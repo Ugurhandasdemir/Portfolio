@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar" class="flex s-around bg-color">
+        <div class="left-nav">
+            <h2 class="t-white">Portfolio</h2>
+        </div>
+        <div class="right-nav">
+            <ul class="flex">
+                <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#about" class="t-white roboto">About me <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#projects" class="t-white roboto">Projects <i class="fa-solid fa-diagram-project"></i></a></li>
+                <li><a href="#contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- home section -->
+    <section id="home" class="flex s-around sw-80 m-auto">
+        <div class="home-left flex items-center">
+            <div class="home-content">
+                <h6 class="popinss">Hi, I'm</h6>
+                <h1 class="t-white">Uğurhan Daşdemir</h1>
+                <h4 class="popinss">Software Engineer</h4>
+                <a href="{% static 'pdf/ozgecmis.pdf' %}" target="_blank">
+                    <button class="btn popinss">Resume</button>
+                </a>
+                <a class="btn live popinss" id="hireme" href="#" target="_blank">Let's talk</a>
+            </div>
+        </div>
+        <div class="home-right flex s-center items-center">
+            <div class="circle flex s-center items-center" id="mainImage">
+                <img src="{% static 'images/c.png' %}" alt="Uğurhan Daşdemir">
+            </div>
+        </div>
+    </section>
+
+    <!-- about section -->
+
+    <section id="about">
+        <h1 class="t-center my-2 t-white f-2 about-title">About Me</h1>
+        <div class="about-container flex s-center items-center">
+            <div class="about-image">
+                <img src="{% static 'images/Adobe Express - file.png' %}" alt="Uğurhan Daşdemir">
+            </div>
+            <div class="about-content about-centered">
+                <p class="t-white m-b-1 popinss about-name">Uğurhan Daşdemir</p>
+                <p class="t-white">
+                    Merhaba, ben Uğurhan Daşdemir. Atatürk Üniversitesi’nde Bilgisayar Mühendisliği okuyorum. Özellikle yapay zeka, veri mühendisliği ve algoritmalarla uğraşmayı seviyorum. Son zamanlarda Teknofest gibi yarışmalarda yer aldım; ulaşımda yapay zeka uygulamaları ve otonom İHA projelerinde çalıştım.
+                    Zor görünen problemleri parçalayıp anlaşılır ve işe yarar çözümler üretmek hoşuma gidiyor. Şu sıralar daha çok makine öğrenmesi, algoritmalar ve backend tarafında kendimi geliştirmeye odaklandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
+                </p>
+                <a class="btn" id="hireme" href="#">Hire me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- skills section -->
+<!-- filepath: /home/ugo/Documents/Python/Portfolio/Base/templates/home.html -->
+    <section id="skills">
+        <h1 class="t-center my-2 t-white f-2">Skills</h1>
+        <div class="skills-list about-centered">
+            <span class="skill-item">OpenCV</span>
+            <span class="skill-item">Numpy</span>
+            <span class="skill-item">Pandas</span>
+            <span class="skill-item">Matplotlib</span>
+            <span class="skill-item">YOLO</span>
+            <span class="skill-item">Oracle SQL</span>
+            <span class="skill-item">Microsoft Server SQL</span>
+            <span class="skill-item">C++</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">LLM</span>
+            <span class="skill-item">Django</span>
+            <span class="skill-item">Scikit-learn</span>
+            <span class="skill-item">Linux</span>
+            <span class="skill-item">LangChain</span>
+        </div>
+    </section>
+
+    <!-- project section -->
+    <section id="projects">
+        <h1 class="t-center my-2 t-white f-2">Projects</h1>
+        <div class="projects-container flex s-center items-center">
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white popinss">Manga Translator</h1>
+                <p class="t-white">
+                    Manga Translator, manga panelindeki konuşma balonlarından Tesseract OCR ile metin çıkaran, Googletrans API ile İngilizceden Türkçeye çeviri yapan ve çeviriyi OpenCV ile görsel üzerinde yeniden yerleştiren bir Python uygulamasıdır.
+                </p>
+                <div class="button flex s-around">
+                    <a href="https://github.com/Ugurhandasdemir/manga_translator" target="_blank">
+                        <button class="btn mx-1 m-top">Github</button>
+                    </a>
+                </div>
+            </div>
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white popinss">Flights-Booking</h1>
+                <p class="t-white">
+                    Flights-Booking, Türk Hava Yolları web sitesinin Django ile geliştirilmiş bir klonudur. Kullanıcılar uçuş arayabilir, bilet seçimi yapabilir ve müşteri bilgilerini yönetebilir. 
+                </p>
+                <div class="button flex s-around">
+                    <a href="https://github.com/Ugurhandasdemir/Flights-Booking" target="_blank">
+                        <button class="btn mx-1 m-top">Github</button>
+                    </a>
+                </div>
+            </div>
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white popinss">YOLOv8 UAV Vehicle & Human Detection</h1>
+                <p class="t-white">
+                    Bu proje, YOLOv8l mimarisi kullanılarak gerçekleştirilmiş bir nesne tespiti uygulamasıdır. Model, 26.000'den fazla görsel ile eğitilmiş ve yüksek doğruluk oranlarına ulaşmıştır.
+                <div class="button flex s-around">
+                    <a href="https://github.com/Ugurhandasdemir/YOLOv8_UAV_Vehicle_Detection" target="_blank">
+                        <button class="btn mx-1 m-top">Github</button>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=rUq1ZLTppGM" target="_blank">
+                        <button class="btn mx-1 m-top">Live</button>
+                    </a>
+                </div>
+            </div>
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white popinss">Automated Document Processing from Government Portals</h1>
+                <p class="t-white">
+                    QNB'nin bir iştiraki olan Ibtech’te, fazladan bir proje kapsamında resmi kurumlardan gelen belgelerin otomatik işlenmesini amaçlayan bir otomasyon projesinde görev aldım. Ekip olarak Selenium kullanarak çeşitli web sitelerinden belgeleri otomatik olarak indirip işleme aldık. Ardından bu belgeleri Python, LLM (Large Language Models) ve LangChain teknolojilerini kullanarak kategorize ettik ve kapsamlı veri kazıma (data scraping) işlemleri gerçekleştirdik. Projede özellikle Python tabanlı veri kazıma süreçleri ve LangChain entegrasyonu alanlarında aktif sorumluluk üstlendim.</p>
+            </div>
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white popinss">FUAV Path Planning with Obstacle Avoidance and Spline Optimization</h1>
+                <p class="t-white">
+                    Yasaklı bölgelerin enlem ve boylam bilgilerini işleyerek, bu alanlara ek bir güvenlik tamponu ekledim. PRM (Probabilistic Roadmap) algoritmasıyla harita üzerinde rastgele noktalar oluşturdum ve yalnızca güvenli bölgelerde kalan noktaları seçtim. Bu noktaları, en yakın k komşuluk bağlantılarıyla birbirine bağladım. Daha sonra, İHA’nın hedefe ulaşması için en optimal rotayı A* algoritmasıyla hesapladım. Hesaplanan rotayı spline enterpolasyonu ile yumuşatarak İHA’nın uçuş sistemine uygun hale getirdim. Son olarak, bu rotayı yer kontrol istasyonu üzerinden İHA’ya başarıyla ilettim.                </p>
+                <div class="button flex s-around">
+                    <a href="{% static 'images/b.jpeg' %}" target="_blank">
+                        <button class="btn mx-1 m-top">Resmi Gör</button>
+                    </a>
+                </div>
+            </div>
+       
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact">
+        <h1 class="t-center my-2 t-white f-2">Contact</h1>
+        <div class="contact-container flex s-center items-center" style="gap:2rem; flex-wrap:wrap;">
+            <div class="contact-card flex f-col s-center items-center">
+                <span class="contact-icon"><i class="fa-solid fa-user"></i></span>
+                <span class="contact-label">Uğurhan Daşdemir</span>
+            </div>
+            <div class="contact-card flex f-col s-center items-center">
+                <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                <a href="mailto:ugurhandasdemir@gmail.com" class="contact-link">ugurhandasdemir@gmail.com</a>
+            </div>
+            <div class="contact-card flex f-col s-center items-center">
+                <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
+                <a href="https://github.com/ugurhandasdemir" target="_blank" class="contact-link">ugurhandasdemir</a>
+            </div>
+            <div class="contact-card flex f-col s-center items-center">
+                <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
+                <a href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" class="contact-link">Uğurhan Daşdemir</a>
+            </div>
+            <div class="contact-card flex f-col s-center items-center">
+                <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                <a href="tel:+905364078583" class="contact-link">+90 536 407 8583</a>
+            </div>
+        </div>
+    </section>
+    <!-- footer section -->
+    <footer class="flex s-around">
+        <p class="t-center my-2 popinss">&copy; All rights reserved - <span class="cpy-white popins">Uğurhan Daşdemir</span></p>
+    </footer>
+</body>
+</html>
