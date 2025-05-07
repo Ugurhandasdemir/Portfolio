@@ -26,11 +26,12 @@ SECRET_KEY = 'django-insecure-()@39pr7@ep(6!%@29gtcv25vxi^s2&ctqv8=-1_pi&r2wx-5!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 9e7b3a6 (Add Render domain to ALLOWED_HOSTS)
-ALLOWED_HOSTS = ['portfolio-ckog.onrender.com']
+ALLOWED_HOSTS = [
+    'portfolio-ckog.onrender.com',
+    'ugurhandasdemir.xyz',
+    'www.ugurhandasdemir.xyz'
+]
 
 
 # Application definition
