@@ -2,13 +2,6 @@
 
 Kişisel portföy web sitem. Django ile geliştirilmiş, projelerimi, yeteneklerimi ve iletişim bilgilerimi içerir.
 
-## Özellikler
-
-- Kişisel bilgiler ve biyografi
-- Proje tanıtımları ve bağlantıları
-- Yetenekler ve kullanılan teknolojiler
-- İletişim bölümü
-- Responsive ve modern tasarım
 
 ## Kurulum
 
