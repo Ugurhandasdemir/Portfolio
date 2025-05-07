@@ -230,18 +230,18 @@ h4 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    gap: 2rem;           /* Kutular arası boşluk */
-    max-width: 1200px;   /* Tüm satırın maksimum genişliği */
-    margin: 0 auto;      /* Ortala */
+    gap: 2rem;         
+    max-width: 1200px;   
+    margin: 0 auto;      
 }
 
 .projects-item {
-    flex: 1 1 22%;       /* 4 kutu yan yana için yaklaşık %22 */
+    flex: 1 1 22%;       
     max-width: 22%;
-    min-width: 240px;    /* Mobilde çok dar olmasın */
+    min-width: 240px;    
     margin: 0;
     box-sizing: border-box;
-    /* Diğer stiller aynı kalabilir */
+
 }
 
 .projects-item h1 {
@@ -280,57 +280,6 @@ textarea {
     resize: none;
 }
 
-
-
-/* Footer Section  */
-#footer {
-    background-color: #010101;
-    padding: 1%;
-    padding-bottom: 2rem;
-}
-
-ul li {
-    list-style: none;
-    margin: 0 1rem;
-}
-
-ul li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: white;
-    transition: all .5s;
-}
-
-ul li a:hover {
-    color: #fff;
-}
-
-
-.font-awesome {
-    margin: 1.1rem auto;
-}
-
-.font-awesome li i {
-    background-color: #1f1f38;
-    padding: 0.6rem;
-    border: 1px solid #1f1f38;
-    color: #fff;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all .4s ease-in-out;
-}
-
-.font-awesome li i:hover {
-    border: 1px solid #1f1f38;
-    border-radius: .5rem;
-    background: transparent;
-    color: #1f1f38;
-}
-
-#footer p {
-    color: white;
-    font-size: .9srem;
-}
 
 
 
@@ -458,7 +407,7 @@ ul li a:hover {
 
 .about-name {
     font-size: 2.2rem;
-    font-weight: 400;  /* Normal kalınlık, bold değil */
+    font-weight: 400;  
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
 }
@@ -506,10 +455,10 @@ ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;   /* Eklendi: Dikey ortalama için */
+    align-items: center;   
     gap: 1rem;
-    margin: 2rem auto;     /* Eklendi: Yatayda ortalamak için */
-    max-width: 900px;      /* Eklendi: Çok geniş yayılmasın diye */
+    margin: 2rem auto;    
+    max-width: 900px;      
 }
 
 .skill-item {
@@ -528,7 +477,7 @@ ul li a:hover {
     color: #1f1f38;
 }
 
-/* About container'ı iki yana yay ve ortala */
+
 .about-container {
     display: flex;
     justify-content: center;
@@ -541,7 +490,7 @@ ul li a:hover {
 
 .about-container {
     display: flex;
-    justify-content: space-between; /* İki içeriği kenarlara yasla */
+    justify-content: space-between; 
     align-items: center;
     gap: 3rem;
     margin: 0 auto;
@@ -551,9 +500,9 @@ ul li a:hover {
 
 .about-image {
     display: flex;
-    justify-content: flex-start; /* Sola yasla */
+    justify-content: flex-start; 
     flex: 1;
-    margin-left: 0;              /* Varsa margin kaldır */
+    margin-left: 0;              
 }
 
 .about-image img {
@@ -562,7 +511,7 @@ ul li a:hover {
     display: block;
 }
 
-/* Contact Card Tasarımı */
+
 .contact-container {
     margin: 2rem auto;
     flex-wrap: wrap;
@@ -607,12 +556,12 @@ ul li a:hover {
     border-radius: 1.5rem;
     padding: 2rem 1rem;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s; /* Eklendi */
+    transition: transform 0.2s, box-shadow 0.2s; 
 }
 
 .projects-item:hover {
-    transform: translateY(-6px) scale(1.04);      /* Eklendi */
-    box-shadow: 0 6px 24px #da7fa880;            /* Eklendi */
+    transform: translateY(-6px) scale(1.04);    
+    box-shadow: 0 6px 24px #da7fa880;            
 }
 
 .skill-item {
@@ -623,11 +572,11 @@ ul li a:hover {
     font-size: 1.1rem;
     margin: 0.3rem;
     box-shadow: 0 2px 8px #0002;
-    transition: background 0.3s, color 0.3s, transform 0.2s; /* Eklendi */
+    transition: background 0.3s, color 0.3s, transform 0.2s; 
 }
 
 .skill-item:hover {
     background: #da7fa8;
     color: #1f1f38;
-    transform: scale(1.08); /* Eklendi */
+    transform: scale(1.08); 
 }
