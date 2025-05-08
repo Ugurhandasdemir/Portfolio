@@ -28,11 +28,12 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
     'portfolio-ckog.onrender.com',
     'ugurhandasdemir.xyz',
     'www.ugurhandasdemir.xyz'
 ]
-
 
 # Application definition
 
