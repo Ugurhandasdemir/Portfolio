@@ -1,40 +1,35 @@
-# Uğurhan Daşdemir - Portfolio
+# Portfolio - Uğurhan Daşdemir
 
-Kişisel portföy web sitem. Django ile geliştirilmiş, projelerimi, yeteneklerimi ve iletişim bilgilerimi içerir.
+Kişisel portfolio sitesi. PHP ile geliştirilmiş, modern ve responsive tasarım.
 
+## Özellikler
+
+- **Home**: Animasyonlu karşılama bölümü
+- **About**: Kişisel tanıtım ve özgeçmiş indirme
+- **Skills**: Teknik yetenekler (Python, Django, PyTorch, LangChain vb.)
+- **Projects**: Otomatik kayan proje slider'ı
+- **Contact**: İletişim bilgileri ve sosyal medya linkleri
+
+## Teknolojiler
+
+- PHP 7.4+
+- HTML5 / CSS3
+- JavaScript (Vanilla)
+- Font Awesome 6
 
 ## Kurulum
 
-1. Bu repoyu klonlayın:
-    ```bash
-    git clone https://github.com/Ugurhandasdemir/Portfolio.git
-    cd Portfolio
-    ```
+```bash
+git clone https://github.com/ugurhandasdemir/portfolio.git
+cd portfolio
+php -S localhost:8000 -t .
+```
 
-2. Sanal ortam oluşturun ve aktif edin:
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-
-3. Gereksinimleri yükleyin:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Veritabanı migrasyonlarını çalıştırın:
-    ```bash
-    python manage.py migrate
-    ```
-
-5. Sunucuyu başlatın:
-    ```bash
-    python manage.py runserver
-    ```
-
-## Kullanılan Teknolojiler
-
-- Python & Django
-- HTML, CSS (Flexbox), JavaScript
+Tarayıcıda aç: http://localhost:8000
 
 
+## İletişim
+
+- **Email**: ugurhandasdemir@gmail.com
+- **LinkedIn**: [ugurhandasdemir](https://linkedin.com/in/ugurhandasdemir)
+- **GitHub**: [ugurhandasdemir](https://github.com/ugurhandasdemir)
