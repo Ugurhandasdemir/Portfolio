@@ -1,6 +1,0 @@
-# Legacy Django requirements (not used by the PHP entrypoint)
-Django>=5.2
-gunicorn
-requests
-django-environ
-whitenoise
