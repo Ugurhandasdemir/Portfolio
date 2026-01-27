@@ -5,6 +5,7 @@
     }
   },
   "routes": [
+    { "src": "/repos.json", "dest": "/repos.json" },
     { "src": "/static/(.*)", "dest": "/static/$1" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]

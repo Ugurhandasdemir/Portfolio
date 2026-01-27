@@ -1,0 +1,34 @@
+{
+  "repos": [
+    "manga_translator",
+    "Flights-Booking",
+    "YOLOv8_UAV_Vehicle_Detection",
+    "house_rent_predictor_xgb",
+    "Local_deep_research",
+    "brain_tumor",
+    "Shared_memory_python",
+    "landing_status"
+  ],
+  "manual": [
+    {
+      "name": "No-Fly Zone İçeren İHA Rota Planlama",
+      "description": "Savaşan İHA 2025 yarışması kapsamında yasaklı alanlardan kaçınan bir rota planlama algoritması geliştirdim. QGroundControl .plan formatında/sunucudan alınan geofence verilerini (uçuş sınırı poligonu ve yasaklı dairesel bölgeler) işleyerek bu alanlara ek bir güvenlik tamponu (buffer) tanımladım. Shapely ile uçuş sınırını poligon, yasaklı bölgeleri ise dairesel engeller olarak modelledim ve yalnızca güvenli bölgede kalan noktaları seçtim. PRM (Probabilistic Roadmap) yaklaşımıyla harita üzerinde rastgele örneklem noktaları ürettim; bu noktaları en yakın k komşuluk ilişkisiyle bir grafik yapısına bağladım. Başlangıç konumu ile seçilen hedef nokta arasında çakışmasız ve kısa bir güzergâh oluşturmak için A* algoritmasını kullanarak en uygun rotayı hesapladım. Elde edilen rota, uçuş kontrolünün daha kararlı olması için Chaikin tabanlı yumuşatma ile pürüzsüzleştirildi ve İHA’nın kullanabileceği waypoint/misyon formatlarına dönüştürüldü (QGC WPL 110 .waypoints ve QGroundControl .plan). Hazırlanan görev, yer kontrol istasyonu üzerinden ve/veya MAVSDK ile simülasyona aktarılacak şekilde yapılandırıldı. Geliştirilen algoritmanın doğrulamasını Gazebo tabanlı simülasyon testleri ve görselleştirme çıktıları ile gerçekleştirdim. (Python, Shapely, PRM, A*, MAVSDK, spline/BSpline)",
+      "updated_at": "2024-01-15",
+      "html_url": null,
+      "homepage": null,
+      "image": "static/images/b.jpeg",
+      "youtube": "https://www.youtube.com/watch?v=YYVqzlg4NcY",
+      "kaggle": null
+    },
+    {
+      "name": "Escape UAV",
+      "description": "Takip eden (rakip) İHA’dan kaçış için rakip İHA’nın konumunu her adımda güvenli koridor ihlali açısından izledim. İki İHA arasındaki mesafeyi (Haversine) ve yönelimlerini (heading) hesaplayarak tehlikeli yakınlaşmalarda uyarı üretip kaçış manevrası kararını destekledim. Sonuçları rota/buffer görselleştirmesiyle doğruladım. (Python, NumPy, Shapely, Matplotlib)",
+      "updated_at": "2025-01-10",
+      "html_url": null,
+      "homepage": null,
+      "image": null,
+      "youtube": null,
+      "kaggle": null
+    }
+  ]
+}

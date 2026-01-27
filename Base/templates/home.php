@@ -48,7 +48,7 @@ function asset($path) {
                     <a href="<?= asset('pdf/ozgecmis.pdf') ?>" target="_blank">
                         <button class="btn live popinss">Resume</button>
                     </a>
-                    <a class="btn live popinss" id="hireme" href="#contact">Let's talk</a>
+                    <a class="btn live popinss" id="hireme" href="mailto:ugurhandasdemir@gmail.com">Contact Me</a>
                 </div>
             </div>
         </div>
@@ -89,64 +89,8 @@ function asset($path) {
             </button>
 
             <div class="projects-viewport">
-                <div class="projects-track">
-                    <div class="projects-item projects-slide flex f-col s-center items-center">
-                        <h1 class="t-white popinss">Manga Translator</h1>
-                        <p class="t-white">
-                            Manga Translator, manga panelindeki konuşma balonlarından Tesseract OCR ile metin çıkaran, Googletrans API ile İngilizceden Türkçeye çeviri yapan ve çeviriyi OpenCV ile görsel üzerinde yeniden yerleştiren bir Python uygulamasıdır.
-                        </p>
-                        <div class="button flex s-around">
-                            <a href="https://github.com/Ugurhandasdemir/manga_translator" target="_blank">
-                                <button class="btn-project mx-1 m-top">Github</button>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="projects-item projects-slide flex f-col s-center items-center">
-                        <h1 class="t-white popinss">Flights-Booking</h1>
-                        <p class="t-white">
-                            Flights-Booking, Türk Hava Yolları web sitesinin Django ile geliştirilmiş bir klonudur. Kullanıcılar uçuş arayabilir, bilet seçimi yapabilir ve müşteri bilgilerini yönetebilir. 
-                        </p>
-                        <div class="button flex s-around">
-                            <a href="https://github.com/Ugurhandasdemir/Flights-Booking" target="_blank">
-                                <button class="btn-project mx-1 m-top">Github</button>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="projects-item projects-slide flex f-col s-center items-center">
-                        <h1 class="t-white popinss">YOLOv8 UAV Vehicle & Human Detection</h1>
-                        <p class="t-white">
-                            Bu proje, YOLOv8l mimarisi kullanılarak gerçekleştirilmiş bir nesne tespiti uygulamasıdır. Model, 26.000'den fazla görsel ile eğitilmiş ve yüksek doğruluk oranlarına ulaşmıştır.
-                        </p>
-                        <div class="button flex s-around">
-                            <a href="https://github.com/Ugurhandasdemir/YOLOv8_UAV_Vehicle_Detection" target="_blank">
-                                <button class="btn-project mx-1 m-top">Github</button>
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=rUq1ZLTppGM" target="_blank">
-                                <button class="btn-project mx-1 m-top">Live</button>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="projects-item projects-slide flex f-col s-center items-center">
-                        <h1 class="t-white popinss">Automated Document Processing from Government Portals</h1>
-                        <p class="t-white">
-                            QNB'nin bir iştiraki olan Ibtech'te, fazladan bir proje kapsamında resmi kurumlardan gelen belgelerin otomatik işlenmesini amaçlayan bir otomasyon projesinde görev aldım. Ekip olarak Selenium kullanarak çeşitli web sitelerinden belgeleri otomatik olarak indirip işleme aldık. Ardından bu belgeleri Python, LLM (Large Language Models) ve LangChain teknolojilerini kullanarak kategorize ettik ve kapsamlı veri kazıma (data scraping) işlemleri gerçekleştirdik. Projede özellikle Python tabanlı veri kazıma süreçleri ve LangChain entegrasyonu alanlarında aktif sorumluluk üstlendim.
-                        </p>
-                    </div>
-
-                    <div class="projects-item projects-slide flex f-col s-center items-center">
-                        <h1 class="t-white popinss">UAV Path Planning with Obstacle Avoidance and Spline Optimization</h1>
-                        <p class="t-white">
-                            Yasaklı bölgelerin enlem ve boylam bilgilerini işleyerek, bu alanlara ek bir güvenlik tamponu ekledim. PRM (Probabilistic Roadmap) algoritmasıyla harita üzerinde rastgele noktalar oluşturdum ve yalnızca güvenli bölgelerde kalan noktaları seçtim. Bu noktaları, en yakın k komşuluk bağlantılarıyla birbirine bağladım. Daha sonra, İHA'nın hedefe ulaşması için en optimal rotayı A* algoritmasıyla hesapladım. Hesaplanan rotayı spline enterpolasyonu ile yumuşatarak İHA'nın uçuş sistemine uygun hale getirdim. Son olarak, bu rotayı yer kontrol istasyonu üzerinden İHA'ya başarıyla ilettim.
-                        </p>
-                        <div class="button flex s-around">
-                            <a href="<?= asset('images/b.jpeg') ?>" target="_blank">
-                                <button class="btn-project mx-1 m-top">Resmi Gör</button>
-                            </a>
-                        </div>
-                    </div>
+                <div class="projects-track" id="projects-track">
+                    <!-- JS dolduracak -->
                 </div>
             </div>
 
@@ -236,6 +180,126 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, 2500);
   });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const track = document.getElementById('projects-track');
+  if (!track) return;
+
+  const username = "ugurhandasdemir";
+
+  const formatDate = (iso) => {
+    const d = new Date(iso);
+    return d.toLocaleDateString('tr-TR', { year: 'numeric', month: 'short', day: 'numeric' });
+  };
+
+  const getReadmeIntro = async (repoName) => {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${username}/${repoName}/readme`, {
+        headers: { 'Accept': 'application/vnd.github.v3.raw' }
+      });
+      if (!res.ok) return null;
+      const text = await res.text();
+      const lines = text.split('\n');
+      let paragraph = '';
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith('#') || trimmed.startsWith('!') || trimmed.startsWith('[!') || trimmed.startsWith('[![')) {
+          if (paragraph) break;
+          continue;
+        }
+        paragraph += (paragraph ? ' ' : '') + trimmed;
+      }
+      paragraph = paragraph.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+      if (paragraph.length > 200) paragraph = paragraph.substring(0, 200).trim() + '...';
+      return paragraph || null;
+    } catch { return null; }
+  };
+
+  try {
+    const listRes = await fetch('/repos.json', { cache: 'no-cache' });
+    if (!listRes.ok) throw new Error('Repos listesi alınamadı');
+    const listData = await listRes.json();
+    const allowed = new Set(listData.repos || []);
+    const manualProjects = listData.manual || [];
+
+    const reposRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+    if (!reposRes.ok) throw new Error('GitHub API hatası');
+    let repos = await reposRes.json();
+
+    repos = repos.filter(r => allowed.has(r.name));
+
+    const reposWithReadme = await Promise.all(
+      repos.map(async (r) => {
+        const readmeIntro = await getReadmeIntro(r.name);
+        return { 
+          ...r, 
+          readmeIntro, 
+          isManual: false,
+          image: null,
+          youtube: null,
+          kaggle: null
+        };
+      })
+    );
+
+    // Elle eklenen projeleri ekle
+    const allProjects = [
+      ...reposWithReadme,
+      ...manualProjects.map(m => ({
+        name: m.name,
+        description: m.description,
+        readmeIntro: m.description,
+        updated_at: m.updated_at,
+        html_url: m.html_url,
+        homepage: m.homepage,
+        image: m.image || null,
+        youtube: m.youtube || null,
+        kaggle: m.kaggle || null,
+        isManual: true
+      }))
+    ];
+
+    // Tarihe göre sırala
+    allProjects.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+
+    track.innerHTML = allProjects.map(r => `
+      <div class="projects-item projects-slide flex f-col s-center items-center">
+        <h1 class="t-white popinss">${r.name}</h1>
+        <p class="t-white">${r.readmeIntro ?? r.description ?? "Açıklama yok."}</p>
+        <p class="t-white" style="opacity:.7; margin-top:.5rem;">
+          Güncelleme: ${formatDate(r.updated_at)}
+        </p>
+        <div class="button flex s-around" style="flex-wrap:wrap; gap:.5rem;">
+          ${r.html_url ? `
+            <a href="${r.html_url}" target="_blank">
+              <button class="btn-project mx-1 m-top"><i class="fa-brands fa-github"></i> Github</button>
+            </a>` : ''}
+          ${r.homepage ? `
+            <a href="${r.homepage}" target="_blank">
+              <button class="btn-project mx-1 m-top"><i class="fa-solid fa-globe"></i> Live</button>
+            </a>` : ''}
+          ${r.image ? `
+            <a href="${r.image}" target="_blank">
+              <button class="btn-project mx-1 m-top"><i class="fa-solid fa-image"></i> Görsel</button>
+            </a>` : ''}
+          ${r.youtube ? `
+            <a href="${r.youtube}" target="_blank">
+              <button class="btn-project mx-1 m-top"><i class="fa-brands fa-youtube"></i> YouTube</button>
+            </a>` : ''}
+          ${r.kaggle ? `
+            <a href="${r.kaggle}" target="_blank">
+              <button class="btn-project mx-1 m-top"><i class="fa-brands fa-kaggle"></i> Kaggle</button>
+            </a>` : ''}
+          ${!r.html_url && !r.homepage && !r.image && !r.youtube && !r.kaggle ? `<span class="t-white" style="opacity:.5;">Private</span>` : ''}
+        </div>
+      </div>
+    `).join("") || `<p class="t-white">Gösterilecek proje bulunamadı.</p>`;
+  } catch (e) {
+    track.innerHTML = `<p class="t-white">Projeler yüklenemedi.</p>`;
+  }
 });
 </script>
 </body>
