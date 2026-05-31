@@ -190,14 +190,14 @@
 <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
 <a class="font-display-lg text-primary tracking-tighter hover:text-secondary transition-colors duration-300" href="#" style="font-size: 24px; font-family: 'Montserrat', sans-serif;">Uğurhan Daşdemir</a>
 <div class="hidden md:flex space-x-8 items-center">
-<a class="text-secondary font-label-md text-label-md transition-colors duration-200 nav-link active" href="#home">Home</a>
-<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#about">About</a>
-<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#skills">Skills</a>
-<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#projects">Projects</a>
-<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#contact">Contact</a>
+<a class="text-secondary font-label-md text-label-md transition-colors duration-200 nav-link active" href="#home">Ana Sayfa</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#about">Hakkımda</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#skills">Yetenekler</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#projects">Projeler</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#contact">İletişim</a>
 </div>
 <a class="hidden md:inline-flex bg-secondary text-white font-label-md text-label-md px-6 py-3 rounded-full hover:bg-secondary-container hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg" href="#contact">
-                Contact Me
+                İletişime Geç
             </a>
 <!-- Mobile Menu Toggle -->
 <button class="md:hidden text-primary hover:text-secondary transition-colors">
@@ -206,10 +206,11 @@
 </div>
 </nav>
 <!-- Main Content -->
-<main class="pt-32 pb-section-gap">
+<main class="pt-32">
 <!-- Hero Section -->
 <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop min-h-[600px] flex flex-col items-center justify-center gap-gutter pt-12 md:pt-24 pb-section-gap relative overflow-hidden" id="home">
 <!-- Ambient Background -->
+<div class="absolute inset-0 -z-10 bg-gradient-to-br from-primary-fixed/60 via-background to-tertiary-fixed/50"></div>
 <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
 <div class="absolute top-0 -right-4 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
 <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
@@ -218,7 +219,7 @@
                     Karmaşık problemleri <br class="hidden md:block"/><span class="text-secondary">zarif kodlar ve yapay zeka ile çözüyorum.</span>
 </h1>
 <p class="font-body-lg text-body-lg text-text-main max-w-2xl mx-auto animate-on-scroll delay-100">
-                    I'm Uğurhan Daşdemir, a Software Engineer &amp; AI Developer specializing in Machine Learning, Backend Systems, and Scalable Solutions.
+                    Ben Uğurhan Daşdemir; makine öğrenmesi, backend sistemler ve ölçeklenebilir çözümler üzerine uzmanlaşmış bir Yazılım Mühendisi ve Yapay Zeka Geliştiricisiyim.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll delay-200">
 <button class="bg-secondary text-white font-label-md text-label-md px-8 py-4 rounded-full hover:bg-secondary-container transition-all duration-300 text-center shadow-[0_4px_14px_0_rgba(75,65,225,0.39)] hover:shadow-[0_8px_25px_rgba(75,65,225,0.4)] hover:-translate-y-1 hover:scale-105 transform relative overflow-hidden group" onclick="document.getElementById('cv-modal').classList.remove('hidden')">
@@ -226,10 +227,10 @@
                         CV Görüntüle
                     </button>
 <a class="bg-transparent border border-primary text-primary font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-variant transition-all duration-300 text-center hover:shadow-md hover:-translate-y-1 hover:scale-105" href="#projects">
-                        View Projects
+                        Projeleri Gör
                     </a>
 <a class="bg-transparent border border-border-subtle text-text-main font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-variant transition-all duration-300 text-center hover:shadow-md hover:-translate-y-1 hover:scale-105" href="#contact">
-                        Contact Me
+                        İletişime Geç
                     </a>
 </div>
 </div>
@@ -238,12 +239,12 @@
 <section class="bg-surface-container-low py-section-gap" id="about">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="max-w-3xl mx-auto text-center space-y-6">
-<h2 class="font-headline-md text-headline-md text-primary animate-on-scroll">About Me</h2>
+<h2 class="font-headline-md text-headline-md text-primary animate-on-scroll">Hakkımda</h2>
 <p class="font-body-md text-body-md text-text-main leading-relaxed text-left md:text-center animate-on-scroll delay-100">
-                        I am Uğurhan Daşdemir, an eager Software Engineer and Artificial Intelligence Developer with an endless passion for innovation. My journey is fueled by a desire to craft intelligent solutions that not only push the boundaries of technology but also make a tangible impact. 
+                        Ben Uğurhan Daşdemir; yeniliğe karşı bitmek bilmeyen bir tutkuyla çalışan bir Yazılım Mühendisi ve Yapay Zeka Geliştiricisiyim. Beni asıl yola çıkaran şey, teknolojinin sınırlarını zorlarken aynı zamanda gerçek dünyada somut bir etki bırakan akıllı çözümler üretmek.
                     </p>
 <p class="font-body-md text-body-md text-text-main leading-relaxed text-left md:text-center mt-4 animate-on-scroll delay-200">
-                        Currently studying at <span class="font-bold text-secondary">Atatürk University</span>, I have honed my skills through rigorous academic challenges and real-world applications. A significant milestone in my career was competing in <span class="font-bold text-secondary">Teknofest</span>, where I applied my expertise in AI and backend systems to develop high-performance, scalable solutions under intense pressure.
+                        Şu anda <span class="font-bold text-secondary">Atatürk Üniversitesi</span>'nde okuyorum; yeteneklerimi hem zorlu akademik çalışmalarla hem de gerçek projelerle geliştirdim. Benim için önemli dönüm noktalarından biri, yapay zeka ve backend sistemlerdeki birikimimi yoğun baskı altında yüksek performanslı ve ölçeklenebilir çözümler üretmek için kullandığım <span class="font-bold text-secondary">Teknofest</span> yarışması oldu.
                     </p>
 </div>
 </div>
@@ -251,21 +252,21 @@
 <!-- Skills Section -->
 <section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="skills">
 <div class="text-center mb-16 animate-on-scroll">
-<h2 class="font-headline-md text-headline-md text-primary">Technical Arsenal</h2>
-<p class="font-body-md text-body-md text-text-main mt-4">Core competencies across the stack.</p>
+<h2 class="font-headline-md text-headline-md text-primary">Teknik Yetkinlikler</h2>
+<p class="font-body-md text-body-md text-text-main mt-4">Projelerimde en çok kullandığım temel teknolojiler.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Languages Card -->
 <div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] transition-all duration-300 animate-on-scroll delay-100 cursor-default">
 <div class="flex items-center gap-3 mb-6">
 <span class="material-symbols-outlined text-secondary text-3xl">code</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">Languages</h3>
+<h3 class="font-headline-sm text-headline-sm text-primary">Diller</h3>
 </div>
 <div class="flex flex-wrap gap-3">
 <span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Python</span>
 <span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">C++</span>
 <span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">JavaScript</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">C#</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">SQL</span>
 </div>
 </div>
 <!-- AI/ML Card -->
@@ -273,27 +274,30 @@
 <div class="absolute top-0 right-0 w-32 h-32 bg-innovation-glow rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
 <div class="flex items-center gap-3 mb-6 relative z-10">
 <span class="material-symbols-outlined text-ai-accent text-3xl">smart_toy</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">AI &amp; Machine Learning</h3>
+<h3 class="font-headline-sm text-headline-sm text-primary">Yapay Zeka &amp; Makine Öğrenmesi</h3>
 </div>
 <div class="flex flex-wrap gap-3 relative z-10">
 <span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md px-4 py-2 rounded-full">PyTorch</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md px-4 py-2 rounded-full">YOLOv8</span>
 <span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md px-4 py-2 rounded-full">Scikit-learn</span>
-<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md px-4 py-2 rounded-full">LangChain</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Numpy</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Pandas</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Transformers</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">OpenCV</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">XGBoost</span>
 </div>
 </div>
 <!-- Data & Backend Card -->
 <div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] transition-all duration-300 animate-on-scroll delay-300 cursor-default">
 <div class="flex items-center gap-3 mb-6">
 <span class="material-symbols-outlined text-secondary text-3xl">database</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">Data &amp; Backend</h3>
+<h3 class="font-headline-sm text-headline-sm text-primary">Veri &amp; Backend</h3>
 </div>
 <div class="flex flex-wrap gap-3">
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">SQL</span>
 <span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">FastAPI</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Docker</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Git</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Django</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Pandas</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">NumPy</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">MS SQL Server</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">ChromaDB</span>
 </div>
 </div>
 </div>
@@ -302,8 +306,8 @@
 <section class="bg-surface-container-low py-section-gap relative" id="projects">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
 <div class="text-center mb-16 animate-on-scroll">
-<h2 class="font-headline-md text-headline-md text-primary">Featured Projects</h2>
-<p class="font-body-md text-body-md text-text-main mt-4">Selected works demonstrating complex problem solving.</p>
+<h2 class="font-headline-md text-headline-md text-primary">Öne Çıkan Projeler</h2>
+<p class="font-body-md text-body-md text-text-main mt-4">Karmaşık problemleri çözdüğüm seçilmiş çalışmalar.</p>
 </div>
 <div class="relative group">
 <button aria-label="Previous Project" class="absolute left-[-16px] md:left-[-24px] top-1/2 transform -translate-y-1/2 bg-surface-card border border-border-subtle rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-surface-variant hover:text-secondary hover:scale-110 active:scale-95 transition-all duration-200 focus:outline-none hidden md:flex" id="prevBtn">
@@ -313,82 +317,7 @@
 <span class="material-symbols-outlined text-2xl">chevron_right</span>
 </button>
 <div class="flex overflow-x-auto snap-x snap-mandatory gap-gutter scroll-smooth no-scrollbar pb-8" id="projectSlider">
-<!-- Project 1 -->
-<div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col animate-on-scroll delay-100">
-<div class="h-48 bg-surface-variant relative overflow-hidden shrink-0">
-<img alt="Drone rendering" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700" data-alt="A highly detailed, photorealistic 3D render of a futuristic autonomous quadcopter drone hovering inside a pristine, white laboratory setting. The lighting is bright and evenly distributed, emphasizing a modern, clean engineering environment. The drone features sleek dark grey carbon fiber textures with subtle glowing cyan accents to represent active AI processing. The composition conveys precision and advanced aerospace technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqC44rIlrq35jM1o6tjpc3aDj61NSF9Y7un1vAcR7pfRqQobFUzCEPYzJV1_O1Sy2TpEV-iI23uTf2fMLg441OodE1jl-Y_dlSrsKUJCfh8iS4JM9uFCzmnSMtiR1EPBiVjTzcGZTeuMz5BmHZaZSY2jabhpogw_07_KhuxoIYP0DcFmUyB2fTev7tzqcxe_Z9nj43KjUBWcR-Nmapd6GFK_p_TtBnRLkb3lpHz-YDFdzE8rE-DT__zXZ4Xh_Q7TVYjmVATOtDreA"/>
-</div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex gap-2 mb-4">
-<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-[12px] px-3 py-1 rounded-full">Computer Vision</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">C++</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-3 group-hover/card:text-secondary transition-colors duration-300">Autonomous UAV System</h3>
-<p class="font-body-md text-body-md text-text-main mb-6 flex-1">
-                                Developed core flight algorithms and real-time object detection systems for autonomous navigation. Showcased at Teknofest, achieving high accuracy in dynamic environments.
-                            </p>
-<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="#">
-<span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
-                                View Case Study <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Project 2 -->
-<div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col animate-on-scroll delay-200">
-<div class="h-48 bg-surface-variant relative overflow-hidden shrink-0">
-<img alt="City traffic with data overlays" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700" data-alt="A modern, minimalist architectural rendering of a smart city intersection viewed from above. The scene is brightly lit with daylight, showcasing clean concrete structures and organized traffic flows. Superimposed over the physical environment are subtle, glowing blue digital network lines and data nodes, illustrating real-time traffic analysis and AI integration. The aesthetic is highly polished, professional, and optimistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcFKaI7OmBoEsIGTegUopBrwQ59g94HHi8tGg9iBJBbEP8hQg51IeXkEAOFA9-H4XqmAZhOaXiQjCffGLlbgjGZYTuvhpZ7k1oNf6yWY5QE2T9kV9BxGJAJghx57ovwKGPWpLq3WwxqQBNUHj3xf1FpCBSXbtmxJvFOmQiaaXbJUQ1u07e_qkfgj9SAjK49K2h50hLe5hh0AAerea9xeV39l1vVBqAAmeaOkk1td-2iiEfUilY_VSkMy0dunzcG8SK0BA9KD3zPnk"/>
-</div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex gap-2 mb-4">
-<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-[12px] px-3 py-1 rounded-full">Machine Learning</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">Python</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-3 group-hover/card:text-secondary transition-colors duration-300">AI in Transportation</h3>
-<p class="font-body-md text-body-md text-text-main mb-6 flex-1">
-                                A predictive modeling system utilizing historical traffic data and real-time inputs to optimize routing and reduce congestion in urban environments using deep learning techniques.
-                            </p>
-<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="#">
-<span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
-                                View Case Study <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Project Placeholder 3 -->
-<div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle border-dashed group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col animate-on-scroll delay-300">
-<div class="h-48 bg-surface-container flex items-center justify-center relative overflow-hidden shrink-0">
-<span class="material-symbols-outlined text-4xl text-on-surface-variant/50 group-hover/card:scale-125 group-hover/card:rotate-12 transition-transform duration-500">rocket_launch</span>
-</div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex gap-2 mb-4">
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full opacity-50">Coming Soon</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary/70 mb-3 group-hover/card:text-primary transition-colors duration-300">Future Innovation</h3>
-<p class="font-body-md text-body-md text-text-main/70 mb-6 flex-1 group-hover/card:text-text-main transition-colors duration-300">
-                                Currently working on a new exciting project combining scalable backend architecture with generative AI models.
-                            </p>
-<a class="inline-flex items-center text-secondary/50 font-label-md text-label-md cursor-not-allowed mt-auto" href="#">
-                                In Progress <span class="material-symbols-outlined ml-1 text-sm">schedule</span>
-</a>
-</div>
-</div>
-<!-- Project Placeholder 4 -->
-<div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle border-dashed group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col">
-<div class="h-48 bg-surface-container flex items-center justify-center relative overflow-hidden shrink-0">
-<span class="material-symbols-outlined text-4xl text-on-surface-variant/50 group-hover/card:scale-125 group-hover/card:text-yellow-400 transition-all duration-500">lightbulb</span>
-</div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex gap-2 mb-4">
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full opacity-50">Ideation</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary/70 mb-3">Next Big Thing</h3>
-<p class="font-body-md text-body-md text-text-main/70 mb-6 flex-1">
-                                Exploring new paradigms in edge computing and decentralized AI inference.
-                            </p>
-<a class="inline-flex items-center text-secondary/50 font-label-md text-label-md cursor-not-allowed mt-auto" href="#">
-                                Planning <span class="material-symbols-outlined ml-1 text-sm">more_horiz</span>
-</a>
-</div>
-</div>
+<div class="w-full text-center py-16 font-body-md text-body-md text-text-main">Projeler yükleniyor…</div>
 </div>
 </div>
 </div>
@@ -400,7 +329,7 @@
 <div class="text-center md:text-left">
 <span class="font-headline-sm text-headline-sm text-primary block mb-2">Uğurhan Daşdemir</span>
 <p class="font-body-md text-body-md text-text-main max-w-sm">
-                    Open to new opportunities and exciting technical challenges.
+                    Yeni fırsatlara ve heyecan verici teknik zorluklara her zaman açığım.
                 </p>
 </div>
 <div class="flex flex-wrap justify-center gap-6">
@@ -409,7 +338,7 @@
 <span class="font-label-md text-label-md">+90 536 407 8583</span>
 </a><a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="mailto:ugurhandasdemir@gmail.com">
 <span class="material-symbols-outlined group-hover:animate-bounce">mail</span>
-<span class="font-label-md text-label-md">Email</span>
+<span class="font-label-md text-label-md">E-posta</span>
 </a>
 <a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">
 <span class="material-symbols-outlined group-hover:animate-bounce">code</span>
@@ -422,7 +351,7 @@
 </div>
 <div class="text-center md:text-right">
 <p class="font-label-md text-[12px] text-on-surface-variant">
-                    © 2024 Uğurhan Daşdemir. Built with precision and AI.
+                    © 2026 Uğurhan Daşdemir. Özen ve yapay zeka ile geliştirildi.
                 </p>
 </div>
 </div>
@@ -434,7 +363,7 @@
 <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
 <div class="relative transform overflow-hidden rounded-2xl bg-surface-card text-left shadow-2xl transition-all sm:my-8 w-full sm:max-w-4xl border border-border-subtle animate-[fade-in-up_0.3s_ease-out_forwards]">
 <div class="bg-surface-card px-4 pb-4 pt-5 sm:p-6 sm:pb-4 border-b border-border-subtle flex justify-between items-center">
-<h3 class="text-headline-sm font-headline-sm text-primary" id="modal-title">Curriculum Vitae</h3>
+<h3 class="text-headline-sm font-headline-sm text-primary" id="modal-title">Özgeçmiş</h3>
 <button class="text-on-surface-variant hover:text-error hover:rotate-90 transition-all duration-300 rounded-full p-1" onclick="document.getElementById('cv-modal').classList.add('hidden')">
 <span class="material-symbols-outlined text-2xl">close</span>
 </button>
@@ -446,10 +375,10 @@
 </div>
 <div class="bg-surface-card px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 border-t border-border-subtle">
 <a class="inline-flex w-full justify-center rounded-full bg-secondary px-6 py-3 text-label-md font-label-md text-white shadow-sm hover:bg-secondary-container hover:scale-105 hover:shadow-lg sm:ml-3 sm:w-auto transition-all duration-300" download="Ugurhan_Dasdemir_CV.pdf" href="/static/pdf/ozgecmis.pdf" target="_blank" rel="noopener">
-                            Download PDF
+                            PDF İndir
                         </a>
 <button class="mt-3 inline-flex w-full justify-center rounded-full bg-white px-6 py-3 text-label-md font-label-md text-primary shadow-sm ring-1 ring-inset ring-border-subtle hover:bg-surface-container-low hover:scale-105 sm:mt-0 sm:w-auto transition-all duration-300" onclick="document.getElementById('cv-modal').classList.add('hidden')" type="button">
-                            Close
+                            Kapat
                         </button>
 </div>
 </div>
@@ -570,7 +499,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const media = img
             ? `<img alt="${esc(r.name)}" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700" src="${esc(img)}"/>`
             : `<div class="w-full h-full flex items-center justify-center bg-surface-container"><span class="material-symbols-outlined text-5xl text-on-surface-variant/40 group-hover/card:scale-125 group-hover/card:rotate-6 transition-transform duration-500">terminal</span></div>`;
-        const desc = r.readmeIntro ?? r.description ?? 'Açıklama yok.';
+        const rawDesc = r.readmeIntro ?? r.description ?? 'Açıklama yok.';
+        const desc = rawDesc.length > 160 ? rawDesc.slice(0, 160).replace(/\s+\S*$/, '').trim() + '…' : rawDesc;
         const dateChip = r.updated_at
             ? `<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">${esc(formatDate(r.updated_at))}</span>`
             : '';
@@ -579,11 +509,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="h-48 bg-surface-variant relative overflow-hidden shrink-0">${media}</div>
             <div class="p-6 flex flex-col flex-1">
                 <div class="flex gap-2 mb-4">${dateChip}</div>
-                <h3 class="font-headline-sm text-headline-sm text-primary mb-3 group-hover/card:text-secondary transition-colors duration-300">${esc(r.name)}</h3>
-                <p class="font-body-md text-body-md text-text-main mb-6 flex-1">${esc(desc)}</p>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-3 line-clamp-2 group-hover/card:text-secondary transition-colors duration-300">${esc(r.name)}</h3>
+                <p class="font-body-md text-body-md text-text-main mb-6 flex-1 line-clamp-4">${esc(desc)}</p>
                 <a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="/project_details.html?repo=${encodeURIComponent(r.repo || r.name)}">
                     <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
-                    View Case Study <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
+                    Detayları Gör<span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
                 </a>
             </div>
         </div>`;
