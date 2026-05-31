@@ -11,6 +11,26 @@
   ],
   "manual": [
     {
+      "name": "Edge AI Tabanlı Termal Nesne Tespiti (SAYZEK Bursiyeri)",
+      "description": "Savunma Sanayii Yapay Zekâ Kümelenmesi (SAYZEK) bursiyeri olarak uç cihazlarda gerçek zamanlı nesne tespiti için Python tabanlı derin öğrenme projesi geliştirdim. Termal görüntülerde car, person ve other_vehicle sınıflarını tespit eden modeller eğittim; YOLOv8, YOLOv11, Faster R-CNN, U-Net ve RT-DETR mimarilerini karşılaştırdım. PyTorch, Ultralytics, OpenCV ve Albumentations kullandım; COCO ve YOLO veri formatlarıyla çalıştım. Focal Loss ve Class-Balanced Loss ile sınıf dengesizliğini ele aldım; modelleri precision, recall, mAP50 ve mAP50-95 metrikleriyle değerlendirdim. ONNX dönüşümü, INT8 quantization ve structured pruning uygulayıp Jetson Orin üzerinde FPS ve inference time benchmark testleri yaptım. (Python, PyTorch, Ultralytics YOLO, RT-DETR, Faster R-CNN, ONNX Runtime, INT8 Quantization, Structured Pruning, CUDA, Jetson Orin)",
+      "updated_at": "2025-08-15",
+      "html_url": null,
+      "homepage": null,
+      "image": null,
+      "youtube": null,
+      "kaggle": null
+    },
+    {
+      "name": "Avcı Drone (Otonom FPV Takip)",
+      "description": "GNSS jamming senaryosunda sabit kanat hedef İHA'yı arayıp takip edebilen otonom FPV multikopter sistemi geliştirdim. Görsel kilit için hem klasik görüntü işleme (MOG2, ORB, CSRT) hem de YOLOv8 + ByteTrack tabanlı derin öğrenme yaklaşımlarını denedim; ONNX Runtime, OpenVINO ve YOLO + CSRT gibi farklı takip backend'lerini karşılaştırmalı çalıştırdım. Mimaride ROS2, Gazebo, PX4 SITL ve MAVLink üzerinde hedef kestirimi, adaptif arama ve offboard kontrol akışlarını kurdum. (Python, YOLOv8, ByteTrack, ONNX Runtime, OpenCV, ROS2, Gazebo, PX4 SITL, MAVLink, IMM Filter)",
+      "updated_at": "2025-07-10",
+      "html_url": null,
+      "homepage": null,
+      "image": null,
+      "youtube": null,
+      "kaggle": null
+    },
+    {
       "name": "No-Fly Zone İçeren İHA Rota Planlama",
       "description": "Savaşan İHA 2025 yarışması kapsamında yasaklı alanlardan kaçınan bir rota planlama algoritması geliştirdim. QGroundControl .plan formatında/sunucudan alınan geofence verilerini (uçuş sınırı poligonu ve yasaklı dairesel bölgeler) işleyerek bu alanlara ek bir güvenlik tamponu (buffer) tanımladım. Shapely ile uçuş sınırını poligon, yasaklı bölgeleri ise dairesel engeller olarak modelledim ve yalnızca güvenli bölgede kalan noktaları seçtim. PRM (Probabilistic Roadmap) yaklaşımıyla harita üzerinde rastgele örneklem noktaları ürettim; bu noktaları en yakın k komşuluk ilişkisiyle bir grafik yapısına bağladım. Başlangıç konumu ile seçilen hedef nokta arasında çakışmasız ve kısa bir güzergâh oluşturmak için A* algoritmasını kullanarak en uygun rotayı hesapladım. Elde edilen rota, uçuş kontrolünün daha kararlı olması için Chaikin tabanlı yumuşatma ile pürüzsüzleştirildi ve İHA’nın kullanabileceği waypoint/misyon formatlarına dönüştürüldü (QGC WPL 110 .waypoints ve QGroundControl .plan). Hazırlanan görev, yer kontrol istasyonu üzerinden ve/veya MAVSDK ile simülasyona aktarılacak şekilde yapılandırıldı. Geliştirilen algoritmanın doğrulamasını Gazebo tabanlı simülasyon testleri ve görselleştirme çıktıları ile gerçekleştirdim. (Python, Shapely, PRM, A*, MAVSDK, spline/BSpline)",
       "updated_at": "2024-01-15",
