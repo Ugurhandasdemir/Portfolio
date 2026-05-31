@@ -1,12 +1,13 @@
 {
   "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.7.2"
+    "api/index.ts": {
+      "includeFiles": "Base/templates/**"
     }
   },
   "routes": [
     { "src": "/repos.json", "dest": "/repos.json" },
     { "src": "/static/(.*)", "dest": "/static/$1" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/project_details(\\.html)?/?", "dest": "/project_details.html" },
+    { "src": "/(.*)", "dest": "/api/index.ts" }
   ]
 }
