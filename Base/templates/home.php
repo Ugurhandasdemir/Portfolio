@@ -581,7 +581,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="flex gap-2 mb-4">${dateChip}</div>
                 <h3 class="font-headline-sm text-headline-sm text-primary mb-3 group-hover/card:text-secondary transition-colors duration-300">${esc(r.name)}</h3>
                 <p class="font-body-md text-body-md text-text-main mb-6 flex-1">${esc(desc)}</p>
-                <a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="/project_details.html">
+                <a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="/project_details.html?repo=${encodeURIComponent(r.repo || r.name)}">
                     <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
                     View Case Study <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
                 </a>
@@ -606,6 +606,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const reposWithReadme = await Promise.all(
             repos.map(async (r) => ({
                 name: r.name,
+                repo: r.name,
                 description: r.description,
                 readmeIntro: await getReadmeIntro(r.name),
                 updated_at: r.updated_at,
@@ -617,6 +618,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             ...reposWithReadme,
             ...manualProjects.map(m => ({
                 name: m.name,
+                repo: m.repo || null,
                 description: m.description,
                 readmeIntro: m.description,
                 updated_at: m.updated_at,
