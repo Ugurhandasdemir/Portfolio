@@ -1,306 +1,637 @@
-<?php
-include __DIR__ . '/navbar.php';
-
-function asset($path) {
-    return '/static/' . ltrim($path, '/');
-}
-?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Uğurhan Daşdemir</title>
-    <link rel="stylesheet" href="<?= asset('css/style.css') ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
 
-    <!-- home section -->
-    <section id="home" class="flex s-around sw-80 m-auto">
-        <main class="container">
-            <p>Hello 👋 I'm</p>
-            <section class="animation">
-                <div class="anim-wrapper">
-                    <div class="first">Uğurhan Daşdemir</div>
-                    <div class="second">Web Developer </div>
-                    <div class="third"> AI Developer</div>
-                    <div class="fourth">Software Engineer</div>
-                </div>
-            </section>
-        </main>
-    </section>
-
-    <!-- about section -->
-    <section id="about">
-        <h1 class="t-center my-2 t-white f-2 about-title">About Me</h1>
-        <div class="about-container flex s-center items-center">
-            <div class="about-image">
-                <!-- Image is hidden via CSS -->
-            </div>
-            <div class="about-content about-centered">
-                <p class="t-white m-b-1 popinss about-name">Uğurhan Daşdemir</p>
-                <p class="t-white">
-                    Merhaba, ben Uğurhan Daşdemir. Atatürk Üniversitesi'nde Bilgisayar Mühendisliği okuyorum. Özellikle yapay zeka, veri mühendisliği ve algoritmalarla uğraşmayı seviyorum. Son zamanlarda Teknofest gibi yarışmalarda yer aldım; ulaşımda yapay zeka uygulamaları ve otonom İHA projelerinde çalıştım.
-                    Zor görünen problemleri parçalayıp anlaşılır ve işe yarar çözümler üretmek hoşuma gidiyor. Şu sıralar daha çok makine öğrenmesi, algoritmalar ve backend tarafında kendimi geliştirmeye odaklandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
-                </p>
-                <div class="home-buttons">
-                    <a href="<?= asset('pdf/ozgecmis.pdf') ?>" target="_blank">
-                        <button class="btn live popinss">Resume</button>
-                    </a>
-                    <a class="btn live popinss" id="hireme" href="mailto:ugurhandasdemir@gmail.com">Contact Me</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- skills section -->
-    <section id="skills">
-        <h1 class="t-center my-2 t-white f-2">Skills</h1>
-        <div class="skills-list about-centered">
-            <span class="skill-item">C++</span>
-            <span class="skill-item">Python</span>
-            <span class="skill-item">HTML / CSS</span>
-            <span class="skill-item">JavaScript</span>
-            <span class="skill-item">Django</span>
-            <span class="skill-item">Numpy</span>
-            <span class="skill-item">Pandas</span>
-            <span class="skill-item">Matplotlib</span>
-            <span class="skill-item">Seaborn</span>
-            <span class="skill-item">Scikit-learn</span>
-            <span class="skill-item">PyTorch</span>
-            <span class="skill-item">OpenCV</span>
-            <span class="skill-item">Oracle SQL</span>
-            <span class="skill-item">Microsoft Server SQL</span>
-            <span class="skill-item">LLM</span>
-            <span class="skill-item">n8n</span>
-            <span class="skill-item">Linux</span>
-            <span class="skill-item">LangChain</span>
-        </div>
-    </section>
-
-    <!-- project section -->
-    <section id="projects">
-        <h1 class="t-center my-2 t-white f-2">Projects</h1>
-
-        <div class="projects-slider">
-            <button class="slider-btn prev" aria-label="Previous projects">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-
-            <div class="projects-viewport">
-                <div class="projects-track" id="projects-track">
-                    <!-- JS dolduracak -->
-                </div>
-            </div>
-
-            <button class="slider-btn next" aria-label="Next projects">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
-
-    <!-- contact section -->
-    <section id="contact">
-        <h1 class="t-center my-2 t-white f-2">Contact</h1>
-        <div class="contact-container flex s-center items-center" style="gap:2rem; flex-wrap:wrap;">
-            <div class="contact-card flex f-col s-center items-center">
-                <span class="contact-icon"><i class="fa-solid fa-user"></i></span>
-                <span class="contact-label">Uğurhan Daşdemir</span>
-            </div>
-            <div class="contact-card flex f-col s-center items-center">
-                <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
-                <a href="mailto:ugurhandasdemir@gmail.com" class="contact-link">ugurhandasdemir@gmail.com</a>
-            </div>
-            <div class="contact-card flex f-col s-center items-center">
-                <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
-                <a href="https://github.com/ugurhandasdemir" target="_blank" class="contact-link">ugurhandasdemir</a>
-            </div>
-            <div class="contact-card flex f-col s-center items-center">
-                <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
-                <a href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" class="contact-link">Uğurhan Daşdemir</a>
-            </div>
-            <div class="contact-card flex f-col s-center items-center">
-                <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
-                <a href="tel:+905364078583" class="contact-link">+90 536 407 8583</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- footer section -->
-    <footer class="flex s-around">
-        <p class="t-center my-2 popinss">&copy; All rights reserved - <span class="cpy-white popins">Uğurhan Daşdemir</span></p>
-    </footer>
-
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', ()=> {
-        const track = document.querySelector('.projects-track');
-        const prev = document.querySelector('.slider-btn.prev');
-        const next = document.querySelector('.slider-btn.next');
-
-        if(!track || !prev || !next){
-            return;
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Uğurhan Daşdemir - Software Engineer &amp; AI Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container": "#eceef0",
+                        "background": "#f7f9fb",
+                        "secondary-container": "#645efb",
+                        "tertiary-fixed": "#acedff",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed": "#dae2fd",
+                        "surface-variant": "#e0e3e5",
+                        "primary-container": "#131b2e",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface-variant": "#45464d",
+                        "secondary-fixed": "#e2dfff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#565e74",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-fixed": "#131b2e",
+                        "on-primary-container": "#7c839b",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "tertiary": "#000000",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#0090a9",
+                        "surface-card": "#FFFFFF",
+                        "on-background": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "tertiary-container": "#001f26",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c6c6cd",
+                        "ai-accent": "#06B6D4",
+                        "on-surface": "#191c1e",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#4b41e1",
+                        "primary": "#000000",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#bec6e0",
+                        "border-subtle": "#E2E8F0",
+                        "on-primary": "#ffffff",
+                        "text-main": "#334155",
+                        "innovation-glow": "rgba(79, 70, 229, 0.1)",
+                        "outline": "#76777d",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-fixed": "#0f0069",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "surface": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "code-snippet": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "code-snippet": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    },
+                    "keyframes": {
+                        "fade-in-up": {
+                            "0%": { "opacity": "0", "transform": "translateY(30px)" },
+                            "100%": { "opacity": "1", "transform": "translateY(0)" }
+                        },
+                        "shimmer": {
+                            "0%": { "transform": "translateX(-100%)" },
+                            "100%": { "transform": "translateX(100%)" }
+                        },
+                        "blob": {
+                            "0%": { "transform": "translate(0px, 0px) scale(1)" },
+                            "33%": { "transform": "translate(30px, -50px) scale(1.1)" },
+                            "66%": { "transform": "translate(-20px, 20px) scale(0.9)" },
+                            "100%": { "transform": "translate(0px, 0px) scale(1)" }
+                        }
+                    },
+                    "animation": {
+                        "fade-in-up": "fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+                        "shimmer": "shimmer 2.5s infinite",
+                        "blob": "blob 7s infinite"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
-        const scrollAmount = () => {
-            const firstSlide = track.querySelector('.projects-slide');
-            return firstSlide ? firstSlide.getBoundingClientRect().width + 24 : 320;
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .animate-on-scroll.is-visible {
+            animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        /* Nav Link Underline */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: theme('colors.secondary');
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased font-body-md text-body-md relative">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface/80 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<a class="font-display-lg text-primary tracking-tighter hover:text-secondary transition-colors duration-300" href="#" style="font-size: 24px; font-family: 'Montserrat', sans-serif;">Uğurhan Daşdemir</a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-secondary font-label-md text-label-md transition-colors duration-200 nav-link active" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#skills">Skills</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#contact">Contact</a>
+</div>
+<a class="hidden md:inline-flex bg-secondary text-white font-label-md text-label-md px-6 py-3 rounded-full hover:bg-secondary-container hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg" href="#contact">
+                Contact Me
+            </a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop min-h-[600px] flex flex-col items-center justify-center gap-gutter pt-12 md:pt-24 pb-section-gap relative overflow-hidden" id="home">
+<!-- Ambient Background -->
+<div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+<div class="absolute top-0 -right-4 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+<div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+<div class="space-y-8 text-center z-10 w-full max-w-4xl relative">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary animate-on-scroll">
+                    Karmaşık problemleri <br class="hidden md:block"/><span class="text-secondary">zarif kodlar ve yapay zeka ile çözüyorum.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-main max-w-2xl mx-auto animate-on-scroll delay-100">
+                    I'm Uğurhan Daşdemir, a Software Engineer &amp; AI Developer specializing in Machine Learning, Backend Systems, and Scalable Solutions.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll delay-200">
+<button class="bg-secondary text-white font-label-md text-label-md px-8 py-4 rounded-full hover:bg-secondary-container transition-all duration-300 text-center shadow-[0_4px_14px_0_rgba(75,65,225,0.39)] hover:shadow-[0_8px_25px_rgba(75,65,225,0.4)] hover:-translate-y-1 hover:scale-105 transform relative overflow-hidden group" onclick="document.getElementById('cv-modal').classList.remove('hidden')">
+<span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></span>
+                        CV Görüntüle
+                    </button>
+<a class="bg-transparent border border-primary text-primary font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-variant transition-all duration-300 text-center hover:shadow-md hover:-translate-y-1 hover:scale-105" href="#projects">
+                        View Projects
+                    </a>
+<a class="bg-transparent border border-border-subtle text-text-main font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-variant transition-all duration-300 text-center hover:shadow-md hover:-translate-y-1 hover:scale-105" href="#contact">
+                        Contact Me
+                    </a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-surface-container-low py-section-gap" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-3xl mx-auto text-center space-y-6">
+<h2 class="font-headline-md text-headline-md text-primary animate-on-scroll">About Me</h2>
+<p class="font-body-md text-body-md text-text-main leading-relaxed text-left md:text-center animate-on-scroll delay-100">
+                        I am Uğurhan Daşdemir, an eager Software Engineer and Artificial Intelligence Developer with an endless passion for innovation. My journey is fueled by a desire to craft intelligent solutions that not only push the boundaries of technology but also make a tangible impact. 
+                    </p>
+<p class="font-body-md text-body-md text-text-main leading-relaxed text-left md:text-center mt-4 animate-on-scroll delay-200">
+                        Currently studying at <span class="font-bold text-secondary">Atatürk University</span>, I have honed my skills through rigorous academic challenges and real-world applications. A significant milestone in my career was competing in <span class="font-bold text-secondary">Teknofest</span>, where I applied my expertise in AI and backend systems to develop high-performance, scalable solutions under intense pressure.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="skills">
+<div class="text-center mb-16 animate-on-scroll">
+<h2 class="font-headline-md text-headline-md text-primary">Technical Arsenal</h2>
+<p class="font-body-md text-body-md text-text-main mt-4">Core competencies across the stack.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Languages Card -->
+<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] transition-all duration-300 animate-on-scroll delay-100 cursor-default">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">code</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Languages</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Python</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">C++</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">JavaScript</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">C#</span>
+</div>
+</div>
+<!-- AI/ML Card -->
+<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] transition-all duration-300 relative overflow-hidden animate-on-scroll delay-200 cursor-default">
+<div class="absolute top-0 right-0 w-32 h-32 bg-innovation-glow rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+<div class="flex items-center gap-3 mb-6 relative z-10">
+<span class="material-symbols-outlined text-ai-accent text-3xl">smart_toy</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">AI &amp; Machine Learning</h3>
+</div>
+<div class="flex flex-wrap gap-3 relative z-10">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md px-4 py-2 rounded-full">PyTorch</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md px-4 py-2 rounded-full">Scikit-learn</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md px-4 py-2 rounded-full">LangChain</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Numpy</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Pandas</span>
+</div>
+</div>
+<!-- Data & Backend Card -->
+<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] transition-all duration-300 animate-on-scroll delay-300 cursor-default">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">database</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Data &amp; Backend</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">SQL</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">FastAPI</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Docker</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Git</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="bg-surface-container-low py-section-gap relative" id="projects">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+<div class="text-center mb-16 animate-on-scroll">
+<h2 class="font-headline-md text-headline-md text-primary">Featured Projects</h2>
+<p class="font-body-md text-body-md text-text-main mt-4">Selected works demonstrating complex problem solving.</p>
+</div>
+<div class="relative group">
+<button aria-label="Previous Project" class="absolute left-[-16px] md:left-[-24px] top-1/2 transform -translate-y-1/2 bg-surface-card border border-border-subtle rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-surface-variant hover:text-secondary hover:scale-110 active:scale-95 transition-all duration-200 focus:outline-none hidden md:flex" id="prevBtn">
+<span class="material-symbols-outlined text-2xl">chevron_left</span>
+</button>
+<button aria-label="Next Project" class="absolute right-[-16px] md:right-[-24px] top-1/2 transform -translate-y-1/2 bg-surface-card border border-border-subtle rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-surface-variant hover:text-secondary hover:scale-110 active:scale-95 transition-all duration-200 focus:outline-none hidden md:flex" id="nextBtn">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</button>
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-gutter scroll-smooth no-scrollbar pb-8" id="projectSlider">
+<!-- Project 1 -->
+<div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col animate-on-scroll delay-100">
+<div class="h-48 bg-surface-variant relative overflow-hidden shrink-0">
+<img alt="Drone rendering" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700" data-alt="A highly detailed, photorealistic 3D render of a futuristic autonomous quadcopter drone hovering inside a pristine, white laboratory setting. The lighting is bright and evenly distributed, emphasizing a modern, clean engineering environment. The drone features sleek dark grey carbon fiber textures with subtle glowing cyan accents to represent active AI processing. The composition conveys precision and advanced aerospace technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqC44rIlrq35jM1o6tjpc3aDj61NSF9Y7un1vAcR7pfRqQobFUzCEPYzJV1_O1Sy2TpEV-iI23uTf2fMLg441OodE1jl-Y_dlSrsKUJCfh8iS4JM9uFCzmnSMtiR1EPBiVjTzcGZTeuMz5BmHZaZSY2jabhpogw_07_KhuxoIYP0DcFmUyB2fTev7tzqcxe_Z9nj43KjUBWcR-Nmapd6GFK_p_TtBnRLkb3lpHz-YDFdzE8rE-DT__zXZ4Xh_Q7TVYjmVATOtDreA"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-[12px] px-3 py-1 rounded-full">Computer Vision</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">C++</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3 group-hover/card:text-secondary transition-colors duration-300">Autonomous UAV System</h3>
+<p class="font-body-md text-body-md text-text-main mb-6 flex-1">
+                                Developed core flight algorithms and real-time object detection systems for autonomous navigation. Showcased at Teknofest, achieving high accuracy in dynamic environments.
+                            </p>
+<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="#">
+<span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
+                                View Case Study <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col animate-on-scroll delay-200">
+<div class="h-48 bg-surface-variant relative overflow-hidden shrink-0">
+<img alt="City traffic with data overlays" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700" data-alt="A modern, minimalist architectural rendering of a smart city intersection viewed from above. The scene is brightly lit with daylight, showcasing clean concrete structures and organized traffic flows. Superimposed over the physical environment are subtle, glowing blue digital network lines and data nodes, illustrating real-time traffic analysis and AI integration. The aesthetic is highly polished, professional, and optimistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcFKaI7OmBoEsIGTegUopBrwQ59g94HHi8tGg9iBJBbEP8hQg51IeXkEAOFA9-H4XqmAZhOaXiQjCffGLlbgjGZYTuvhpZ7k1oNf6yWY5QE2T9kV9BxGJAJghx57ovwKGPWpLq3WwxqQBNUHj3xf1FpCBSXbtmxJvFOmQiaaXbJUQ1u07e_qkfgj9SAjK49K2h50hLe5hh0AAerea9xeV39l1vVBqAAmeaOkk1td-2iiEfUilY_VSkMy0dunzcG8SK0BA9KD3zPnk"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-[12px] px-3 py-1 rounded-full">Machine Learning</span>
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">Python</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3 group-hover/card:text-secondary transition-colors duration-300">AI in Transportation</h3>
+<p class="font-body-md text-body-md text-text-main mb-6 flex-1">
+                                A predictive modeling system utilizing historical traffic data and real-time inputs to optimize routing and reduce congestion in urban environments using deep learning techniques.
+                            </p>
+<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="#">
+<span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
+                                View Case Study <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project Placeholder 3 -->
+<div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle border-dashed group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col animate-on-scroll delay-300">
+<div class="h-48 bg-surface-container flex items-center justify-center relative overflow-hidden shrink-0">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant/50 group-hover/card:scale-125 group-hover/card:rotate-12 transition-transform duration-500">rocket_launch</span>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full opacity-50">Coming Soon</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary/70 mb-3 group-hover/card:text-primary transition-colors duration-300">Future Innovation</h3>
+<p class="font-body-md text-body-md text-text-main/70 mb-6 flex-1 group-hover/card:text-text-main transition-colors duration-300">
+                                Currently working on a new exciting project combining scalable backend architecture with generative AI models.
+                            </p>
+<a class="inline-flex items-center text-secondary/50 font-label-md text-label-md cursor-not-allowed mt-auto" href="#">
+                                In Progress <span class="material-symbols-outlined ml-1 text-sm">schedule</span>
+</a>
+</div>
+</div>
+<!-- Project Placeholder 4 -->
+<div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle border-dashed group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col">
+<div class="h-48 bg-surface-container flex items-center justify-center relative overflow-hidden shrink-0">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant/50 group-hover/card:scale-125 group-hover/card:text-yellow-400 transition-all duration-500">lightbulb</span>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex gap-2 mb-4">
+<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full opacity-50">Ideation</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary/70 mb-3">Next Big Thing</h3>
+<p class="font-body-md text-body-md text-text-main/70 mb-6 flex-1">
+                                Exploring new paradigms in edge computing and decentralized AI inference.
+                            </p>
+<a class="inline-flex items-center text-secondary/50 font-label-md text-label-md cursor-not-allowed mt-auto" href="#">
+                                Planning <span class="material-symbols-outlined ml-1 text-sm">more_horiz</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background w-full py-16 border-t border-border-subtle" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left">
+<span class="font-headline-sm text-headline-sm text-primary block mb-2">Uğurhan Daşdemir</span>
+<p class="font-body-md text-body-md text-text-main max-w-sm">
+                    Open to new opportunities and exciting technical challenges.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="tel:+905364078583">
+<span class="material-symbols-outlined group-hover:animate-bounce">call</span>
+<span class="font-label-md text-label-md">+90 536 407 8583</span>
+</a><a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="mailto:ugurhandasdemir@gmail.com">
+<span class="material-symbols-outlined group-hover:animate-bounce">mail</span>
+<span class="font-label-md text-label-md">Email</span>
+</a>
+<a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">
+<span class="material-symbols-outlined group-hover:animate-bounce">code</span>
+<span class="font-label-md text-label-md">GitHub</span>
+</a>
+<a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" rel="noopener">
+<span class="material-symbols-outlined group-hover:animate-bounce">account_circle</span>
+<span class="font-label-md text-label-md">LinkedIn</span>
+</a>
+</div>
+<div class="text-center md:text-right">
+<p class="font-label-md text-[12px] text-on-surface-variant">
+                    © 2024 Uğurhan Daşdemir. Built with precision and AI.
+                </p>
+</div>
+</div>
+</footer>
+<!-- CV Modal -->
+<div class="fixed inset-0 z-[100] hidden" id="cv-modal">
+<div class="absolute inset-0 bg-primary/80 backdrop-blur-sm transition-opacity" onclick="document.getElementById('cv-modal').classList.add('hidden')"></div>
+<div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+<div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+<div class="relative transform overflow-hidden rounded-2xl bg-surface-card text-left shadow-2xl transition-all sm:my-8 w-full sm:max-w-4xl border border-border-subtle animate-[fade-in-up_0.3s_ease-out_forwards]">
+<div class="bg-surface-card px-4 pb-4 pt-5 sm:p-6 sm:pb-4 border-b border-border-subtle flex justify-between items-center">
+<h3 class="text-headline-sm font-headline-sm text-primary" id="modal-title">Curriculum Vitae</h3>
+<button class="text-on-surface-variant hover:text-error hover:rotate-90 transition-all duration-300 rounded-full p-1" onclick="document.getElementById('cv-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-4 sm:p-6">
+<div class="aspect-[1/1.4] sm:aspect-auto sm:h-[65vh] w-full bg-surface-variant rounded-lg overflow-hidden border border-border-subtle relative">
+<iframe src="/static/pdf/ozgecmis.pdf#toolbar=1" title="CV - Uğurhan Daşdemir" class="w-full h-full" loading="lazy"></iframe>
+</div>
+</div>
+<div class="bg-surface-card px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 border-t border-border-subtle">
+<a class="inline-flex w-full justify-center rounded-full bg-secondary px-6 py-3 text-label-md font-label-md text-white shadow-sm hover:bg-secondary-container hover:scale-105 hover:shadow-lg sm:ml-3 sm:w-auto transition-all duration-300" download="Ugurhan_Dasdemir_CV.pdf" href="/static/pdf/ozgecmis.pdf" target="_blank" rel="noopener">
+                            Download PDF
+                        </a>
+<button class="mt-3 inline-flex w-full justify-center rounded-full bg-white px-6 py-3 text-label-md font-label-md text-primary shadow-sm ring-1 ring-inset ring-border-subtle hover:bg-surface-container-low hover:scale-105 sm:mt-0 sm:w-auto transition-all duration-300" onclick="document.getElementById('cv-modal').classList.add('hidden')" type="button">
+                            Close
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
         };
 
-        prev.addEventListener('click', () => {
-            track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: stop observing once animated
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
         });
 
-        next.addEventListener('click', () => {
-            track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+        // Project Slider
+        const slider = document.getElementById('projectSlider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        if(slider && prevBtn && nextBtn) {
+            const scrollAmount = () => {
+                if (window.innerWidth >= 1024) return slider.clientWidth / 3 + 24;
+                if (window.innerWidth >= 768) return slider.clientWidth / 2 + 12;
+                return slider.clientWidth + 24;
+            };
+
+            prevBtn.addEventListener('click', () => {
+                slider.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                slider.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+            });
+        }
+
+        // Active Nav Link updating
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
         });
-    } );
+    });
 </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const track = document.querySelector('.projects-track');
-  if (!track) return;
-
-  let timer = setInterval(() => {
-    track.scrollBy({ left: 340, behavior: 'smooth' });
-    if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
-      track.scrollTo({ left: 0, behavior: 'smooth' });
-    }
-  }, 2500);
-
-  track.addEventListener('mouseenter', () => clearInterval(timer));
-  track.addEventListener('mouseleave', () => {
-    timer = setInterval(() => {
-      track.scrollBy({ left: 340, behavior: 'smooth' });
-      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
-        track.scrollTo({ left: 0, behavior: 'smooth' });
-      }
-    }, 2500);
-  });
-});
-</script>
-
+<!-- Dynamic projects loader (ported backend: repos.json + GitHub API) -->
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
-  const track = document.getElementById('projects-track');
-  if (!track) return;
+    const slider = document.getElementById('projectSlider');
+    if (!slider) return;
 
-  const username = "ugurhandasdemir";
+    // Clear the static demo cards immediately, show loading state
+    slider.innerHTML = '<div class="w-full text-center py-16 font-body-md text-body-md text-text-main">Projeler yükleniyor…</div>';
 
-  const formatDate = (iso) => {
-    const d = new Date(iso);
-    return d.toLocaleDateString('tr-TR', { year: 'numeric', month: 'short', day: 'numeric' });
-  };
+    const username = "ugurhandasdemir";
 
-  const getReadmeIntro = async (repoName) => {
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const assetUrl = (p) => p ? ('/' + String(p).replace(/^\/+/, '')) : null;
+    const formatDate = (iso) => {
+        if (!iso) return '';
+        const d = new Date(iso);
+        return d.toLocaleDateString('tr-TR', { year: 'numeric', month: 'short', day: 'numeric' });
+    };
+
+    const getReadmeIntro = async (repoName) => {
+        try {
+            const res = await fetch(`https://api.github.com/repos/${username}/${repoName}/readme`, {
+                headers: { 'Accept': 'application/vnd.github.v3.raw' }
+            });
+            if (!res.ok) return null;
+            const text = await res.text();
+            const lines = text.split('\n');
+            let paragraph = '';
+            for (const line of lines) {
+                const trimmed = line.trim();
+                if (!trimmed || trimmed.startsWith('#') || trimmed.startsWith('!') || trimmed.startsWith('[!') || trimmed.startsWith('[![')) {
+                    if (paragraph) break;
+                    continue;
+                }
+                paragraph += (paragraph ? ' ' : '') + trimmed;
+            }
+            paragraph = paragraph.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+            if (paragraph.length > 180) paragraph = paragraph.substring(0, 180).trim() + '...';
+            return paragraph || null;
+        } catch { return null; }
+    };
+
+    const cardHTML = (r, i) => {
+        const delay = ['delay-100', 'delay-200', 'delay-300'][i % 3];
+        const img = assetUrl(r.image);
+        const media = img
+            ? `<img alt="${esc(r.name)}" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700" src="${esc(img)}"/>`
+            : `<div class="w-full h-full flex items-center justify-center bg-surface-container"><span class="material-symbols-outlined text-5xl text-on-surface-variant/40 group-hover/card:scale-125 group-hover/card:rotate-6 transition-transform duration-500">terminal</span></div>`;
+        const desc = r.readmeIntro ?? r.description ?? 'Açıklama yok.';
+        const dateChip = r.updated_at
+            ? `<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">${esc(formatDate(r.updated_at))}</span>`
+            : '';
+        return `
+        <div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col animate-on-scroll is-visible ${delay}">
+            <div class="h-48 bg-surface-variant relative overflow-hidden shrink-0">${media}</div>
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex gap-2 mb-4">${dateChip}</div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-3 group-hover/card:text-secondary transition-colors duration-300">${esc(r.name)}</h3>
+                <p class="font-body-md text-body-md text-text-main mb-6 flex-1">${esc(desc)}</p>
+                <a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="/project_details.html">
+                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
+                    View Case Study <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
+                </a>
+            </div>
+        </div>`;
+    };
+
     try {
-      const res = await fetch(`https://api.github.com/repos/${username}/${repoName}/readme`, {
-        headers: { 'Accept': 'application/vnd.github.v3.raw' }
-      });
-      if (!res.ok) return null;
-      const text = await res.text();
-      const lines = text.split('\n');
-      let paragraph = '';
-      for (const line of lines) {
-        const trimmed = line.trim();
-        if (!trimmed || trimmed.startsWith('#') || trimmed.startsWith('!') || trimmed.startsWith('[!') || trimmed.startsWith('[![')) {
-          if (paragraph) break;
-          continue;
-        }
-        paragraph += (paragraph ? ' ' : '') + trimmed;
-      }
-      paragraph = paragraph.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
-      if (paragraph.length > 200) paragraph = paragraph.substring(0, 200).trim() + '...';
-      return paragraph || null;
-    } catch { return null; }
-  };
+        const listRes = await fetch('/repos.json', { cache: 'no-cache' });
+        if (!listRes.ok) throw new Error('repos.json alınamadı');
+        const listData = await listRes.json();
+        const allowed = new Set(listData.repos || []);
+        const manualProjects = listData.manual || [];
 
-  try {
-    const listRes = await fetch('/repos.json', { cache: 'no-cache' });
-    if (!listRes.ok) throw new Error('Repos listesi alınamadı');
-    const listData = await listRes.json();
-    const allowed = new Set(listData.repos || []);
-    const manualProjects = listData.manual || [];
+        let repos = [];
+        try {
+            const reposRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+            if (reposRes.ok) repos = await reposRes.json();
+        } catch { /* GitHub erişilemezse manuel projelerle devam */ }
+        repos = (Array.isArray(repos) ? repos : []).filter(r => allowed.has(r.name));
 
-    const reposRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
-    if (!reposRes.ok) throw new Error('GitHub API hatası');
-    let repos = await reposRes.json();
+        const reposWithReadme = await Promise.all(
+            repos.map(async (r) => ({
+                name: r.name,
+                description: r.description,
+                readmeIntro: await getReadmeIntro(r.name),
+                updated_at: r.updated_at,
+                image: null
+            }))
+        );
 
-    repos = repos.filter(r => allowed.has(r.name));
+        const allProjects = [
+            ...reposWithReadme,
+            ...manualProjects.map(m => ({
+                name: m.name,
+                description: m.description,
+                readmeIntro: m.description,
+                updated_at: m.updated_at,
+                image: m.image || null
+            }))
+        ];
 
-    const reposWithReadme = await Promise.all(
-      repos.map(async (r) => {
-        const readmeIntro = await getReadmeIntro(r.name);
-        return { 
-          ...r, 
-          readmeIntro, 
-          isManual: false,
-          image: null,
-          youtube: null,
-          kaggle: null
-        };
-      })
-    );
+        allProjects.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
-    // Elle eklenen projeleri ekle
-    const allProjects = [
-      ...reposWithReadme,
-      ...manualProjects.map(m => ({
-        name: m.name,
-        description: m.description,
-        readmeIntro: m.description,
-        updated_at: m.updated_at,
-        html_url: m.html_url,
-        homepage: m.homepage,
-        image: m.image || null,
-        youtube: m.youtube || null,
-        kaggle: m.kaggle || null,
-        isManual: true
-      }))
-    ];
-
-    // Tarihe göre sırala
-    allProjects.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-
-    track.innerHTML = allProjects.map(r => `
-      <div class="projects-item projects-slide flex f-col s-center items-center">
-        <h1 class="t-white popinss">${r.name}</h1>
-        <p class="t-white">${r.readmeIntro ?? r.description ?? "Açıklama yok."}</p>
-        <p class="t-white" style="opacity:.7; margin-top:.5rem;">
-          Güncelleme: ${formatDate(r.updated_at)}
-        </p>
-        <div class="button flex s-around" style="flex-wrap:wrap; gap:.5rem;">
-          ${r.html_url ? `
-            <a href="${r.html_url}" target="_blank">
-              <button class="btn-project mx-1 m-top"><i class="fa-brands fa-github"></i> Github</button>
-            </a>` : ''}
-          ${r.homepage ? `
-            <a href="${r.homepage}" target="_blank">
-              <button class="btn-project mx-1 m-top"><i class="fa-solid fa-globe"></i> Live</button>
-            </a>` : ''}
-          ${r.image ? `
-            <a href="${r.image}" target="_blank">
-              <button class="btn-project mx-1 m-top"><i class="fa-solid fa-image"></i> Görsel</button>
-            </a>` : ''}
-          ${r.youtube ? `
-            <a href="${r.youtube}" target="_blank">
-              <button class="btn-project mx-1 m-top"><i class="fa-brands fa-youtube"></i> YouTube</button>
-            </a>` : ''}
-          ${r.kaggle ? `
-            <a href="${r.kaggle}" target="_blank">
-              <button class="btn-project mx-1 m-top"><i class="fa-brands fa-kaggle"></i> Kaggle</button>
-            </a>` : ''}
-          ${!r.html_url && !r.homepage && !r.image && !r.youtube && !r.kaggle ? `<span class="t-white" style="opacity:.5;">Private</span>` : ''}
-        </div>
-      </div>
-    `).join("") || `<p class="t-white">Gösterilecek proje bulunamadı.</p>`;
-  } catch (e) {
-    track.innerHTML = `<p class="t-white">Projeler yüklenemedi.</p>`;
-  }
+        slider.innerHTML = allProjects.length
+            ? allProjects.map((r, i) => cardHTML(r, i)).join('')
+            : '<p class="w-full text-center py-16 font-body-md text-body-md text-text-main">Gösterilecek proje bulunamadı.</p>';
+    } catch (e) {
+        slider.innerHTML = '<p class="w-full text-center py-16 font-body-md text-body-md text-text-main">Projeler yüklenemedi.</p>';
+    }
 });
 </script>
-</body>
-</html>
+</body></html>

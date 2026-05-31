@@ -2,8 +2,8 @@
 $uri = $_SERVER['REQUEST_URI'];
 $path = parse_url($uri, PHP_URL_PATH);
 
-// Statik dosyalar ve repos.json
-if (preg_match('/^\/(static\/|repos\.json)/', $path)) {
+// Statik dosyalar, repos.json ve case study sayfası
+if (preg_match('/^\/(static\/|repos\.json|project_details\.html)/', $path)) {
     $file = __DIR__ . $path;
     if (is_file($file)) {
         $ext = pathinfo($file, PATHINFO_EXTENSION);
@@ -11,6 +11,7 @@ if (preg_match('/^\/(static\/|repos\.json)/', $path)) {
             'css'  => 'text/css',
             'js'   => 'application/javascript',
             'json' => 'application/json',
+            'html' => 'text/html; charset=utf-8',
             'png'  => 'image/png',
             'jpg'  => 'image/jpeg',
             'jpeg' => 'image/jpeg',

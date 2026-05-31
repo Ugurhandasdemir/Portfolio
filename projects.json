@@ -1,0 +1,175 @@
+{
+  "projects": [
+    {
+      "name": "Manga Translator",
+      "description": "Python ile manga görsellerindeki konuşma balonlarını otomatik olarak tespit eden, OCR ile metin çıkaran, İngilizce metinleri Türkçeye çeviren ve çeviri sonucunu görsel üzerine yeniden yerleştiren yapay zeka destekli bir görüntü işleme uygulaması geliştirdim. YOLO/Ultralytics ile nesne tespiti, OpenCV ve Pillow ile görüntü işleme ve dinamik metin yerleştirme, Ollama, Google Gemini API ve OpenAI API entegrasyonlarıyla fallback destekli LLM tabanlı çeviri mimarisi uyguladım. Toplu görsel işleme, crop üretimi, JSON metadata kaydı, GPU/CPU cihaz seçimi ve VRAM yönetimi özellikleriyle süreci daha stabil ve izlenebilir hale getirdim.",
+      "technologies": [
+        "Python",
+        "YOLO",
+        "OpenCV",
+        "OCR",
+        "Ollama",
+        "Gemini API",
+        "OpenAI API"
+      ]
+    },
+    {
+      "name": "Local Deep Research",
+      "description": "Python, FastAPI ve Flutter ile yerel bir RAG uygulaması geliştirdim. Uygulama PDF dosyalarını yükler, metinlerini çıkarır. İçerikleri parçalara ayırarak vektör veritabanlarına kaydeder. ChromaDB, Milvus, Qdrant, LanceDB ve Weaviate üzerinde semantik arama altyapısı kurdum. Ollama tabanlı yerel LLM entegrasyonu ile kaynaklı soru-cevap ve rapor üretimi sağladım. SentenceTransformers, Transformers ve PyTorch kullanarak 28 farklı embedding modelini benchmark ettim. Modelleri 52.331 belge üzerinde yazma süresi, arama gecikmesi, nDCG@10, Recall@10/100, MRR@10 ve Hit@1/10 metrikleriyle karşılaştırdım. Sonuçları JSON ve Excel formatında raporlanabilir hale getirdim.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Flutter",
+        "RAG",
+        "LLM",
+        "Ollama",
+        "SentenceTransformers",
+        "Transformers",
+        "PyTorch",
+        "ChromaDB",
+        "Milvus",
+        "Qdrant",
+        "LanceDB",
+        "Weaviate",
+        "Vector Database",
+        "Semantic Search",
+        "PDF Processing",
+        "PyPDF2",
+        "pdfplumber",
+        "NumPy",
+        "pandas"
+      ]
+    },
+    {
+      "name": "Edge AI Tabanlı Termal Nesne Tespiti",
+      "description": "Uç cihazlarda gerçek zamanlı nesne tespiti için Python tabanlı bir derin öğrenme projesi geliştirdim. Termal görüntüler üzerinde car, person ve other_vehicle sınıflarını tespit eden modeller eğittim. YOLOv8, YOLOv11, Faster R-CNN ve RT-DETR mimarilerini karşılaştırdım. PyTorch, Ultralytics, OpenCV ve Albumentations kullandım. COCO ve YOLO veri formatlarıyla çalıştım. Focal Loss ve Class-Balanced Loss ile sınıf dengesizliği problemini ele aldım. Modelleri precision, recall, mAP50 ve mAP50-95 metrikleriyle değerlendirdim. ONNX dönüşümü, INT8 quantization ve structured pruning uyguladım. Jetson Orin üzerinde FPS ve inference time benchmark testleri yaptım. Düşük kaynaklı cihazlarda hızlı ve optimize nesne tespiti hedefledim.",
+      "technologies": [
+          "Python",
+          "PyTorch",
+          "TorchVision",
+          "Ultralytics YOLO",
+          "YOLOv8",
+          "YOLOv11",
+          "Faster R-CNN",
+          "RT-DETR",
+          "OpenCV",
+          "Albumentations",
+          "COCO",
+          "YOLO Dataset Format",
+          "ONNX",
+          "ONNX Runtime",
+          "INT8 Quantization",
+          "Structured Pruning",
+          "Torch-Pruning",
+          "CUDA",
+          "Jetson Orin",
+          "NumPy",
+          "pandas",
+          "Matplotlib"
+      ]
+    },
+    {
+      "name": "Beyin Tümörü Sınıflandırma",
+      "description": "12.064 MR görüntüsünden oluşan Glioma, Meningioma, Pituitary ve No Tumor sınıflarını içeren veri seti üzerinde veri analizi ve ön işleme adımlarını gerçekleştirdim. Görüntüleri 224x224 boyutuna ölçekleyip normalize ederek RandomAffine, ColorJitter ve GaussianBlur gibi veri çoğaltma teknikleri uyguladım. PyTorch ile DenseNet121+SE+LSTM, EfficientNet/ResNet tabanlı hibrit modeller ve özgün CNN mimarileri geliştirdim; modelleri Adam optimizasyonu ve early stopping ile eğitip Accuracy, Precision, Recall, F1-score ve AUC metrikleri ile değerlendirdim. En iyi modellerde yaklaşık %97–98 doğruluk seviyesine ulaştım.",
+      "technologies": [
+        "Python", 
+        "PyTorch",
+        "DenseNet121",
+        "EfficientNet",
+        "ResNet",
+        "CNN",
+        "LSTM",
+        "OpenCV",
+        "NumPy",
+        "Scikit-learn"
+      ]
+    },
+    {
+      "name": "Gerçek Zamanlı İHA Görüntü Analizi Sistemi",
+      "description": "Videodan elde edilen görüntü kareleri üzerinde YOLOv8 ve SAHI tabanlı nesne tespiti geliştirerek insan, araç, UAP ve UAI sınıflarını tespit eden bir sistem geliştirdim. Tespit edilen nesnelerin konumlarını ve inişe uygunluk durumlarını analiz edip yarışma formatına uygun çıktılar ürettim. Ardışık kareler arasındaki kutu hareketlerinden hedef ötelemesini tahmin eden yapı kurarak sonuçları sunucuya otomatik ileten uçtan uca bir hat oluşturdum.",
+      "technologies": [
+        "Python",
+        "YOLOv8",
+        "SAHI",
+        "OpenCV",
+        "NumPy",
+        "Computer Vision",
+        "Object Detection",
+        "API Integration"
+      ]
+    },
+    {
+      "name": "Konut Fiyat Tahmini ve Yatırım Analizi Uygulaması",
+      "description": "2020 yılına ait konut ilan verileri üzerinde, bir ilanın adil piyasa değerini tahmin edip yatırım fırsatı olup olmadığını yorumlayan bir karar destek sistemi geliştirdim. Veri temizleme, target encoding, sayısallaştırma ve polinomsal dönüşümler gibi feature engineering adımlarını kurgulayarak XGBoost, LightGBM ve CatBoost modellerini Optuna ile optimize ettim segment bazlı hata analizi ve residual düzeltme yaklaşımıyla yaklaşık %93 R2 seviyesine ulaştım. Geliştirdiğim modeli Streamlit arayüzü ile son kullanıcıya sunarak girilen ilan özelliklerine göre adil değer hesaplayan ve yatırım önerisi üretenkullanılabilir bir web uygulaması oluşturdum",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "XGBoost",
+        "LightGBM",
+        "CatBoost",
+        "Optuna",
+        "Streamlit"
+      ]
+    },
+    {
+      "name": "No-Fly Zone Güvenli Rota Planlama Sistemi",
+      "description": "NoFlyZone projesinde Python tabanlı İHA rota planlama sistemi geliştirdim. QGroundControl .plan dosyalarından geofence, polygon ve circle verilerini ayrıştırdım. Bu verileri JSON ve QGC WPL 110 waypoint formatlarına dönüştürdüm. Shapely ve NumPy kullanarak uçuş alanı, engel bölgeleri ve güvenli rota kontrollerini oluşturdum. PRM ve A* algoritmaları ile no-fly zone alanlarından kaçınan gidiş ve dönüş rotaları ürettim. Rotaları B-Spline ve Chaikin yöntemleriyle yumuşattım. MAVSDK ile simülasyon bağlantısı, konum alma, görev yükleme ve mission takibi süreçlerini entegre ettim. Matplotlib ile rota, yasaklı alan ve waypoint görselleştirmeleri hazırladım. Çıktıları QGroundControl, ArduPlane ve otonom uçuş senaryoları ile uyumlu hale getirdim.",
+      "technologies": [
+        "Python",
+        "NumPy",
+        "Shapely",
+        "PRM",
+        "A*",
+        "MAVSDK",
+        "JSON", 
+        "Path Planning"
+      ]
+    },
+    {
+      "name": "Gerçek Zamanlı İHA Kaçış ve Tehdit Kontrol Sistemi",
+      "description": "Rakip İHA telemetri verilerini gerçek zamanlı işleyerek ana aracın konum, hız ve yönelim bilgileriyle birlikte tehdit analizi yapan bir kontrol sistemi geliştirdim. Mesafe, yönelim uyumu ve bölgede kalma süresi gibi kriterlerle tehdit seviyesini anlık belirleyip kritik senaryolarda MAVSDK offboard komutlarıyla otonom kaçış manevraları uygulayan bir yapı kurdum. Bu sayede savunma odaklı senaryolarda gerçek zamanlı karar verme, telemetri işleme ve otonom kontrol akışını uçtan uca tasarladım",
+      "technologies": [
+        "Python",
+        "YOLOv8",
+        "SAHI",
+        "OpenCV",
+        "NumPy",
+        "Computer Vision",
+        "Object Detection",
+        "API Integration"
+      ]
+    },
+    {
+      "name": "PawsMap - Kayıp ve Sahiplendirme Hayvan Bildirim Platformu",
+      "description": "MPawsMap, kampüs içindeki kayıp, sahiplendirme ve sağlık ihtiyacı olan hayvan bildirimleri için geliştirilen Django tabanlı bir web uygulamasıdır. Python ve Django ile kullanıcı kayıt, giriş ve çıkış akışları geliştirildi. Django Authentication, parola doğrulama, CSRF koruması ve güvenli yönlendirme kontrolleri kullanıldı. HTML, CSS ve Django Template yapısı ile responsive giriş, kayıt, yeni bildirim ve hayvan detay sayfaları hazırlandı. SQLite veritabanı, statik dosya yönetimi ve Vercel uyumlu deployment ayarları yapılandırıldı. Proje backend geliştirme, frontend arayüz tasarımı, form yönetimi ve kullanıcı kimlik doğrulama konularında pratik deneyim sağladı.",
+      "technologies": [
+        "Python",
+        "Django",
+        "Django Authentication",
+        "SQLite",
+        "HTML5",
+        "CSS3",
+        "Django Templates",
+        "Responsive Design",
+        "CSRF Protection",
+        "Vercel Deployment"
+      ]
+    },
+    {
+      "name": "THY Web Sitesi Klonu",
+      "description": "Kullanıcıların uçuş arayabildiği, koltuk seçebildiği, ödeme adımını tamamlayabildiği ve bilet sorgulama ile iptal işlemlerini gerçekleştirebildiği tam akış bir rezervasyon sistemi geliştirdim. Django ile çok adımlı rezervasyon akışını, kullanıcı kayıt ve giriş süreçlerini ve kalkış-varış seçimlerini veritabanından dinamik besleyen JSON servislerini kurguladım. Microsoft SQL Server tarafında stored procedure, function ve view yapılarıyla müşteri oluşturma, ödeme alma, boş koltuk hesaplama ve bilet özetleme süreçlerini yönettim. Aynı uçuşta çakışan koltuk seçimlerini transaction ve doğrulama katmanlarıyla engelledim.",
+      "technologies": [
+        "Python",
+        "Django", 
+        "Microsoft SQL Server", 
+        "PyODBC", 
+        "Django ORM", 
+        "JavaScript", 
+        "Bootstrap", 
+        "Stored Procedures"
+      ]
+    }
+  ]
+}
