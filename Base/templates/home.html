@@ -474,51 +474,6 @@
                 }
             });
         });
-
-        const contactForm = document.getElementById('contact-form');
-        const contactOutput = document.getElementById('contact-output');
-
-        if (contactForm && contactOutput) {
-            const outputClasses = {
-                info: 'min-h-6 font-label-md text-[13px] text-on-surface-variant',
-                success: 'min-h-6 font-label-md text-[13px] text-secondary',
-                error: 'min-h-6 font-label-md text-[13px] text-error',
-            };
-
-            const setOutput = (message, type = 'info') => {
-                contactOutput.className = outputClasses[type] || outputClasses.info;
-                contactOutput.value = message;
-            };
-
-            contactForm.addEventListener('submit', event => {
-                event.preventDefault();
-
-                const formData = new FormData(contactForm);
-                const name = String(formData.get('name') || '').trim();
-                const email = String(formData.get('email') || '').trim();
-                const message = String(formData.get('message') || '').trim();
-                const missingFields = [];
-
-                if (!name) missingFields.push('ad soyad');
-                if (!email) missingFields.push('e-posta');
-                if (!message) missingFields.push('mesaj');
-
-                if (missingFields.length) {
-                    setOutput(`Lütfen şu alanları doldurun: ${missingFields.join(', ')}.`, 'error');
-                    return;
-                }
-
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                    setOutput('Lütfen geçerli bir e-posta adresi girin.', 'error');
-                    return;
-                }
-
-                const subject = encodeURIComponent(`Portfolio iletişim: ${name}`);
-                const body = encodeURIComponent(`Ad Soyad: ${name}\nE-posta: ${email}\n\nMesaj:\n${message}`);
-                window.location.href = `mailto:ugurhandasdemir@gmail.com?subject=${subject}&body=${body}`;
-                setOutput('E-posta uygulamanız açılıyor. Mesaj içeriği hazırlandı.', 'success');
-            });
-        }
     });
 </script>
 <!-- Dynamic projects loader (ported backend: repos.json + GitHub API) -->
