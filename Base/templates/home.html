@@ -1,636 +1,516 @@
-<!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Uğurhan Daşdemir - Software Engineer &amp; AI Developer</title>
+<!DOCTYPE html><html lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Uğurhan Daşdemir - AI &amp; Full-Stack Developer</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-tertiary-fixed-variant": "#004e5c",
-                        "surface-container": "#eceef0",
-                        "background": "#f7f9fb",
-                        "secondary-container": "#645efb",
-                        "tertiary-fixed": "#acedff",
-                        "surface-container-high": "#e6e8ea",
-                        "primary-fixed": "#dae2fd",
-                        "surface-variant": "#e0e3e5",
-                        "primary-container": "#131b2e",
-                        "surface-container-highest": "#e0e3e5",
-                        "on-surface-variant": "#45464d",
-                        "secondary-fixed": "#e2dfff",
-                        "error-container": "#ffdad6",
-                        "surface-tint": "#565e74",
-                        "on-tertiary-fixed": "#001f26",
-                        "on-secondary-container": "#fffbff",
-                        "on-primary-fixed": "#131b2e",
-                        "on-primary-container": "#7c839b",
-                        "secondary-fixed-dim": "#c3c0ff",
-                        "tertiary": "#000000",
-                        "surface-dim": "#d8dadc",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary-container": "#0090a9",
-                        "surface-card": "#FFFFFF",
-                        "on-background": "#191c1e",
-                        "inverse-surface": "#2d3133",
-                        "primary-fixed-dim": "#bec6e0",
-                        "on-primary-fixed-variant": "#3f465c",
-                        "tertiary-container": "#001f26",
-                        "on-error-container": "#93000a",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#c6c6cd",
-                        "ai-accent": "#06B6D4",
-                        "on-surface": "#191c1e",
-                        "on-secondary": "#ffffff",
-                        "secondary": "#4b41e1",
-                        "primary": "#000000",
-                        "surface-container-low": "#f2f4f6",
-                        "on-secondary-fixed-variant": "#3323cc",
-                        "error": "#ba1a1a",
-                        "surface-bright": "#f7f9fb",
-                        "on-tertiary": "#ffffff",
-                        "inverse-primary": "#bec6e0",
-                        "border-subtle": "#E2E8F0",
-                        "on-primary": "#ffffff",
-                        "text-main": "#334155",
-                        "innovation-glow": "rgba(79, 70, 229, 0.1)",
-                        "outline": "#76777d",
-                        "inverse-on-surface": "#eff1f3",
-                        "on-secondary-fixed": "#0f0069",
-                        "tertiary-fixed-dim": "#4cd7f6",
-                        "surface": "#f7f9fb"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "section-gap": "120px",
-                        "gutter": "24px",
-                        "container-max": "1280px",
-                        "margin-mobile": "16px",
-                        "base": "8px",
-                        "margin-desktop": "64px"
-                    },
-                    "fontFamily": {
-                        "headline-sm": ["Montserrat"],
-                        "display-lg": ["Montserrat"],
-                        "headline-md": ["Montserrat"],
-                        "label-md": ["Inter"],
-                        "body-md": ["Inter"],
-                        "display-lg-mobile": ["Montserrat"],
-                        "code-snippet": ["Inter"],
-                        "body-lg": ["Inter"]
-                    },
-                    "fontSize": {
-                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
-                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }],
-                        "code-snippet": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
-                    },
-                    "keyframes": {
-                        "fade-in-up": {
-                            "0%": { "opacity": "0", "transform": "translateY(30px)" },
-                            "100%": { "opacity": "1", "transform": "translateY(0)" }
-                        },
-                        "shimmer": {
-                            "0%": { "transform": "translateX(-100%)" },
-                            "100%": { "transform": "translateX(100%)" }
-                        },
-                        "blob": {
-                            "0%": { "transform": "translate(0px, 0px) scale(1)" },
-                            "33%": { "transform": "translate(30px, -50px) scale(1.1)" },
-                            "66%": { "transform": "translate(-20px, 20px) scale(0.9)" },
-                            "100%": { "transform": "translate(0px, 0px) scale(1)" }
-                        }
-                    },
-                    "animation": {
-                        "fade-in-up": "fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-                        "shimmer": "shimmer 2.5s infinite",
-                        "blob": "blob 7s infinite"
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "outline": "#777587",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e6e8ea",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "secondary": "#515f74",
+                    "on-tertiary-container": "#ffc9b4",
+                    "secondary-fixed": "#d5e3fd",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary-fixed-variant": "#7e2c00",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#4d44e3",
+                    "primary-container": "#4b41e1",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary-fixed": "#0f0069",
+                    "primary-fixed": "#e2dfff",
+                    "on-secondary-container": "#57657b",
+                    "outline-variant": "#c7c4d8",
+                    "tertiary-fixed-dim": "#ffb597",
+                    "on-background": "#191c1e",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "secondary-container": "#d5e3fd",
+                    "surface-container": "#eceef0",
+                    "on-surface": "#191c1e",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "text-ink": "#000000",
+                    "surface": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f2f4f6",
+                    "primary": "#311fca",
+                    "surface-pure": "#FFFFFF",
+                    "tertiary-fixed": "#ffdbcd",
+                    "on-surface-variant": "#464555",
+                    "tertiary-container": "#a13b00",
+                    "slate-muted": "#64748B",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-primary-fixed-variant": "#3322cc",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#0d1c2f",
+                    "on-primary-container": "#d3d1ff",
+                    "surface-dim": "#d8dadc",
+                    "inverse-surface": "#2d3133",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary": "#7a2b00",
+                    "background": "#f7f9fb",
+                    "inverse-primary": "#c3c0ff"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "container-max": "1280px",
+                    "base": "8px"
+                },
+                "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Montserrat"]
+                },
+                "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
                 }
             }
         }
-    </script>
+    }
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined[data-weight="fill"] {
-            font-variation-settings: 'FILL' 1;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* Reduced Motion */
-        @media (prefers-reduced-motion: reduce) {
-            *, ::before, ::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-
-        /* Scroll Animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        .animate-on-scroll.is-visible {
-            animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        .delay-400 { animation-delay: 400ms; }
-
-        /* Nav Link Underline */
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: theme('colors.secondary');
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after, .nav-link.active::after {
-            width: 100%;
-        }
-    </style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+    .delay-100 { transition-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; }
+    .nav-link.active { color: #311fca; border-bottom: 2px solid #311fca; padding-bottom: 2px; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
 </head>
-<body class="bg-background text-on-background antialiased font-body-md text-body-md relative">
+<body class="bg-surface-bright text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface/80 shadow-sm transition-all duration-300 ease-in-out">
-<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
-<a class="font-display-lg text-primary tracking-tighter hover:text-secondary transition-colors duration-300" href="#" style="font-size: 24px; font-family: 'Montserrat', sans-serif;">Uğurhan Daşdemir</a>
-<div class="hidden md:flex space-x-8 items-center">
-<a class="text-secondary font-label-md text-label-md transition-colors duration-200 nav-link active" href="#home">Ana Sayfa</a>
-<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#about">Hakkımda</a>
-<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#experience">Deneyim</a>
-<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#skills">Yetenekler</a>
-<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#projects">Projeler</a>
-<a class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors duration-200 nav-link" href="#contact">İletişim</a>
-</div>
-<a class="hidden md:inline-flex bg-secondary text-white font-label-md text-label-md px-6 py-3 rounded-full hover:bg-secondary-container hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg" href="#contact">
-                İletişime Geç
-            </a>
-<!-- Mobile Menu Toggle -->
-<button class="md:hidden text-primary hover:text-secondary transition-colors">
-<span class="material-symbols-outlined text-3xl">menu</span>
+<header class="bg-surface-pure/80 fixed top-0 w-full backdrop-blur-md border-b border-outline-variant/30 shadow-sm z-50 transition-all duration-200">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors ease-out duration-200" href="#">Uğurhan Daşdemir</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="nav-link font-label-md text-label-md text-primary border-b-2 border-primary pb-1 ease-out duration-200" href="#home">Ana Sayfa</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#about">Hakkımda</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#experience">Deneyim</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#skills">Yetenekler</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#projects">Projeler</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#volunteer">Gönüllü</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#contact">İletişim</a>
+</nav>
+<a class="hidden md:inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-4 py-2 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" href="#contact">İletişime Geç</a>
+<button class="md:hidden text-on-surface hover:bg-surface-container-low p-2 rounded-full transition-all duration-200 ease-out active:scale-95" id="mobileMenuBtn">
+<span class="material-symbols-outlined">menu</span>
 </button>
 </div>
-</nav>
-<!-- Main Content -->
-<main class="pt-32">
+<!-- Mobile Menu -->
+<div class="hidden md:hidden bg-surface-pure border-t border-outline-variant/30 px-margin-mobile py-4 flex-col gap-4" id="mobileMenu">
+<a class="font-label-md text-label-md text-primary" href="#home" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Ana Sayfa</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="#about" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Hakkımda</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="#experience" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Deneyim</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="#skills" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Yetenekler</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="#projects" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Projeler</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="#volunteer" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Gönüllü</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="#contact" onclick="document.getElementById('mobileMenu').classList.add('hidden')">İletişim</a>
+</div>
+</header>
+
+<main class="pt-24 md:pt-32 pb-20">
+
 <!-- Hero Section -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop min-h-[600px] flex flex-col items-center justify-center gap-gutter pt-12 md:pt-24 pb-section-gap relative overflow-hidden" id="home">
-<!-- Ambient Background -->
-<div class="absolute inset-0 -z-10 bg-gradient-to-br from-primary-fixed/60 via-background to-tertiary-fixed/50"></div>
-<div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-<div class="absolute top-0 -right-4 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-<div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
-<div class="space-y-8 text-center z-10 w-full max-w-4xl relative">
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary animate-on-scroll">
-                    Zor problemleri <br class="hidden md:block"/><span class="text-secondary">basit ve işe yarar çözümlere dönüştürüyorum.</span>
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32 flex flex-col md:flex-row items-center gap-gutter" id="home">
+<div class="flex-1 space-y-6">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface animate-on-scroll">
+    Zor problemleri <br class="hidden md:block">
+    <span class="text-primary">basit ve işe yarar</span> <br class="hidden md:block">
+    çözümlere dönüştürüyorum.
 </h1>
-<p class="font-body-lg text-body-lg text-text-main max-w-2xl mx-auto animate-on-scroll delay-100">
-                    Ben Uğurhan Daşdemir, zor görünen problemleri parçalayıp anlaşılır ve işe yarar çözümler üretmek hoşuma gidiyor. Şu sıralar daha çok derin öğrenme ve full-stack tarafında kendimi geliştirmeye odaklandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll delay-200">
-<button class="bg-secondary text-white font-label-md text-label-md px-8 py-4 rounded-full hover:bg-secondary-container transition-all duration-300 text-center shadow-[0_4px_14px_0_rgba(75,65,225,0.39)] hover:shadow-[0_8px_25px_rgba(75,65,225,0.4)] hover:-translate-y-1 hover:scale-105 transform relative overflow-hidden group" onclick="document.getElementById('cv-modal').classList.remove('hidden')">
-<span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></span>
-                        CV Görüntüle
-                    </button>
-<a class="bg-transparent border border-primary text-primary font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-variant transition-all duration-300 text-center hover:shadow-md hover:-translate-y-1 hover:scale-105" href="#projects">
-                        Projeleri Gör
-                    </a>
-<a class="bg-transparent border border-border-subtle text-text-main font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-variant transition-all duration-300 text-center hover:shadow-md hover:-translate-y-1 hover:scale-105" href="#contact">
-                        İletişime Geç
-                    </a>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl animate-on-scroll delay-100">
+    Ben Uğurhan Daşdemir, zor görünen problemleri parçalayıp anlaşılır ve işe yarar çözümler üretmek hoşuma gidiyor. Şu sıralar daha çok derin öğrenme ve full-stack tarafında kendimi geliştirmeye odaklandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
+</p>
+<div class="flex flex-wrap gap-4 pt-4 animate-on-scroll delay-200">
+<button class="inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-6 py-3 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" onclick="document.getElementById('cv-modal').classList.remove('hidden')">
+    CV Görüntüle
+</button>
+<a class="inline-flex items-center justify-center font-label-md text-label-md border border-outline-variant text-on-surface px-6 py-3 rounded-lg hover:bg-surface-container-low transition-all duration-200 ease-out active:scale-95" href="#projects">
+    Projeleri Gör
+</a>
+<a class="inline-flex items-center justify-center font-label-md text-label-md border border-transparent text-primary hover:bg-surface-container-low px-6 py-3 rounded-lg transition-all duration-200 ease-out active:scale-95" href="#contact">
+    İletişime Geç
+</a>
 </div>
+</div>
+<div class="flex-1 w-full mt-12 md:mt-0 relative h-64 md:h-96 rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 bg-surface-pure animate-on-scroll delay-200">
+<div class="w-full h-full bg-cover bg-center opacity-80 mix-blend-multiply" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGko2WoLKDHWSLJVBAxEMpWkxX7B_cfioovnS7fwEQTkjDEsgYU97vuIu2Il1DIFB_xN7z6LP-tqcvDQZCf3P8BrIxa2DL9YsDEBhe1wb8fVFvFfJ7_8NOaWwEkOEhRNoZb_EmhUiK7vNWDEVAlWFXL68jAMiuGuVOf7TPN79_8sP4jrwCpRrQixX38jtTGVUOfXECNj7_H4eXG1rt5FMOwm5CDiOjCZcdyloJoeCrvnBm6nTVGUNttBOI77P7NbQLG3GBDbdCDHOr')"></div>
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-bright/50 to-transparent pointer-events-none"></div>
 </div>
 </section>
+
 <!-- About Section -->
-<section class="bg-surface-container-low py-section-gap" id="about">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="max-w-3xl mx-auto text-center space-y-6">
-<h2 class="font-headline-md text-headline-md text-primary animate-on-scroll">Hakkımda</h2>
-<p class="font-body-md text-body-md text-text-main leading-relaxed text-left md:text-center animate-on-scroll delay-100">
-                        Merhaba, ben Uğurhan Daşdemir. <span class="font-bold text-secondary">Atatürk Üniversitesi</span>'nde Bilgisayar Mühendisliği okuyorum. Yapay zeka, otonom sistemler ve veri mühendisliği üzerine çalışıyorum; <span class="font-bold text-secondary">SAYZEK</span> bursiyeri olarak termal nesne tespiti, <span class="font-bold text-secondary">Teknofest</span> yarışmalarında İHA algoritmaları geliştirdim. <span class="font-bold text-secondary">NICEYE GROUP</span>'ta part-time AI otomasyon geliştirici, öncesinde <span class="font-bold text-secondary">IBTECH</span>'te Data Warehouse stajyeri olarak çalıştım.
-                    </p>
-<p class="font-body-md text-body-md text-text-main leading-relaxed text-left md:text-center mt-4 animate-on-scroll delay-200">
-                        Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
-                    </p>
-</div>
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="about">
+<div class="bg-surface-pure rounded-xl p-8 md:p-12 border border-outline-variant/30 shadow-sm relative overflow-hidden animate-on-scroll">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary">person</span> Hakkımda
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl leading-relaxed">
+    Merhaba, ben Uğurhan Daşdemir. <strong>Atatürk Üniversitesi</strong>'nde Bilgisayar Mühendisliği okuyorum. Yapay zeka, otonom sistemler ve veri mühendisliği üzerine çalışıyorum; <strong>SAYZEK</strong> bursiyeri olarak termal nesne tespiti, <strong>Teknofest</strong> yarışmalarında İHA algoritmaları geliştirdim. <strong>NICEYE GROUP</strong>'ta part-time AI otomasyon geliştirici, öncesinde <strong>IBTECH</strong>'te Data Warehouse stajyeri olarak çalıştım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
+</p>
 </div>
 </section>
+
 <!-- Experience Section -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="experience">
-<div class="text-center mb-16 animate-on-scroll">
-<h2 class="font-headline-md text-headline-md text-primary">İş Deneyimi</h2>
-</div>
-<div class="max-w-3xl mx-auto space-y-8">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="experience">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-2 animate-on-scroll">
+    <span class="material-symbols-outlined text-primary">work</span> İş Deneyimi
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- NICEYE GROUP -->
-<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle animate-on-scroll delay-100">
-<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-100">
+<div class="flex justify-between items-start mb-4 gap-4">
 <div>
-<h3 class="font-headline-sm text-headline-sm text-primary">NICEYE GROUP</h3>
-<p class="font-label-md text-label-md text-secondary italic">Part-Time Developer / Uzaktan</p>
-<p class="font-label-md text-label-md text-on-surface-variant">İstanbul, Türkiye</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">NICEYE GROUP</h3>
+<p class="font-label-md text-label-md text-primary mt-1">Part-Time Developer / Uzaktan</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">İstanbul, Türkiye</p>
 </div>
-<span class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap pt-1">Haziran 2025 – Günümüz</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Haz 2025 – Günümüz</span>
 </div>
-<p class="font-body-md text-body-md text-text-main mb-5">n8n üzerinde birden fazla uçtan uca yapay zekâ otomasyonu geliştirdim. Ayrıca Pfizer ve Viatris gibi ilaç firmaları için web çözümleri geliştirdim. Yapay zekâ projelerinde geliştirme, test, doğrulama ve prompt mühendisliği görevleri üstlendim.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">n8n üzerinde birden fazla uçtan uca yapay zekâ otomasyonu geliştirdim. Ayrıca Pfizer ve Viatris gibi ilaç firmaları için web çözümleri geliştirdim. Yapay zekâ projelerinde geliştirme, test, doğrulama ve prompt mühendisliği görevleri üstlendim.</p>
 <div class="flex flex-wrap gap-2">
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">n8n</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">LLM</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">AI Agent</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">HTML</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">CSS</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">PHP</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">n8n</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">LLM</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">AI Agent</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">HTML / CSS</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PHP</span>
 </div>
 </div>
 <!-- IBTECH -->
-<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle animate-on-scroll delay-200">
-<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-200">
+<div class="flex justify-between items-start mb-4 gap-4">
 <div>
-<h3 class="font-headline-sm text-headline-sm text-primary">IBTECH</h3>
-<p class="font-label-md text-label-md text-secondary italic">Data Warehouse Stajyeri / Hibrit</p>
-<p class="font-label-md text-label-md text-on-surface-variant">Kocaeli, Türkiye</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">IBTECH</h3>
+<p class="font-label-md text-label-md text-primary mt-1">Data Warehouse Stajyeri / Hibrit</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Kocaeli, Türkiye</p>
 </div>
-<span class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap pt-1">Kasım 2024 – Mayıs 2025</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Kas 2024 – May 2025</span>
 </div>
-<p class="font-body-md text-body-md text-text-main mb-5">MicroStrategy alternatifi kurum içi BI geliştirme sürecinde yer aldım. Oracle SQL rapor optimizasyonu ve POTA taleplerine yönelik sorgular geliştirdim. Selenium ile belge otomasyonu kurup Python, LLM ve LangChain kullanarak belge kategorizasyonu ve veri kazıma yaptım.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">MicroStrategy alternatifi kurum içi BI geliştirme sürecinde yer aldım. Oracle SQL rapor optimizasyonu ve POTA taleplerine yönelik sorgular geliştirdim. Selenium ile belge otomasyonu kurup Python, LLM ve LangChain kullanarak belge kategorizasyonu ve veri kazıma yaptım.</p>
 <div class="flex flex-wrap gap-2">
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">Python</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">Oracle SQL</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">Selenium</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">LangChain</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">LLM</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Python</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Oracle SQL</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Selenium</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">LangChain</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">LLM</span>
 </div>
 </div>
 </div>
 </section>
+
 <!-- Skills Section -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="skills">
-<div class="text-center mb-16 animate-on-scroll">
-<h2 class="font-headline-md text-headline-md text-primary">Teknik Yetkinlikler</h2>
-<p class="font-body-md text-body-md text-text-main mt-4">Projelerimde en çok kullandığım temel teknolojiler.</p>
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="skills">
+<div class="mb-12 animate-on-scroll">
+<h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary">code</span> Teknik Yetkinlikler
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Projelerimde en çok kullandığım temel teknolojiler.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Languages Card -->
-<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] transition-all duration-300 animate-on-scroll delay-100 cursor-default">
+<!-- Languages -->
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-100">
 <div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-secondary text-3xl">code</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">Diller</h3>
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Diller</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Python</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">C++</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">TypeScript</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">JavaScript</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Dart</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">SQL</span>
+</div>
+</div>
+<!-- AI & Autonomous Systems -->
+<div class="md:col-span-2 bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-200">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Yapay Zeka &amp; Otonom Sistemler</h3>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20 text-center">PyTorch</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20 text-center">YOLO</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20 text-center">OpenCV</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20 text-center">Transformers</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20 text-center">ONNX</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20 text-center">MAVSDK</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20 text-center">ROS2</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20 text-center">RAG / LLM</span>
+</div>
+</div>
+<!-- Data & Backend -->
+<div class="md:col-span-3 bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-300">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">database</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Veri &amp; Backend</h3>
 </div>
 <div class="flex flex-wrap gap-3">
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Python</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">C++</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">TypeScript</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">JavaScript</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Dart</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">SQL</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">HTML</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">CSS</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20">FastAPI</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20">Django</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20">LangChain</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20">n8n</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20">PostgreSQL / pgvector</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20">Oracle SQL</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20">Supabase</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20">ChromaDB / Milvus</span>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant/20">Pandas / NumPy</span>
 </div>
 </div>
-<!-- AI/ML Card -->
-<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] transition-all duration-300 relative overflow-hidden animate-on-scroll delay-200 cursor-default">
-<div class="absolute top-0 right-0 w-32 h-32 bg-innovation-glow rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
-<div class="flex items-center gap-3 mb-6 relative z-10">
-<span class="material-symbols-outlined text-ai-accent text-3xl">smart_toy</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">Yapay Zeka &amp; Otonom Sistemler</h3>
 </div>
-<div class="flex flex-wrap gap-3 relative z-10">
-<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md px-4 py-2 rounded-full">PyTorch</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Ultralytics YOLO</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">OpenCV</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Transformers</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">ONNX Runtime</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">MAVSDK / PX4</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">ROS2 / Gazebo</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">RAG / LLM</span>
+</section>
 
-</div>
-</div>
-<!-- Data & Backend Card -->
-<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle hover:-translate-y-2 hover:scale-105 hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] transition-all duration-300 animate-on-scroll delay-300 cursor-default">
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-secondary text-3xl">database</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">Veri &amp; Backend</h3>
-</div>
-<div class="flex flex-wrap gap-3">
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">FastAPI</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Django</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">LangChain</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">n8n</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">PostgreSQL / pgvector</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Oracle SQL</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Supabase</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">ChromaDB / Milvus</span>
-<span class="bg-[#F1F5F9] text-text-main font-label-md text-label-md px-4 py-2 rounded-full">Pandas / NumPy</span>
-</div>
-</div>
-</div>
-</section>
 <!-- Projects Section -->
-<section class="bg-surface-container-low py-section-gap relative" id="projects">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
-<div class="text-center mb-16 animate-on-scroll">
-<h2 class="font-headline-md text-headline-md text-primary">Öne Çıkan Projeler</h2>
-<p class="font-body-md text-body-md text-text-main mt-4">Karmaşık problemleri çözdüğüm seçilmiş çalışmalar.</p>
-</div>
-<div class="relative group">
-<button aria-label="Previous Project" class="absolute left-[-16px] md:left-[-24px] top-1/2 transform -translate-y-1/2 bg-surface-card border border-border-subtle rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-surface-variant hover:text-secondary hover:scale-110 active:scale-95 transition-all duration-200 focus:outline-none hidden md:flex" id="prevBtn">
-<span class="material-symbols-outlined text-2xl">chevron_left</span>
-</button>
-<button aria-label="Next Project" class="absolute right-[-16px] md:right-[-24px] top-1/2 transform -translate-y-1/2 bg-surface-card border border-border-subtle rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-surface-variant hover:text-secondary hover:scale-110 active:scale-95 transition-all duration-200 focus:outline-none hidden md:flex" id="nextBtn">
-<span class="material-symbols-outlined text-2xl">chevron_right</span>
-</button>
-<div class="flex overflow-x-auto snap-x snap-mandatory gap-gutter scroll-smooth no-scrollbar pb-8" id="projectSlider">
-<div class="w-full text-center py-16 font-body-md text-body-md text-text-main">Projeler yükleniyor…</div>
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="projects">
+<div class="flex justify-between items-end mb-12">
+<div class="animate-on-scroll">
+<h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary">view_carousel</span> Öne Çıkan Projeler
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Karmaşık problemleri çözdüğüm seçilmiş çalışmalar.</p>
 </div>
 </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="projectSlider">
+<div class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">Projeler yükleniyor…</div>
 </div>
 </section>
+
 <!-- Volunteer / Community Section -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="volunteer">
-<div class="text-center mb-16 animate-on-scroll">
-<h2 class="font-headline-md text-headline-md text-primary">Gönüllü Çalışmalar &amp; Yarışmalar</h2>
-</div>
-<div class="max-w-3xl mx-auto space-y-8">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="volunteer">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-2 animate-on-scroll">
+    <span class="material-symbols-outlined text-primary">groups</span> Gönüllü Çalışmalar &amp; Yarışmalar
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- ATA AIT Simurg -->
-<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle animate-on-scroll delay-100">
-<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-100">
+<div class="flex justify-between items-start mb-4 gap-4">
 <div>
-<h3 class="font-headline-sm text-headline-sm text-primary">ATA AIT Simurg İHA ve Ulaşımda Yapay Zekâ Takımları</h3>
-<p class="font-label-md text-label-md text-secondary italic">Kurucu Takım Lideri / Yazılım Birim Lideri</p>
-<p class="font-label-md text-label-md text-on-surface-variant">Erzurum, Türkiye</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">ATA AIT Simurg İHA Takımı</h3>
+<p class="font-label-md text-label-md text-primary mt-1">Kurucu Takım Lideri / Yazılım Birim Lideri</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Erzurum, Türkiye</p>
 </div>
-<span class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap pt-1">Kasım 2022 – Mayıs 2025</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Kas 2022 – May 2025</span>
 </div>
-<p class="font-body-md text-body-md text-text-main">Otonom hava araçları üzerine çalışan takımımızda; hava muharebesi, görüntü işleme, yasaklı alanlardan kaçış, veri aktarımı ve rota/kaçış algoritmalarının geliştirilmesi alanlarında aktif görev aldım. İHA'lardan alınan kamera verileriyle araç, insan ve nesne tespiti, iniş alanı uygunluğu belirleme ve kamera tabanlı konum kestirimi üzerine çalışmalar yürüttüm. Geliştirilen algoritmaların Gazebo simülasyon ortamında test edilmesi ve iyileştirilmesi süreçlerinde de yer aldım.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Otonom hava araçları üzerine çalışan takımımızda; hava muharebesi, görüntü işleme, yasaklı alanlardan kaçış, veri aktarımı ve rota/kaçış algoritmalarının geliştirilmesi alanlarında aktif görev aldım. İHA'lardan alınan kamera verileriyle araç, insan ve nesne tespiti, iniş alanı uygunluğu ve kamera tabanlı konum kestirimi üzerine çalışmalar yürüttüm.</p>
 </div>
 <!-- YZ Topluluğu -->
-<div class="bg-surface-card rounded-2xl p-8 shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle animate-on-scroll delay-200">
-<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-200">
+<div class="flex justify-between items-start mb-4 gap-4">
 <div>
-<h3 class="font-headline-sm text-headline-sm text-primary">Yapay Zekâ ve Teknoloji Topluluğu</h3>
-<p class="font-label-md text-label-md text-secondary italic">Yönetim Kurulu Üyesi</p>
-<p class="font-label-md text-label-md text-on-surface-variant">Erzurum, Türkiye</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">Yapay Zekâ ve Teknoloji Topluluğu</h3>
+<p class="font-label-md text-label-md text-primary mt-1">Yönetim Kurulu Üyesi</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Erzurum, Türkiye</p>
 </div>
-<span class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap pt-1">Ekim 2022 – Temmuz 2025</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Eki 2022 – Tem 2025</span>
 </div>
-<p class="font-body-md text-body-md text-text-main">Kulüpte yapay zekâ konferansları, eğitimleri ve teknik gezilerin düzenlenmesinde ve organize edilmesinde görev aldım. 2023'te 1000+ kişinin katıldığı Devfest etkinliğinde ve 2024'te 600+ kişinin katıldığı T3 AI organizasyonlarında aktif rol üstlendim.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Kulüpte yapay zekâ konferansları, eğitimleri ve teknik gezilerin düzenlenmesinde görev aldım. 2023'te 1000+ kişinin katıldığı Devfest etkinliğinde ve 2024'te 600+ kişinin katıldığı T3 AI organizasyonlarında aktif rol üstlendim.</p>
 </div>
 </div>
 </section>
-</main>
-<!-- Footer -->
-<footer class="bg-background w-full py-16 border-t border-border-subtle" id="contact">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="text-center md:text-left">
-<span class="font-headline-sm text-headline-sm text-primary block mb-2">Uğurhan Daşdemir</span>
 
+</main>
+
+<!-- Footer / Contact -->
+<footer class="bg-surface-container w-full py-12 border-t border-outline-variant/20" id="contact">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg text-on-surface">Uğurhan Daşdemir</span>
 </div>
 <div class="flex flex-wrap justify-center gap-6">
-<a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="tel:+905364078583">
-<span class="material-symbols-outlined group-hover:animate-bounce">call</span>
-<span class="font-label-md text-label-md">+90 536 407 8583</span>
-</a><a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="mailto:ugurhandasdemir@gmail.com">
-<span class="material-symbols-outlined group-hover:animate-bounce">mail</span>
-<span class="font-label-md text-label-md">E-posta</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="tel:+905364078583">
+<span class="material-symbols-outlined text-base">call</span>+90 536 407 85 83
 </a>
-<a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">
-<span class="material-symbols-outlined group-hover:animate-bounce">code</span>
-<span class="font-label-md text-label-md">GitHub</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="mailto:ugurhandasdemir@gmail.com">
+<span class="material-symbols-outlined text-base">mail</span>E-posta
 </a>
-<a class="text-on-surface-variant hover:text-secondary hover:-translate-y-1 hover:scale-110 transition-all duration-300 flex items-center gap-2 group" href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" rel="noopener">
-<span class="material-symbols-outlined group-hover:animate-bounce">account_circle</span>
-<span class="font-label-md text-label-md">LinkedIn</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">
+<span class="material-symbols-outlined text-base">code</span>GitHub
+</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" rel="noopener">
+<span class="material-symbols-outlined text-base">account_circle</span>LinkedIn
 </a>
 </div>
-<div class="text-center md:text-right">
-<p class="font-label-md text-[12px] text-on-surface-variant">
-                    © 2026 Uğurhan Daşdemir.
-                </p>
+<div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">
+    © 2026 Uğurhan Daşdemir.
 </div>
 </div>
 </footer>
+
 <!-- CV Modal -->
 <div class="fixed inset-0 z-[100] hidden" id="cv-modal">
-<div class="absolute inset-0 bg-primary/80 backdrop-blur-sm transition-opacity" onclick="document.getElementById('cv-modal').classList.add('hidden')"></div>
+<div class="absolute inset-0 bg-on-surface/60 backdrop-blur-sm" onclick="document.getElementById('cv-modal').classList.add('hidden')"></div>
 <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-<div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-<div class="relative transform overflow-hidden rounded-2xl bg-surface-card text-left shadow-2xl transition-all sm:my-8 w-full sm:max-w-4xl border border-border-subtle animate-[fade-in-up_0.3s_ease-out_forwards]">
-<div class="bg-surface-card px-4 pb-4 pt-5 sm:p-6 sm:pb-4 border-b border-border-subtle flex justify-between items-center">
-<h3 class="text-headline-sm font-headline-sm text-primary" id="modal-title">Özgeçmiş</h3>
-<button class="text-on-surface-variant hover:text-error hover:rotate-90 transition-all duration-300 rounded-full p-1" onclick="document.getElementById('cv-modal').classList.add('hidden')">
+<div class="flex min-h-full items-end justify-center p-4 sm:items-center sm:p-0">
+<div class="relative transform overflow-hidden rounded-xl bg-surface-pure text-left shadow-2xl transition-all sm:my-8 w-full sm:max-w-4xl border border-outline-variant/30">
+<div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4 border-b border-outline-variant/30 flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Özgeçmiş</h3>
+<button class="text-on-surface-variant hover:text-error transition-colors rounded-full p-1" onclick="document.getElementById('cv-modal').classList.add('hidden')">
 <span class="material-symbols-outlined text-2xl">close</span>
 </button>
 </div>
 <div class="bg-surface-container-low p-4 sm:p-6">
-<div class="aspect-[1/1.4] sm:aspect-auto sm:h-[65vh] w-full bg-surface-variant rounded-lg overflow-hidden border border-border-subtle relative">
+<div class="aspect-[1/1.4] sm:aspect-auto sm:h-[65vh] w-full bg-surface-variant rounded-lg overflow-hidden border border-outline-variant/30">
 <iframe src="/static/pdf/ozgecmis.pdf#toolbar=1" title="CV - Uğurhan Daşdemir" class="w-full h-full" loading="lazy"></iframe>
 </div>
 </div>
-<div class="bg-surface-card px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 border-t border-border-subtle">
-<a class="inline-flex w-full justify-center rounded-full bg-secondary px-6 py-3 text-label-md font-label-md text-white shadow-sm hover:bg-secondary-container hover:scale-105 hover:shadow-lg sm:ml-3 sm:w-auto transition-all duration-300" download="Ugurhan_Dasdemir_CV.pdf" href="/static/pdf/ozgecmis.pdf" target="_blank" rel="noopener">
-                            PDF İndir
-                        </a>
-<button class="mt-3 inline-flex w-full justify-center rounded-full bg-white px-6 py-3 text-label-md font-label-md text-primary shadow-sm ring-1 ring-inset ring-border-subtle hover:bg-surface-container-low hover:scale-105 sm:mt-0 sm:w-auto transition-all duration-300" onclick="document.getElementById('cv-modal').classList.add('hidden')" type="button">
-                            Kapat
-                        </button>
+<div class="px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 border-t border-outline-variant/30 gap-3">
+<a class="inline-flex w-full justify-center rounded-lg bg-primary px-6 py-3 font-label-md text-label-md text-on-primary shadow-sm hover:bg-primary/90 sm:w-auto transition-all duration-200" download="Ugurhan_Dasdemir_CV.pdf" href="/static/pdf/ozgecmis.pdf" target="_blank" rel="noopener">PDF İndir</a>
+<button class="mt-3 inline-flex w-full justify-center rounded-lg bg-surface-pure px-6 py-3 font-label-md text-label-md text-on-surface shadow-sm ring-1 ring-inset ring-outline-variant hover:bg-surface-container-low sm:mt-0 sm:w-auto transition-all duration-200" onclick="document.getElementById('cv-modal').classList.add('hidden')" type="button">Kapat</button>
 </div>
 </div>
 </div>
 </div>
 </div>
+
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
+document.addEventListener('DOMContentLoaded', () => {
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    // Optional: stop observing once animated
-                    // observer.unobserve(entry.target); 
-                }
-            });
-        }, observerOptions);
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
 
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(s => { if (scrollY >= s.offsetTop - 120) current = s.getAttribute('id'); });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) link.classList.add('active');
         });
-
-        // Project Slider
-        const slider = document.getElementById('projectSlider');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        if(slider && prevBtn && nextBtn) {
-            const scrollAmount = () => {
-                if (window.innerWidth >= 1024) return slider.clientWidth / 3 + 24;
-                if (window.innerWidth >= 768) return slider.clientWidth / 2 + 12;
-                return slider.clientWidth + 24;
-            };
-
-            prevBtn.addEventListener('click', () => {
-                slider.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
-            });
-
-            nextBtn.addEventListener('click', () => {
-                slider.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-            });
-        }
-
-        // Active Nav Link updating
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    });
+    }, { passive: true });
+});
 </script>
-<!-- Dynamic projects loader (ported backend: repos.json + GitHub API) -->
+
+<!-- Dynamic projects loader -->
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
-    const slider = document.getElementById('projectSlider');
-    if (!slider) return;
+    const grid = document.getElementById('projectSlider');
+    if (!grid) return;
 
-    // Clear the static demo cards immediately, show loading state
-    slider.innerHTML = '<div class="w-full text-center py-16 font-body-md text-body-md text-text-main">Projeler yükleniyor…</div>';
+    const username = 'ugurhandasdemir';
 
-    const username = "ugurhandasdemir";
-
-    // GitHub API (auth'suz 60 istek/saat) limit aşılınca repo listesi boş döner.
-    // O durumda bu statik liste devreye girer; CV + projelerden alınan özetler.
     const FALLBACK_PROJECTS = [
-        { name: "Local Deep Research", repo: "Local_deep_research", updated_at: "2025-09-20",
-          readmeIntro: "Python/FastAPI/Flutter ile yerel RAG uygulaması: PDF'leri parçalayıp ChromaDB, Milvus, Qdrant, LanceDB ve Weaviate'e gömme; Ollama LLM ile kaynaklı soru-cevap. 28 embedding modelini benchmark ettim." },
-        { name: "Manga Translator", repo: "manga_translator", updated_at: "2025-06-15",
-          readmeIntro: "Manga konuşma balonlarını PyTorch ile tespit edip OCR'la metni çıkaran, çevirip balona geri yerleştiren uçtan uca Python pipeline (API/CLI)." },
-        { name: "Paylaşımlı Bellek Gerçek Zamanlı CV (YOLO + QR)", repo: "Shared_memory_python", updated_at: "2025-05-10",
-          readmeIntro: "Jetson/GStreamer kamera akışını multiprocessing.shared_memory ile süreçler arası düşük gecikmeyle paylaşan, Ultralytics YOLO + pyzbar QR tespiti yapan gerçek zamanlı görüntü işleme hattı." },
-        { name: "Drone Görüntü Analizi (YOLOv8 + SAHI)", repo: "YOLOv8_UAV_Vehicle_Detection", updated_at: "2025-04-05",
-          readmeIntro: "Drone görüntülerinde YOLOv8 + SAHI ile insan/araç/UAP-UAI tespiti; iniş uygunluğu analizi ve ardışık karelerden öteleme/konum kestirimi." },
-        { name: "İniş Alanı Uygunluk Analizi", repo: "landing_status", updated_at: "2025-03-12",
-          readmeIntro: "Drone alt görüş kamerasından alınan karelerle iniş alanı uygunluğunu analiz eden ve kutu hareketinden öteleme/konum kestiren görüntü işleme modülü." },
-        { name: "Beyin Tümörü Sınıflandırma", repo: "brain_tumor", updated_at: "2025-02-08",
-          readmeIntro: "12.064 MR görüntüsünde 4 sınıflı tümör sınıflandırması; PyTorch ile DenseNet121+SE+LSTM ve hibrit mimariler, yaklaşık %97-98 doğruluk." },
-        { name: "HouseRentPredictor (Kira Tahmini)", repo: "house_rent_predictor_xgb", updated_at: "2024-12-20",
-          readmeIntro: "Ev kira tahmini için uçtan uca ML akışı: veri temizleme, aykırı değer filtreleme, one-hot encoding ve GridSearchCV ile XGBoost hiperparametre optimizasyonu." },
-        { name: "Flights Booking (Django)", repo: "Flights-Booking", updated_at: "2024-10-15",
-          readmeIntro: "Django ile uçtan uca uçuş rezervasyon uygulaması: kayıt/giriş, koltuk seçimi, ödeme ve özet akışı; ORM, formlar ve migrations ile." }
+        { name: 'Local Deep Research', repo: 'Local_deep_research', updated_at: '2025-09-20',
+          readmeIntro: 'Python/FastAPI/Flutter ile yerel RAG uygulaması: PDF\'leri parçalayıp ChromaDB, Milvus, Qdrant, LanceDB ve Weaviate\'e gömme; Ollama LLM ile kaynaklı soru-cevap. 28 embedding modelini benchmark ettim.' },
+        { name: 'Manga Translator', repo: 'manga_translator', updated_at: '2025-06-15',
+          readmeIntro: 'Manga konuşma balonlarını PyTorch ile tespit edip OCR\'la metni çıkaran, çevirip balona geri yerleştiren uçtan uca Python pipeline (API/CLI).' },
+        { name: 'Paylaşımlı Bellek Gerçek Zamanlı CV (YOLO + QR)', repo: 'Shared_memory_python', updated_at: '2025-05-10',
+          readmeIntro: 'Jetson/GStreamer kamera akışını multiprocessing.shared_memory ile süreçler arası düşük gecikmeyle paylaşan, Ultralytics YOLO + pyzbar QR tespiti yapan gerçek zamanlı görüntü işleme hattı.' },
+        { name: 'Drone Görüntü Analizi (YOLOv8 + SAHI)', repo: 'YOLOv8_UAV_Vehicle_Detection', updated_at: '2025-04-05',
+          readmeIntro: 'Drone görüntülerinde YOLOv8 + SAHI ile insan/araç/UAP-UAI tespiti; iniş uygunluğu analizi ve ardışık karelerden öteleme/konum kestirimi.' },
+        { name: 'İniş Alanı Uygunluk Analizi', repo: 'landing_status', updated_at: '2025-03-12',
+          readmeIntro: 'Drone alt görüş kamerasından alınan karelerle iniş alanı uygunluğunu analiz eden ve kutu hareketinden öteleme/konum kestiren görüntü işleme modülü.' },
+        { name: 'Beyin Tümörü Sınıflandırma', repo: 'brain_tumor', updated_at: '2025-02-08',
+          readmeIntro: '12.064 MR görüntüsünde 4 sınıflı tümör sınıflandırması; PyTorch ile DenseNet121+SE+LSTM ve hibrit mimariler, yaklaşık %97-98 doğruluk.' },
+        { name: 'HouseRentPredictor (Kira Tahmini)', repo: 'house_rent_predictor_xgb', updated_at: '2024-12-20',
+          readmeIntro: 'Ev kira tahmini için uçtan uca ML akışı: veri temizleme, aykırı değer filtreleme, one-hot encoding ve GridSearchCV ile XGBoost hiperparametre optimizasyonu.' },
+        { name: 'Flights Booking (Django)', repo: 'Flights-Booking', updated_at: '2024-10-15',
+          readmeIntro: 'Django ile uçtan uca uçuş rezervasyon uygulaması: kayıt/giriş, koltuk seçimi, ödeme ve özet akışı; ORM, formlar ve migrations ile.' }
     ].map(p => ({ ...p, description: p.readmeIntro, image: null }));
 
-    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-    const assetUrl = (p) => p ? ('/' + String(p).replace(/^\/+/, '')) : null;
-    const formatDate = (iso) => {
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const assetUrl = p => p ? ('/' + String(p).replace(/^\/+/, '')) : null;
+    const formatDate = iso => {
         if (!iso) return '';
-        const d = new Date(iso);
-        return d.toLocaleDateString('tr-TR', { year: 'numeric', month: 'short', day: 'numeric' });
+        return new Date(iso).toLocaleDateString('tr-TR', { year: 'numeric', month: 'short' });
     };
 
-    const getReadmeIntro = async (repoName) => {
+    const getReadmeIntro = async repo => {
         try {
-            const res = await fetch(`https://api.github.com/repos/${username}/${repoName}/readme`, {
-                headers: { 'Accept': 'application/vnd.github.v3.raw' }
-            });
-            if (!res.ok) return null;
-            const text = await res.text();
-            const lines = text.split('\n');
-            let paragraph = '';
+            const r = await fetch(`https://api.github.com/repos/${username}/${repo}/readme`, { headers: { Accept: 'application/vnd.github.v3.raw' } });
+            if (!r.ok) return null;
+            const lines = (await r.text()).split('\n');
+            let p = '';
             for (const line of lines) {
-                const trimmed = line.trim();
-                if (!trimmed || trimmed.startsWith('#') || trimmed.startsWith('!') || trimmed.startsWith('[!') || trimmed.startsWith('[![')) {
-                    if (paragraph) break;
-                    continue;
-                }
-                paragraph += (paragraph ? ' ' : '') + trimmed;
+                const t = line.trim();
+                if (!t || t.startsWith('#') || t.startsWith('!') || t.startsWith('[!') || t.startsWith('[![')) { if (p) break; continue; }
+                p += (p ? ' ' : '') + t;
             }
-            paragraph = paragraph.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
-            if (paragraph.length > 180) paragraph = paragraph.substring(0, 180).trim() + '...';
-            return paragraph || null;
+            p = p.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+            return (p.length > 180 ? p.slice(0, 180).trim() + '...' : p) || null;
         } catch { return null; }
     };
 
-    const cardHTML = (r, i) => {
-        const delay = ['delay-100', 'delay-200', 'delay-300'][i % 3];
+    const cardHTML = r => {
         const img = assetUrl(r.image);
         const media = img
-            ? `<img alt="${esc(r.name)}" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700" src="${esc(img)}"/>`
-            : `<div class="w-full h-full flex items-center justify-center bg-surface-container"><span class="material-symbols-outlined text-5xl text-on-surface-variant/40 group-hover/card:scale-125 group-hover/card:rotate-6 transition-transform duration-500">terminal</span></div>`;
+            ? `<img alt="${esc(r.name)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="${esc(img)}">`
+            : `<div class="w-full h-full flex items-center justify-center bg-surface-container-low"><span class="material-symbols-outlined text-5xl text-on-surface-variant/30">terminal</span></div>`;
         const rawDesc = r.readmeIntro ?? r.description ?? 'Açıklama yok.';
         const desc = rawDesc.length > 160 ? rawDesc.slice(0, 160).replace(/\s+\S*$/, '').trim() + '…' : rawDesc;
-        const dateChip = r.updated_at
-            ? `<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">${esc(formatDate(r.updated_at))}</span>`
-            : '';
-        // Tıklanabilirlik: yerel .md (details) ya da GitHub repo varsa detay sayfası açılır.
+        const dateChip = r.updated_at ? `<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full">${esc(formatDate(r.updated_at))}</span>` : '';
         const clickable = !!(r.details || r.repo);
-        const linkTarget = r.slug || r.repo || r.name;
+        const target = r.slug || r.repo || r.name;
         const cta = clickable
-            ? `<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="/project_details.html?repo=${encodeURIComponent(linkTarget)}">
-                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
-                    Detayları Gör<span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
-                </a>`
-            : `<span class="inline-flex items-center text-on-surface-variant/50 font-label-md text-label-md mt-auto w-max px-2 py-1 -ml-2 cursor-default select-none">
-                    Detay yok
-                </span>`;
+            ? `<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1 mt-auto" href="/project_details.html?repo=${encodeURIComponent(target)}">Detayları Gör <span class="material-symbols-outlined text-sm">arrow_forward</span></a>`
+            : `<span class="font-label-md text-label-md text-on-surface-variant/40 inline-flex items-center gap-1 mt-auto cursor-default select-none">Detay yok</span>`;
         return `
-        <div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col animate-on-scroll is-visible ${delay}">
-            <div class="h-48 bg-surface-variant relative overflow-hidden shrink-0">${media}</div>
+        <div class="group bg-surface-pure rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col">
+            <div class="w-full h-48 overflow-hidden bg-surface-container-low shrink-0">${media}</div>
             <div class="p-6 flex flex-col flex-1">
-                <div class="flex gap-2 mb-4">${dateChip}</div>
-                <h3 class="font-headline-sm text-headline-sm text-primary mb-3 line-clamp-2 group-hover/card:text-secondary transition-colors duration-300">${esc(r.name)}</h3>
-                <p class="font-body-md text-body-md text-text-main mb-6 flex-1 line-clamp-4">${esc(desc)}</p>
+                <div class="mb-3">${dateChip}</div>
+                <h3 class="font-headline-md text-headline-md text-on-surface mb-2 line-clamp-2">${esc(r.name)}</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-1 line-clamp-4">${esc(desc)}</p>
                 ${cta}
             </div>
         </div>`;
@@ -645,46 +525,33 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         let repos = [];
         try {
-            const reposRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
-            if (reposRes.ok) repos = await reposRes.json();
-        } catch { /* GitHub erişilemezse manuel projelerle devam */ }
+            const r = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+            if (r.ok) repos = await r.json();
+        } catch { /* limit / offline → fallback */ }
         repos = (Array.isArray(repos) ? repos : []).filter(r => allowed.has(r.name));
 
-        const reposWithReadme = await Promise.all(
-            repos.map(async (r) => ({
-                name: r.name,
-                repo: r.name,
-                description: r.description,
-                readmeIntro: await getReadmeIntro(r.name),
-                updated_at: r.updated_at,
-                image: null
-            }))
-        );
+        const reposWithReadme = await Promise.all(repos.map(async r => ({
+            name: r.name, repo: r.name, description: r.description,
+            readmeIntro: await getReadmeIntro(r.name),
+            updated_at: r.updated_at, image: null
+        })));
 
-        // GitHub erişilemez/limit dolu → repo listesi boş → statik fallback'e düş.
         const githubProjects = reposWithReadme.length ? reposWithReadme : FALLBACK_PROJECTS;
 
         const allProjects = [
             ...githubProjects,
             ...manualProjects.map(m => ({
-                name: m.name,
-                repo: m.repo || null,
-                slug: m.slug || null,
-                details: m.details || null,
-                description: m.description,
-                readmeIntro: m.description,
-                updated_at: m.updated_at,
-                image: m.image || null
+                name: m.name, repo: m.repo || null, slug: m.slug || null,
+                details: m.details || null, description: m.description,
+                readmeIntro: m.description, updated_at: m.updated_at, image: m.image || null
             }))
-        ];
+        ].sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
-        allProjects.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-
-        slider.innerHTML = allProjects.length
-            ? allProjects.map((r, i) => cardHTML(r, i)).join('')
-            : '<p class="w-full text-center py-16 font-body-md text-body-md text-text-main">Gösterilecek proje bulunamadı.</p>';
-    } catch (e) {
-        slider.innerHTML = '<p class="w-full text-center py-16 font-body-md text-body-md text-text-main">Projeler yüklenemedi.</p>';
+        grid.innerHTML = allProjects.length
+            ? allProjects.map(r => cardHTML(r)).join('')
+            : '<p class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">Gösterilecek proje bulunamadı.</p>';
+    } catch {
+        grid.innerHTML = '<p class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">Projeler yüklenemedi.</p>';
     }
 });
 </script>
