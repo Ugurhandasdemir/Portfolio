@@ -47,10 +47,10 @@
       "kaggle": null
     },
     {
-      "name": "Escape UAV",
+      "name": "Gerçek Zamanlı İHA Kaçış ve Tehdit Kontrol Sistemi",
       "slug": "escape-uav",
       "details": "static/projects/escape-uav.md",
-      "description": "Takip eden (rakip) İHA’dan kaçış için rakip İHA’nın konumunu her adımda güvenli koridor ihlali açısından izledim. İki İHA arasındaki mesafeyi (Haversine) ve yönelimlerini (heading) hesaplayarak tehlikeli yakınlaşmalarda uyarı üretip kaçış manevrası kararını destekledim. Sonuçları rota/buffer görselleştirmesiyle doğruladım. (Python, NumPy, Shapely, Matplotlib)",
+      "description": "Rakip İHA telemetri verilerini gerçek zamanlı işleyerek ana aracın konum, hız ve yönelim bilgileriyle birlikte tehdit analizi yapan bir kontrol sistemi geliştirdim. Mesafe, yönelim uyumu ve bölgede kalma süresi gibi kriterlerle tehdit seviyesini anlık belirleyip kritik senaryolarda MAVSDK offboard komutlarıyla otonom kaçış manevraları uygulayan bir yapı kurdum. Bu sayede savunma odaklı senaryolarda gerçek zamanlı karar verme, telemetri işleme ve otonom kontrol akışını uçtan uca tasarladım. (Python, MAVSDK, PX4, Telemetry Processing, Offboard Control, Autonomous Control, Real-Time Decision Making)",
       "updated_at": "2025-01-10",
       "html_url": null,
       "homepage": null,

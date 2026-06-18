@@ -1,18 +1,17 @@
-# Escape UAV
+# Gerçek Zamanlı İHA Kaçış ve Tehdit Kontrol Sistemi
 
-> Takip eden rakip İHA'dan kaçış için güvenli koridor izleme ve kaçış manevrası karar desteği.
+> Savunma odaklı senaryolarda rakip İHA'dan otonom kaçış: gerçek zamanlı telemetri işleme, tehdit analizi ve MAVSDK offboard kontrol.
 
 ## Genel Bakış
 
-Takip eden (rakip) bir İHA'dan kaçış senaryosu için, rakip İHA'nın konumunu her adımda güvenli koridor ihlali açısından izleyen bir sistem geliştirdim.
+Rakip İHA telemetri verilerini gerçek zamanlı işleyerek ana aracın konum, hız ve yönelim bilgileriyle birlikte tehdit analizi yapan bir kontrol sistemi geliştirdim. Kritik senaryolarda MAVSDK offboard komutlarıyla otonom kaçış manevraları uygulayan bir yapı kurdum.
 
 ## Yöntem
 
-- İki İHA arasındaki **mesafeyi** Haversine formülüyle hesapladım.
-- **Yönelimleri** (heading) takip ederek tehlikeli yakınlaşmaları tespit ettim.
-- Tehlikeli yakınlaşmalarda uyarı üretip kaçış manevrası kararını destekledim.
-- Sonuçları rota/buffer görselleştirmesiyle doğruladım.
+- **Tehdit seviyesi belirleme:** Mesafe (Haversine), yönelim uyumu ve bölgede kalma süresi gibi kriterlerle tehdit seviyesini anlık hesapladım.
+- **Kaçış manevrası:** Kritik eşik aşılınca MAVSDK offboard kontrol arayüzü üzerinden otonom kaçış komutu ürettim.
+- **Uçtan uca akış:** Gerçek zamanlı karar verme → telemetri işleme → otonom kontrol akışını tek bir pipeline içinde tasarladım.
 
 ## Teknolojiler
 
-`Python` · `NumPy` · `Shapely` · `Matplotlib`
+`Python` · `MAVSDK` · `PX4` · `Telemetry Processing` · `Offboard Control` · `Autonomous Control` · `Real-Time Decision Making`
