@@ -533,6 +533,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         const dateChip = r.updated_at
             ? `<span class="bg-[#F1F5F9] text-text-main font-label-md text-[12px] px-3 py-1 rounded-full">${esc(formatDate(r.updated_at))}</span>`
             : '';
+        // Tıklanabilirlik: yerel .md (details) ya da GitHub repo varsa detay sayfası açılır.
+        const clickable = !!(r.details || r.repo);
+        const linkTarget = r.slug || r.repo || r.name;
+        const cta = clickable
+            ? `<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="/project_details.html?repo=${encodeURIComponent(linkTarget)}">
+                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
+                    Detayları Gör<span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
+                </a>`
+            : `<span class="inline-flex items-center text-on-surface-variant/50 font-label-md text-label-md mt-auto w-max px-2 py-1 -ml-2 cursor-default select-none">
+                    Detay yok
+                </span>`;
         return `
         <div class="shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center sm:snap-start bg-surface-card rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-border-subtle group/card hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] hover:-translate-y-3 transition-all duration-500 flex flex-col animate-on-scroll is-visible ${delay}">
             <div class="h-48 bg-surface-variant relative overflow-hidden shrink-0">${media}</div>
@@ -540,10 +551,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="flex gap-2 mb-4">${dateChip}</div>
                 <h3 class="font-headline-sm text-headline-sm text-primary mb-3 line-clamp-2 group-hover/card:text-secondary transition-colors duration-300">${esc(r.name)}</h3>
                 <p class="font-body-md text-body-md text-text-main mb-6 flex-1 line-clamp-4">${esc(desc)}</p>
-                <a class="inline-flex items-center text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto relative overflow-hidden w-max px-2 py-1 -ml-2 rounded-lg" href="/project_details.html?repo=${encodeURIComponent(r.repo || r.name)}">
-                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover/card:animate-shimmer"></span>
-                    Detayları Gör<span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-2 transition-transform duration-300">arrow_forward</span>
-                </a>
+                ${cta}
             </div>
         </div>`;
     };
@@ -581,6 +589,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             ...manualProjects.map(m => ({
                 name: m.name,
                 repo: m.repo || null,
+                slug: m.slug || null,
+                details: m.details || null,
                 description: m.description,
                 readmeIntro: m.description,
                 updated_at: m.updated_at,

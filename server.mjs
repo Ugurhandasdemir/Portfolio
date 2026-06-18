@@ -22,6 +22,7 @@ const MIME = {
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
   '.pdf': 'application/pdf',
+  '.md': 'text/markdown; charset=utf-8',
 };
 
 function send(res, status, type, body) {

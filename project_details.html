@@ -297,30 +297,28 @@
 (function () {
   const USER = 'ugurhandasdemir';
   const params = new URLSearchParams(location.search);
-  const repo = params.get('repo');
+  const slug = params.get('repo');
   const titleEl = document.getElementById('repo-title');
   const statusEl = document.getElementById('readme-status');
   const bodyEl = document.getElementById('readme');
 
-  if (!repo) {
+  if (!slug) {
     titleEl.textContent = 'Proje secilmedi';
     statusEl.textContent = 'Gecerli bir proje secilmedi.';
     return;
   }
-  titleEl.textContent = repo;
-  document.title = repo + ' - Ugurhan Dasdemir';
 
-  fetch('https://api.github.com/repos/' + USER + '/' + encodeURIComponent(repo) + '/readme', {
-    headers: { 'Accept': 'application/vnd.github.v3.raw' }
-  })
-    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
-    .then(function (md) {
-      statusEl.textContent = '';
-      var html = window.marked ? marked.parse(md) : ('<pre>' + md.replace(/[&<>]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]; }) + '</pre>');
-      var rawBase = 'https://raw.githubusercontent.com/' + USER + '/' + repo + '/HEAD/';
-      var blobBase = 'https://github.com/' + USER + '/' + repo + '/blob/HEAD/';
-      var tmp = document.createElement('div');
-      tmp.innerHTML = html;
+  function renderMarkdown(md, ghRepo) {
+    statusEl.textContent = '';
+    var html = window.marked
+      ? marked.parse(md)
+      : ('<pre>' + md.replace(/[&<>]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]; }) + '</pre>');
+    var tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    if (ghRepo) {
+      // GitHub README: göreli yolları repo'ya göre mutlaklaştır.
+      var rawBase = 'https://raw.githubusercontent.com/' + USER + '/' + ghRepo + '/HEAD/';
+      var blobBase = 'https://github.com/' + USER + '/' + ghRepo + '/blob/HEAD/';
       tmp.querySelectorAll('img[src]').forEach(function (img) {
         var sv = img.getAttribute('src');
         if (sv && !/^https?:|^data:|^\/\//.test(sv)) img.setAttribute('src', rawBase + sv.replace(/^\.?\//, ''));
@@ -328,12 +326,56 @@
       tmp.querySelectorAll('a[href]').forEach(function (a) {
         var h = a.getAttribute('href');
         if (h && !/^https?:|^#|^mailto:|^\/\//.test(h)) a.setAttribute('href', blobBase + h.replace(/^\.?\//, ''));
-        a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener');
       });
-      bodyEl.innerHTML = tmp.innerHTML;
-    })
-    .catch(function (e) {
-      statusEl.innerHTML = 'README alinamadi (' + e.message + '). <a class="text-secondary underline" target="_blank" rel="noopener" href="https://github.com/' + USER + '/' + encodeURIComponent(repo) + '">GitHub\'da ac</a>';
+    }
+    // Yerel .md: göreli yollar zaten /static/... ile mutlak; dış linkleri yeni sekmede aç.
+    tmp.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href') || '';
+      if (/^https?:/.test(h)) { a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener'); }
+    });
+    bodyEl.innerHTML = tmp.innerHTML;
+  }
+
+  function fetchText(url, accept) {
+    var opts = accept ? { headers: { 'Accept': accept } } : undefined;
+    return fetch(url, opts).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); });
+  }
+
+  function loadGithub(ghRepo) {
+    return fetchText('https://api.github.com/repos/' + USER + '/' + encodeURIComponent(ghRepo) + '/readme', 'application/vnd.github.v3.raw')
+      .then(function (md) { renderMarkdown(md, ghRepo); });
+  }
+
+  fetch('/repos.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .catch(function () { return {}; })
+    .then(function (data) {
+      var manual = (data.manual || []).find(function (m) {
+        return (m.slug && m.slug === slug) || m.name === slug || m.repo === slug;
+      });
+      var mdPath = manual && manual.details ? ('/' + String(manual.details).replace(/^\/+/, '')) : null;
+      // Manual projede repo yok; düz repos[] girdisinde slug = repo adıdır.
+      var ghRepo = manual ? (manual.repo || null) : slug;
+      var title = manual ? manual.name : slug;
+      titleEl.textContent = title;
+      document.title = title + ' - Ugurhan Dasdemir';
+
+      // Öncelik: yerel .md → GitHub README → kaynak yok.
+      var local = mdPath ? fetchText(mdPath) : Promise.reject(new Error('no-local'));
+      local
+        .then(function (md) { renderMarkdown(md, null); })
+        .catch(function () {
+          if (!ghRepo) throw new Error('no-source');
+          return loadGithub(ghRepo);
+        })
+        .catch(function (e) {
+          if (e && e.message === 'no-source') {
+            statusEl.textContent = 'Bu proje için detay sayfası bulunmuyor.';
+          } else {
+            statusEl.innerHTML = 'İçerik alınamadı (' + (e && e.message) + ').'
+              + (ghRepo ? ' <a class="text-secondary underline" target="_blank" rel="noopener" href="https://github.com/' + USER + '/' + encodeURIComponent(ghRepo) + '">GitHub\'da aç</a>' : '');
+          }
+        });
     });
 })();
 </script>
