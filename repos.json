@@ -11,7 +11,13 @@
   ],
   "images": {
     "manga_translator": "static/images/manga.png",
-    "Local_deep_research": "static/images/deep.png"
+    "Local_deep_research": "static/images/deep.png",
+    "landing_status": "static/images/landing_status.png",
+    "brain_tumor": "static/images/braintumor.png",
+    "house_rent_predictor_xgb": "static/images/house_rent_predictor_xgb.png"
+  },
+  "youtube": {
+    "YOLOv8_UAV_Vehicle_Detection": "https://www.youtube.com/watch?v=rUq1ZLTppGM"
   },
   "manual": [
     {
@@ -47,7 +53,7 @@
       "html_url": null,
       "homepage": null,
       "image": "static/images/b.jpeg",
-      "youtube": "https://www.youtube.com/watch?v=YYVqzlg4NcY",
+      "youtube": "https://www.youtube.com/watch?v=YYVqzlg4NcY&t=251s",
       "kaggle": null
     },
     {
