@@ -452,7 +452,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const FALLBACK_PROJECTS = [
         { name: 'Local Deep Research', repo: 'Local_deep_research', updated_at: '2025-09-20',
           readmeIntro: 'Python/FastAPI/Flutter ile yerel RAG uygulaması: PDF\'leri parçalayıp ChromaDB, Milvus, Qdrant, LanceDB ve Weaviate\'e gömme; Ollama LLM ile kaynaklı soru-cevap. 28 embedding modelini benchmark ettim.' },
-        { name: 'Manga Translator', repo: 'manga_translator', updated_at: '2025-06-15',
+        { name: 'Manga Translator', repo: 'manga_translator', updated_at: '2025-06-15', image: 'static/images/manga.png',
           readmeIntro: 'Manga konuşma balonlarını PyTorch ile tespit edip OCR\'la metni çıkaran, çevirip balona geri yerleştiren uçtan uca Python pipeline (API/CLI).' },
         { name: 'Paylaşımlı Bellek Gerçek Zamanlı CV (YOLO + QR)', repo: 'Shared_memory_python', updated_at: '2025-05-10',
           readmeIntro: 'Jetson/GStreamer kamera akışını multiprocessing.shared_memory ile süreçler arası düşük gecikmeyle paylaşan, Ultralytics YOLO + pyzbar QR tespiti yapan gerçek zamanlı görüntü işleme hattı.' },
@@ -466,7 +466,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           readmeIntro: 'Ev kira tahmini için uçtan uca ML akışı: veri temizleme, aykırı değer filtreleme, one-hot encoding ve GridSearchCV ile XGBoost hiperparametre optimizasyonu.' },
         { name: 'Flights Booking (Django)', repo: 'Flights-Booking', updated_at: '2024-10-15',
           readmeIntro: 'Django ile uçtan uca uçuş rezervasyon uygulaması: kayıt/giriş, koltuk seçimi, ödeme ve özet akışı; ORM, formlar ve migrations ile.' }
-    ].map(p => ({ ...p, description: p.readmeIntro, image: null }));
+    ].map(p => ({ ...p, description: p.readmeIntro, image: p.image || null }));
 
     const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const assetUrl = p => p ? ('/' + String(p).replace(/^\/+/, '')) : null;
@@ -521,6 +521,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!listRes.ok) throw new Error('repos.json alınamadı');
         const listData = await listRes.json();
         const allowed = new Set(listData.repos || []);
+        const repoImages = listData.images || {};
         const manualProjects = listData.manual || [];
 
         let repos = [];
@@ -533,7 +534,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const reposWithReadme = await Promise.all(repos.map(async r => ({
             name: r.name, repo: r.name, description: r.description,
             readmeIntro: await getReadmeIntro(r.name),
-            updated_at: r.updated_at, image: null
+            updated_at: r.updated_at, image: repoImages[r.name] || null
         })));
 
         const githubProjects = reposWithReadme.length ? reposWithReadme : FALLBACK_PROJECTS;

@@ -9,6 +9,10 @@
     "Shared_memory_python",
     "landing_status"
   ],
+  "images": {
+    "manga_translator": "static/images/manga.png",
+    "Local_deep_research": "static/images/deep.png"
+  },
   "manual": [
     {
       "name": "Edge AI Tabanlı Termal Nesne Tespiti (SAYZEK Bursiyeri)",
