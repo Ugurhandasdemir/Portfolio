@@ -43,7 +43,7 @@
 <div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors ease-out duration-200" href="#">Uğurhan Daşdemir</a>
 <nav class="hidden md:flex items-center gap-6">
-<a class="nav-link font-label-md text-label-md text-primary border-b-2 border-primary pb-1 ease-out duration-200" href="#home">Ana Sayfa</a>
+<a class="nav-link active font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#home">Ana Sayfa</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#about">Hakkımda</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#experience">Deneyim</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#skills">Yetenekler</a>
@@ -53,18 +53,18 @@
 </nav>
 <a class="hidden md:inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-4 py-2 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" href="#contact">İletişime Geç</a>
 <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Menüyü aç" class="md:hidden text-on-surface hover:bg-surface-container-low p-3 rounded-full transition-all duration-200 ease-out active:scale-95" id="mobileMenuBtn">
-<span class="material-symbols-outlined">menu</span>
+<span aria-hidden="true" class="material-symbols-outlined">menu</span>
 </button>
 </div>
 <!-- Mobile Menu -->
-<div class="hidden md:hidden bg-surface-pure border-t border-outline-variant/30 px-margin-mobile py-4 flex-col gap-4" id="mobileMenu">
-<a class="font-label-md text-label-md text-primary" href="#home" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Ana Sayfa</a>
-<a class="font-label-md text-label-md text-on-surface-variant" href="#about" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Hakkımda</a>
-<a class="font-label-md text-label-md text-on-surface-variant" href="#experience" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Deneyim</a>
-<a class="font-label-md text-label-md text-on-surface-variant" href="#skills" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Yetenekler</a>
-<a class="font-label-md text-label-md text-on-surface-variant" href="#projects" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Projeler</a>
-<a class="font-label-md text-label-md text-on-surface-variant" href="#volunteer" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Gönüllü</a>
-<a class="font-label-md text-label-md text-on-surface-variant" href="#contact" onclick="document.getElementById('mobileMenu').classList.add('hidden')">İletişim</a>
+<div class="hidden md:hidden bg-surface-pure border-t border-outline-variant/30 px-margin-mobile py-4 flex-col gap-1" id="mobileMenu">
+<a class="mobile-menu-link block py-3 font-label-md text-label-md text-primary" href="#home">Ana Sayfa</a>
+<a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="#about">Hakkımda</a>
+<a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="#experience">Deneyim</a>
+<a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="#skills">Yetenekler</a>
+<a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="#projects">Projeler</a>
+<a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="#volunteer">Gönüllü</a>
+<a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="#contact">İletişim</a>
 </div>
 </header>
 
@@ -79,10 +79,10 @@
     çözümlere dönüştürüyorum.
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl animate-on-scroll delay-100">
-    Ben Uğurhan Daşdemir, zor görünen problemleri parçalayıp anlaşılır ve işe yarar çözümler üretmek hoşuma gidiyor. Şu sıralar daha çok derin öğrenme ve full-stack tarafında kendimi geliştirmeye odaklandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
+    Ben Uğurhan Daşdemir. Bilgisayar mühendisliği mezunu olarak bilgisayarlı görü, derin öğrenme ve otonom sistemlerde gerçek problemlere çalışan çözümler geliştiriyorum.
 </p>
 <div class="flex flex-wrap gap-4 pt-4 animate-on-scroll delay-200">
-<button class="inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-6 py-3 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" onclick="document.getElementById('cv-modal').classList.remove('hidden')">
+<button class="inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-6 py-3 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" id="cv-open">
     CV Görüntüle
 </button>
 <a class="inline-flex items-center justify-center font-label-md text-label-md border border-outline-variant text-on-surface px-6 py-3 rounded-lg hover:bg-surface-container-low transition-all duration-200 ease-out active:scale-95" href="#projects">
@@ -114,10 +114,10 @@
 <div class="bg-surface-pure rounded-xl p-8 md:p-12 border border-outline-variant/30 shadow-sm relative overflow-hidden animate-on-scroll">
 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 flex items-center gap-2">
-    <span class="material-symbols-outlined text-primary">person</span> Hakkımda
+    <span aria-hidden="true" class="material-symbols-outlined text-primary">person</span> Hakkımda
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-    Merhaba, ben Uğurhan Daşdemir. <strong>Atatürk Üniversitesi</strong>'nde Bilgisayar Mühendisliği okuyorum. Yapay zeka, otonom sistemler ve veri mühendisliği üzerine çalışıyorum; <strong>SAYZEK</strong> bursiyeri olarak termal nesne tespiti, <strong>Teknofest</strong> yarışmalarında İHA algoritmaları geliştirdim. <strong>NICEYE GROUP</strong>'ta part-time AI otomasyon geliştirici, öncesinde <strong>IBTECH</strong>'te Data Warehouse stajyeri olarak çalıştım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
+    Merhaba, ben Uğurhan Daşdemir. <strong>Atatürk Üniversitesi Bilgisayar Mühendisliği</strong> mezunuyum (2026). Yapay zeka, otonom sistemler ve veri mühendisliği üzerine çalışıyorum; <strong>SAYZEK</strong> bursiyeri olarak termal nesne tespiti, <strong>Teknofest</strong> yarışmalarında İHA algoritmaları geliştirdim. <strong>NICEYE GROUP</strong>'ta part-time AI otomasyon geliştirici, öncesinde <strong>IBTECH</strong>'te Data Warehouse stajyeri olarak deneyim kazandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
 </p>
 </div>
 </section>
@@ -125,7 +125,7 @@
 <!-- Experience Section -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="experience">
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-2 animate-on-scroll">
-    <span class="material-symbols-outlined text-primary">work</span> İş Deneyimi
+    <span aria-hidden="true" class="material-symbols-outlined text-primary">work</span> İş Deneyimi
 </h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- NICEYE GROUP -->
@@ -136,7 +136,7 @@
 <p class="font-label-md text-label-md text-primary mt-1">Part-Time Developer / Uzaktan</p>
 <p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">İstanbul, Türkiye</p>
 </div>
-<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Haz 2025 – Günümüz</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Tem 2025 – Haz 2026</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6">n8n üzerinde birden fazla uçtan uca yapay zekâ otomasyonu geliştirdim. Ayrıca Pfizer ve Viatris gibi ilaç firmaları için web çözümleri geliştirdim. Yapay zekâ projelerinde geliştirme, test, doğrulama ve prompt mühendisliği görevleri üstlendim.</p>
 <div class="flex flex-wrap gap-2">
@@ -173,7 +173,7 @@
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="skills">
 <div class="mb-12 animate-on-scroll">
 <h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
-    <span class="material-symbols-outlined text-primary">code</span> Teknik Yetkinlikler
+    <span aria-hidden="true" class="material-symbols-outlined text-primary">code</span> Teknik Yetkinlikler
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-2">Projelerimde en çok kullandığım temel teknolojiler.</p>
 </div>
@@ -182,7 +182,7 @@
 <div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-100">
 <div class="flex items-center gap-3 mb-6">
 <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">terminal</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary">terminal</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-on-surface">Diller</h3>
 </div>
@@ -199,7 +199,7 @@
 <div class="md:col-span-2 bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-200">
 <div class="flex items-center gap-3 mb-6">
 <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">smart_toy</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary">smart_toy</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-on-surface">Yapay Zeka &amp; Otonom Sistemler</h3>
 </div>
@@ -210,7 +210,8 @@
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Transformers</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">ONNX</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">MAVSDK</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">ROS2</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PX4</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">ROS 2</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">RAG / LLM</span>
 </div>
 </div>
@@ -218,7 +219,7 @@
 <div class="md:col-span-3 bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-300">
 <div class="flex items-center gap-3 mb-6">
 <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">database</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary">database</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-on-surface">Veri &amp; Backend</h3>
 </div>
@@ -242,7 +243,7 @@
 <div class="flex justify-between items-end mb-12">
 <div class="animate-on-scroll">
 <h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
-    <span class="material-symbols-outlined text-primary">view_carousel</span> Öne Çıkan Projeler
+    <span aria-hidden="true" class="material-symbols-outlined text-primary">view_carousel</span> Öne Çıkan Projeler
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-2">Karmaşık problemleri çözdüğüm seçilmiş çalışmalar.</p>
 </div>
@@ -255,7 +256,7 @@
 <!-- Volunteer / Community Section -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="volunteer">
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-2 animate-on-scroll">
-    <span class="material-symbols-outlined text-primary">groups</span> Gönüllü Çalışmalar &amp; Yarışmalar
+    <span aria-hidden="true" class="material-symbols-outlined text-primary">groups</span> Gönüllü Çalışmalar &amp; Yarışmalar
 </h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- ATA AIT Simurg -->
@@ -295,16 +296,16 @@
 </div>
 <div class="flex flex-wrap justify-center gap-6">
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="tel:+905364078583">
-<span class="material-symbols-outlined text-base">call</span>+90 536 407 85 83
+<span aria-hidden="true" class="material-symbols-outlined text-base">call</span>+90 536 407 85 83
 </a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="mailto:ugurhandasdemir@gmail.com">
-<span class="material-symbols-outlined text-base">mail</span>E-posta
+<span aria-hidden="true" class="material-symbols-outlined text-base">mail</span>E-posta
 </a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">
-<span class="material-symbols-outlined text-base">code</span>GitHub
+<span aria-hidden="true" class="material-symbols-outlined text-base">code</span>GitHub
 </a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" rel="noopener">
-<span class="material-symbols-outlined text-base">account_circle</span>LinkedIn
+<span aria-hidden="true" class="material-symbols-outlined text-base">account_circle</span>LinkedIn
 </a>
 </div>
 <div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">
@@ -314,15 +315,12 @@
 </footer>
 
 <!-- CV Modal -->
-<div class="fixed inset-0 z-[100] hidden" id="cv-modal">
-<div class="absolute inset-0 bg-on-surface/60 backdrop-blur-sm" onclick="document.getElementById('cv-modal').classList.add('hidden')"></div>
-<div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-<div class="flex min-h-full items-end justify-center p-4 sm:items-center sm:p-0">
-<div class="relative transform overflow-hidden rounded-xl bg-surface-pure text-left shadow-2xl transition-all sm:my-8 w-full sm:max-w-4xl border border-outline-variant/30">
+<dialog aria-labelledby="cv-modal-title" class="m-auto w-[calc(100%-2rem)] max-w-4xl rounded-xl bg-surface-pure p-0 text-left shadow-2xl backdrop:bg-on-surface/60 backdrop:backdrop-blur-sm" id="cv-modal">
+<div class="overflow-hidden rounded-xl border border-outline-variant/30">
 <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4 border-b border-outline-variant/30 flex justify-between items-center">
-<h3 class="font-headline-md text-headline-md text-on-surface">Özgeçmiş</h3>
-<button class="text-on-surface-variant hover:text-error transition-colors rounded-full p-1" onclick="document.getElementById('cv-modal').classList.add('hidden')">
-<span class="material-symbols-outlined text-2xl">close</span>
+<h3 class="font-headline-md text-headline-md text-on-surface" id="cv-modal-title">Özgeçmiş</h3>
+<button aria-label="Kapat" class="text-on-surface-variant hover:text-error transition-colors rounded-full p-3" data-close-cv type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-2xl">close</span>
 </button>
 </div>
 <div class="bg-surface-container-low p-4 sm:p-6">
@@ -332,12 +330,10 @@
 </div>
 <div class="px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 border-t border-outline-variant/30 gap-3">
 <a class="inline-flex w-full justify-center rounded-lg bg-primary px-6 py-3 font-label-md text-label-md text-on-primary shadow-sm hover:bg-primary/90 sm:w-auto transition-all duration-200" download="Ugurhan_Dasdemir_CV.pdf" href="/static/pdf/ozgecmis.pdf" target="_blank" rel="noopener">PDF İndir</a>
-<button class="mt-3 inline-flex w-full justify-center rounded-lg bg-surface-pure px-6 py-3 font-label-md text-label-md text-on-surface shadow-sm ring-1 ring-inset ring-outline-variant hover:bg-surface-container-low sm:mt-0 sm:w-auto transition-all duration-200" onclick="document.getElementById('cv-modal').classList.add('hidden')" type="button">Kapat</button>
+<button class="mt-3 inline-flex w-full justify-center rounded-lg bg-surface-pure px-6 py-3 font-label-md text-label-md text-on-surface shadow-sm ring-1 ring-inset ring-outline-variant hover:bg-surface-container-low sm:mt-0 sm:w-auto transition-all duration-200" data-close-cv type="button">Kapat</button>
 </div>
 </div>
-</div>
-</div>
-</div>
+</dialog>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -356,11 +352,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            const isOpen = !mobileMenu.classList.toggle('hidden');
+        const setMobileMenu = isOpen => {
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileMenu.classList.toggle('flex', isOpen);
             mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
             mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Menüyü kapat' : 'Menüyü aç');
+        };
+        mobileMenuBtn.addEventListener('click', () => setMobileMenu(mobileMenu.classList.contains('hidden')));
+        mobileMenu.querySelectorAll('.mobile-menu-link').forEach(link => link.addEventListener('click', () => setMobileMenu(false)));
+    }
+
+    // Accessible CV dialog
+    const cvModal = document.getElementById('cv-modal');
+    const cvOpen = document.getElementById('cv-open');
+    let cvTrigger = null;
+    if (cvModal && cvOpen) {
+        cvOpen.addEventListener('click', () => {
+            cvTrigger = document.activeElement;
+            cvModal.showModal();
+            cvModal.querySelector('[data-close-cv]').focus();
         });
+        cvModal.querySelectorAll('[data-close-cv]').forEach(button => button.addEventListener('click', () => cvModal.close()));
+        cvModal.addEventListener('click', event => { if (event.target === cvModal) cvModal.close(); });
+        cvModal.addEventListener('close', () => { if (cvTrigger) cvTrigger.focus(); });
     }
 
     // Active nav link on scroll
@@ -432,17 +446,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         const img = assetUrl(r.image);
         const media = img
             ? `<img alt="${esc(r.name)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="${esc(img)}">`
-            : `<div class="w-full h-full flex items-center justify-center bg-surface-container-low"><span class="material-symbols-outlined text-5xl text-on-surface-variant/30">terminal</span></div>`;
+            : `<div class="w-full h-full flex items-center justify-center bg-surface-container-low"><span aria-hidden="true" class="material-symbols-outlined text-5xl text-on-surface-variant/30">terminal</span></div>`;
         const rawDesc = r.readmeIntro ?? r.description ?? 'Açıklama yok.';
         const desc = rawDesc.length > 160 ? rawDesc.slice(0, 160).replace(/\s+\S*$/, '').trim() + '…' : rawDesc;
         const dateChip = r.updated_at ? `<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full">${esc(formatDate(r.updated_at))}</span>` : '';
         const clickable = !!(r.details || r.repo);
         const target = r.slug || r.repo || r.name;
         const cta = clickable
-            ? `<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1" href="/project_details.html?repo=${encodeURIComponent(target)}">Detayları Gör <span class="material-symbols-outlined text-sm">arrow_forward</span></a>`
+            ? `<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1" href="/project_details.html?repo=${encodeURIComponent(target)}">Detayları Gör <span aria-hidden="true" class="material-symbols-outlined text-sm">arrow_forward</span></a>`
             : `<span class="font-label-md text-label-md text-on-surface-variant/40 inline-flex items-center gap-1 cursor-default select-none">Detay yok</span>`;
         const ytBtn = r.youtube
-            ? `<a class="font-label-md text-label-md text-error hover:underline inline-flex items-center gap-1" href="${esc(r.youtube)}" target="_blank" rel="noopener"><span class="material-symbols-outlined text-sm">play_circle</span> Video</a>`
+            ? `<a class="font-label-md text-label-md text-error hover:underline inline-flex items-center gap-1" href="${esc(r.youtube)}" target="_blank" rel="noopener"><span aria-hidden="true" class="material-symbols-outlined text-sm">play_circle</span> Video</a>`
             : '';
         return `
         <div class="group bg-surface-pure rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col">
