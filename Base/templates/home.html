@@ -8,7 +8,7 @@
 <meta property="og:title" content="Uğurhan Daşdemir | Yapay Zekâ ve Otonom Sistemler">
 <meta property="og:description" content="Bilgisayarlı görü, Edge AI, LLM/RAG ve otonom sistemler projeleri.">
 <meta property="og:url" content="https://ugurhandasdemir.com/">
-<meta property="og:image" content="https://ugurhandasdemir.com/static/images/avci.png">
+<meta property="og:image" content="https://ugurhandasdemir.com/static/images/avci.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static/css/site.css">
@@ -19,15 +19,16 @@
 <style>
     :root { --color-primary: #311fca; }
     html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
     .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
-    .animate-on-scroll {
+    #home .animate-on-scroll {
         opacity: 0;
         transform: translateY(16px);
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
-    .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+    #home .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
     .delay-100 { transition-delay: 0.1s; }
     .delay-200 { transition-delay: 0.2s; }
     .delay-300 { transition-delay: 0.3s; }
@@ -40,8 +41,9 @@
     }
     @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
-        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-        .animate-on-scroll { opacity: 1; transform: none; }
+        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+        #home .animate-on-scroll { opacity: 1; transform: none; transition-property: opacity !important; }
+        .group:hover { transform: none !important; }
     }
 </style>
 </head>
@@ -50,7 +52,7 @@
 <!-- TopNavBar -->
 <header class="bg-surface-pure/80 fixed top-0 w-full backdrop-blur-md border-b border-outline-variant/30 shadow-sm z-50 transition-all duration-200">
 <div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors ease-out duration-200" href="#">Uğurhan Daşdemir</a>
+<a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors ease-out duration-200 py-3" href="#">Uğurhan Daşdemir</a>
 <nav class="hidden md:flex items-center gap-6">
 <a class="nav-link active font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#home">Ana Sayfa</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#about">Hakkımda</a>
@@ -102,8 +104,8 @@
 <div aria-label="İHA yazılım yığını: algılama, karar ve uçuş katmanları" class="telemetry-grid flex-1 w-full mt-12 md:mt-0 relative h-72 md:h-96 rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 bg-surface-pure animate-on-scroll delay-200 font-telemetry">
 <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary-container/40"></div>
 <div class="relative h-full p-6 md:p-8 flex flex-col justify-between">
-<div class="flex items-center justify-between text-label-sm text-on-surface-variant uppercase tracking-widest">
-<span>İHA yazılım katmanları</span>
+<div class="flex items-center justify-between text-label-sm text-on-surface-variant">
+<span>İHA yazılım katmanları</span><span>Benchmark: FPS · çıkarım süresi</span>
 </div>
 <div class="space-y-3" aria-hidden="true">
 <div class="ml-auto w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">01 / ALGILAMA</span><p class="mt-1 text-sm text-on-surface-variant">YOLO · OpenCV · Termal görüntüleme</p></div>
@@ -117,11 +119,11 @@
 
 <!-- About Section -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="about">
-<div class="bg-surface-pure rounded-xl p-8 md:p-12 border border-outline-variant/30 shadow-sm relative overflow-hidden animate-on-scroll">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 flex items-center gap-2">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">person</span> Hakkımda
+<div class="max-w-4xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">
+    Hakkımda
 </h2>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-[70ch]">
     Merhaba, ben Uğurhan Daşdemir. <strong>Atatürk Üniversitesi Bilgisayar Mühendisliği</strong> mezunuyum (2026). Yapay zeka, otonom sistemler ve veri mühendisliği üzerine çalışıyorum; <strong>SAYZEK</strong> bursiyeri olarak termal nesne tespiti, <strong>Teknofest</strong> yarışmalarında İHA algoritmaları geliştirdim. <strong>Uludoğan Savunma Sanayi</strong>'nde PX4 tabanlı GPS'siz otonom uçuş, <strong>NICEYE GROUP</strong>'ta AI otomasyon ve <strong>IBTECH</strong>'te veri ambarı alanlarında deneyim kazandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
 </p>
 </div>
@@ -129,21 +131,18 @@
 
 <!-- Experience Section -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="experience">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-2 animate-on-scroll">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">work</span> İş Deneyimi
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">
+    İş Deneyimi
 </h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="border-t border-outline-variant/60">
 <!-- ULUDOĞAN SAVUNMA SANAYİ -->
-<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-100">
-<div class="flex justify-between items-start mb-4 gap-4">
-<div>
+<article class="grid md:grid-cols-[12rem_1fr] gap-4 md:gap-10 py-10 border-b border-outline-variant/60">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tem 2026 – Eyl 2026</div>
+<div class="max-w-[70ch]">
 <h3 class="font-headline-md text-headline-md text-on-surface">ULUDOĞAN SAVUNMA SANAYİ TEKNOLOJİ A.Ş.</h3>
 <p class="font-label-md text-label-md text-primary mt-1">Uzun Dönem Stajyer / Yerinde</p>
 <p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">İstanbul, Türkiye</p>
-</div>
-<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Tem 2026 – Eyl 2026</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">GPS'in kullanılamadığı uçuşlar için LiDAR ölçümlerini irtifa veya zemin durumuna yönlendiren iki modlu bir PX4 EKF2 yapısı geliştirdim. Engel geçişlerinde irtifa kaymasını 3 m'den 0,2 m'ye düşürdüm; sistemi Gazebo SITL, gerçek araç uçuşu, ULog kabul testleri ve birim testleriyle doğruladım.</p>
+<p class="font-body-md text-body-md text-on-surface-variant my-5">GPS'in kullanılamadığı uçuşlar için LiDAR ölçümlerini irtifa veya zemin durumuna yönlendiren iki modlu bir PX4 EKF2 yapısı geliştirdim. Engel geçişlerinde irtifa kaymasını 3 m'den 0,2 m'ye düşürdüm; sistemi Gazebo SITL, gerçek araç uçuşu, ULog kabul testleri ve birim testleriyle doğruladım.</p>
 <div class="flex flex-wrap gap-2">
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">C++</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PX4 / EKF2</span>
@@ -151,18 +150,15 @@
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Gazebo SITL</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">MAVLink / ULog</span>
 </div>
-</div>
+</div></article>
 <!-- NICEYE GROUP -->
-<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-200">
-<div class="flex justify-between items-start mb-4 gap-4">
-<div>
+<article class="grid md:grid-cols-[12rem_1fr] gap-4 md:gap-10 py-10 border-b border-outline-variant/60">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tem 2025 – Haz 2026</div>
+<div class="max-w-[70ch]">
 <h3 class="font-headline-md text-headline-md text-on-surface">NICEYE GROUP</h3>
 <p class="font-label-md text-label-md text-primary mt-1">Part-Time Developer / Uzaktan</p>
 <p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">İstanbul, Türkiye</p>
-</div>
-<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Tem 2025 – Haz 2026</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">n8n üzerinde birden fazla uçtan uca yapay zekâ otomasyonu geliştirdim. Ayrıca Pfizer ve Viatris gibi ilaç firmaları için web çözümleri geliştirdim. Yapay zekâ projelerinde geliştirme, test, doğrulama ve prompt mühendisliği görevleri üstlendim.</p>
+<p class="font-body-md text-body-md text-on-surface-variant my-5">n8n üzerinde birden fazla uçtan uca yapay zekâ otomasyonu geliştirdim. Ayrıca Pfizer ve Viatris gibi ilaç firmaları için web çözümleri geliştirdim. Yapay zekâ projelerinde geliştirme, test, doğrulama ve prompt mühendisliği görevleri üstlendim.</p>
 <div class="flex flex-wrap gap-2">
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">n8n</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">LLM</span>
@@ -170,18 +166,15 @@
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">HTML / CSS</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PHP</span>
 </div>
-</div>
+</div></article>
 <!-- IBTECH -->
-<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-300">
-<div class="flex justify-between items-start mb-4 gap-4">
-<div>
+<article class="grid md:grid-cols-[12rem_1fr] gap-4 md:gap-10 py-10 border-b border-outline-variant/60">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Kas 2024 – May 2025</div>
+<div class="max-w-[70ch]">
 <h3 class="font-headline-md text-headline-md text-on-surface">IBTECH</h3>
 <p class="font-label-md text-label-md text-primary mt-1">Data Warehouse Stajyeri / Hibrit</p>
 <p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Kocaeli, Türkiye</p>
-</div>
-<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Kas 2024 – May 2025</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">MicroStrategy alternatifi kurum içi BI geliştirme sürecinde yer aldım. Oracle SQL rapor optimizasyonu ve POTA taleplerine yönelik sorgular geliştirdim. Selenium ile belge otomasyonu kurup Python, LLM ve LangChain kullanarak belge kategorizasyonu ve veri kazıma yaptım.</p>
+<p class="font-body-md text-body-md text-on-surface-variant my-5">MicroStrategy alternatifi kurum içi BI geliştirme sürecinde yer aldım. Oracle SQL rapor optimizasyonu ve POTA taleplerine yönelik sorgular geliştirdim. Selenium ile belge otomasyonu kurup Python, LLM ve LangChain kullanarak belge kategorizasyonu ve veri kazıma yaptım.</p>
 <div class="flex flex-wrap gap-2">
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Python</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Oracle SQL</span>
@@ -189,27 +182,22 @@
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">LangChain</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">LLM</span>
 </div>
-</div>
+</div></article>
 </div>
 </section>
 
 <!-- Skills Section -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="skills">
-<div class="mb-12 animate-on-scroll">
-<h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">code</span> Teknik Yetkinlikler
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+    Teknik Yetkinlikler
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-2">Projelerimde en çok kullandığım temel teknolojiler.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="divide-y divide-outline-variant/60 border-y border-outline-variant/60">
 <!-- Languages -->
-<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-100">
-<div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<span aria-hidden="true" class="material-symbols-outlined text-primary">terminal</span>
-</div>
+<div class="grid md:grid-cols-[16rem_1fr] gap-5 py-7">
 <h3 class="font-headline-md text-headline-md text-on-surface">Diller</h3>
-</div>
 <div class="flex flex-wrap gap-2">
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Python</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">C++</span>
@@ -220,13 +208,8 @@
 </div>
 </div>
 <!-- AI & Autonomous Systems -->
-<div class="md:col-span-2 bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-200">
-<div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<span aria-hidden="true" class="material-symbols-outlined text-primary">smart_toy</span>
-</div>
+<div class="grid md:grid-cols-[16rem_1fr] gap-5 py-7">
 <h3 class="font-headline-md text-headline-md text-on-surface">Yapay Zeka &amp; Otonom Sistemler</h3>
-</div>
 <div class="flex flex-wrap gap-2">
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PyTorch</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">YOLO</span>
@@ -240,13 +223,8 @@
 </div>
 </div>
 <!-- Data & Backend -->
-<div class="md:col-span-3 bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-300">
-<div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<span aria-hidden="true" class="material-symbols-outlined text-primary">database</span>
-</div>
+<div class="grid md:grid-cols-[16rem_1fr] gap-5 py-7">
 <h3 class="font-headline-md text-headline-md text-on-surface">Veri &amp; Backend</h3>
-</div>
 <div class="flex flex-wrap gap-2">
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">FastAPI</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Django</span>
@@ -265,9 +243,9 @@
 <!-- Projects Section -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="projects">
 <div class="flex justify-between items-end mb-12">
-<div class="animate-on-scroll">
-<h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">view_carousel</span> Öne Çıkan Projeler
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+    Öne Çıkan Projeler
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-2">Karmaşık problemleri çözdüğüm seçilmiş çalışmalar.</p>
 </div>
@@ -275,16 +253,20 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="projectSlider">
 <div class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">Projeler yükleniyor…</div>
 </div>
+<div class="mt-14 border-t border-outline-variant/60 pt-8" id="otherProjectsSection" hidden>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-5">Diğer projeler</h3>
+<div class="grid md:grid-cols-2 gap-x-10" id="otherProjects"></div>
+</div>
 </section>
 
 <!-- Volunteer / Community Section -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="volunteer">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-2 animate-on-scroll">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">groups</span> Gönüllü Çalışmalar &amp; Yarışmalar
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">
+    Gönüllü Çalışmalar &amp; Yarışmalar
 </h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- ATA AIT Simurg -->
-<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-100">
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm">
 <div class="flex justify-between items-start mb-4 gap-4">
 <div>
 <h3 class="font-headline-md text-headline-md text-on-surface">ATA AIT Simurg İHA Takımı</h3>
@@ -296,7 +278,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Otonom hava araçları üzerine çalışan takımımızda; hava muharebesi, görüntü işleme, yasaklı alanlardan kaçış, veri aktarımı ve rota/kaçış algoritmalarının geliştirilmesi alanlarında aktif görev aldım. İHA'lardan alınan kamera verileriyle araç, insan ve nesne tespiti, iniş alanı uygunluğu ve kamera tabanlı konum kestirimi üzerine çalışmalar yürüttüm.</p>
 </div>
 <!-- YZ Topluluğu -->
-<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-200">
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm">
 <div class="flex justify-between items-start mb-4 gap-4">
 <div>
 <h3 class="font-headline-md text-headline-md text-on-surface">Yapay Zekâ ve Teknoloji Topluluğu</h3>
@@ -312,9 +294,8 @@
 
 <!-- Contact Section -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-0" id="contact">
-<div class="bg-primary text-on-primary rounded-xl p-8 md:p-12 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 animate-on-scroll">
+<div class="bg-primary text-on-primary rounded-xl p-8 md:p-12 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
 <div class="max-w-3xl">
-<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary/70 mb-3">Birlikte çalışalım</p>
 <h2 class="font-headline-lg text-headline-lg mb-4">Yeni projelere ve iş birliklerine açığım.</h2>
 <p class="font-body-lg text-body-lg text-on-primary/80">Yapay zekâ, bilgisayarlı görü, Edge AI, LLM/RAG ve otonom sistemler alanındaki projelerde çalışmaya açığım.</p>
 </div>
@@ -341,16 +322,16 @@
 <span class="font-headline-lg text-headline-lg text-on-surface">Uğurhan Daşdemir</span>
 </div>
 <div class="flex flex-wrap justify-center gap-6">
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="tel:+905364078583">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1 py-3" href="tel:+905364078583">
 <span aria-hidden="true" class="material-symbols-outlined text-base">call</span>+90 536 407 85 83
 </a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="mailto:ugurhandasdemir@gmail.com">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1 py-3" href="mailto:ugurhandasdemir@gmail.com">
 <span aria-hidden="true" class="material-symbols-outlined text-base">mail</span>E-posta
 </a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1 py-3" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">
 <span aria-hidden="true" class="material-symbols-outlined text-base">code</span>GitHub
 </a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" rel="noopener">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1 py-3" href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" rel="noopener">
 <span aria-hidden="true" class="material-symbols-outlined text-base">account_circle</span>LinkedIn
 </a>
 </div>
@@ -384,7 +365,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll animations
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const animatedElements = document.querySelectorAll('#home .animate-on-scroll');
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         animatedElements.forEach(el => el.classList.add('is-visible'));
     } else {
@@ -441,25 +422,27 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
     const grid = document.getElementById('projectSlider');
+    const otherGrid = document.getElementById('otherProjects');
+    const otherSection = document.getElementById('otherProjectsSection');
     if (!grid) return;
 
     const username = 'ugurhandasdemir';
 
     const FALLBACK_PROJECTS = [
-        { name: 'Local Deep Research', repo: 'Local_deep_research', updated_at: '2025-09-20', image: 'static/images/deep.png',
+        { name: 'Local Deep Research', repo: 'Local_deep_research', updated_at: '2025-09-20', image: 'static/images/deep.webp',
           readmeIntro: 'Python/FastAPI/Flutter ile yerel RAG uygulaması: PDF\'leri parçalayıp ChromaDB, Milvus, Qdrant, LanceDB ve Weaviate\'e gömme; Ollama LLM ile kaynaklı soru-cevap. 28 embedding modelini benchmark ettim.' },
-        { name: 'Manga Translator', repo: 'manga_translator', updated_at: '2025-06-15', image: 'static/images/manga.png',
+        { name: 'Manga Translator', repo: 'manga_translator', updated_at: '2025-06-15', image: 'static/images/manga.webp',
           readmeIntro: 'Manga konuşma balonlarını PyTorch ile tespit edip OCR\'la metni çıkaran, çevirip balona geri yerleştiren uçtan uca Python pipeline (API/CLI).' },
         { name: 'Paylaşımlı Bellek Gerçek Zamanlı CV (YOLO + QR)', repo: 'Shared_memory_python', updated_at: '2025-05-10',
           readmeIntro: 'Jetson/GStreamer kamera akışını multiprocessing.shared_memory ile süreçler arası düşük gecikmeyle paylaşan, Ultralytics YOLO + pyzbar QR tespiti yapan gerçek zamanlı görüntü işleme hattı.' },
         { name: 'Drone Görüntü Analizi (YOLOv8 + SAHI)', repo: 'YOLOv8_UAV_Vehicle_Detection', updated_at: '2025-04-05',
           youtube: 'https://www.youtube.com/watch?v=rUq1ZLTppGM',
           readmeIntro: 'Drone görüntülerinde YOLOv8 + SAHI ile insan/araç/UAP-UAI tespiti; iniş uygunluğu analizi ve ardışık karelerden öteleme/konum kestirimi.' },
-        { name: 'İniş Alanı Uygunluk Analizi', repo: 'landing_status', updated_at: '2025-03-12', image: 'static/images/landing_status.png',
+        { name: 'İniş Alanı Uygunluk Analizi', repo: 'landing_status', updated_at: '2025-03-12', image: 'static/images/landing_status.webp',
           readmeIntro: 'Drone alt görüş kamerasından alınan karelerle iniş alanı uygunluğunu analiz eden ve kutu hareketinden öteleme/konum kestiren görüntü işleme modülü.' },
-        { name: 'Beyin Tümörü Sınıflandırma', repo: 'brain_tumor', updated_at: '2025-02-08', image: 'static/images/braintumor.png',
+        { name: 'Beyin Tümörü Sınıflandırma', repo: 'brain_tumor', updated_at: '2025-02-08', image: 'static/images/braintumor.webp',
           readmeIntro: '12.064 MR görüntüsünde 4 sınıflı tümör sınıflandırması; PyTorch ile DenseNet121+SE+LSTM ve hibrit mimariler, yaklaşık %97-98 doğruluk.' },
-        { name: 'HouseRentPredictor (Kira Tahmini)', repo: 'house_rent_predictor_xgb', updated_at: '2024-12-20', image: 'static/images/house_rent_predictor_xgb.png',
+        { name: 'HouseRentPredictor (Kira Tahmini)', repo: 'house_rent_predictor_xgb', updated_at: '2024-12-20', image: 'static/images/house_rent_predictor_xgb.webp',
           readmeIntro: 'Ev kira tahmini için uçtan uca ML akışı: veri temizleme, aykırı değer filtreleme, one-hot encoding ve GridSearchCV ile XGBoost hiperparametre optimizasyonu.' },
         { name: 'Flights Booking (Django)', repo: 'Flights-Booking', updated_at: '2024-10-15',
           readmeIntro: 'Django ile uçtan uca uçuş rezervasyon uygulaması: kayıt/giriş, koltuk seçimi, ödeme ve özet akışı; ORM, formlar ve migrations ile.' }
@@ -499,10 +482,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         const clickable = !!(r.details || r.repo);
         const target = r.slug || r.repo || r.name;
         const cta = clickable
-            ? `<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1" href="/project_details.html?repo=${encodeURIComponent(target)}">Detayları Gör <span aria-hidden="true" class="material-symbols-outlined text-sm">arrow_forward</span></a>`
+            ? `<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1 py-2" href="/project_details.html?repo=${encodeURIComponent(target)}">Detayları Gör <span aria-hidden="true" class="material-symbols-outlined text-sm">arrow_forward</span></a>`
             : '';
         const ytBtn = r.youtube
-            ? `<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1" href="${esc(r.youtube)}" target="_blank" rel="noopener"><span aria-hidden="true" class="material-symbols-outlined text-sm">play_circle</span> Video</a>`
+            ? `<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1 py-2" href="${esc(r.youtube)}" target="_blank" rel="noopener"><span aria-hidden="true" class="material-symbols-outlined text-sm">play_circle</span> Video</a>`
             : '';
         return `
         <div class="group bg-surface-pure rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col">
@@ -523,6 +506,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const allowed = new Set(listData.repos || []);
         const repoImages = listData.images || {};
         const repoYoutube = listData.youtube || {};
+        const repoTitles = listData.titles || {};
+        const featuredOrder = listData.featured || [];
         const manualProjects = listData.manual || [];
 
         let repos = [];
@@ -533,26 +518,48 @@ document.addEventListener('DOMContentLoaded', async () => {
         repos = (Array.isArray(repos) ? repos : []).filter(r => allowed.has(r.name));
 
         const reposWithReadme = await Promise.all(repos.map(async r => ({
-            name: r.name, repo: r.name, description: r.description,
+            name: repoTitles[r.name] || r.name, repo: r.name, description: r.description,
             readmeIntro: await getReadmeIntro(r.name),
             updated_at: r.updated_at, image: repoImages[r.name] || null,
             youtube: repoYoutube[r.name] || null
         })));
 
-        const githubProjects = reposWithReadme.length ? reposWithReadme : FALLBACK_PROJECTS;
+        const liveRepoNames = new Set(reposWithReadme.map(project => project.repo));
+        const githubProjects = [
+            ...reposWithReadme,
+            ...FALLBACK_PROJECTS.filter(project => !liveRepoNames.has(project.repo))
+        ]
+            .map(project => ({ ...project, name: repoTitles[project.repo] || project.name }));
 
         const allProjects = [
             ...githubProjects,
             ...manualProjects.map(m => ({
                 name: m.name, repo: m.repo || null, slug: m.slug || null,
                 details: m.details || null, description: m.description,
-                readmeIntro: m.description, updated_at: m.updated_at, image: m.image || null
+                readmeIntro: m.description, updated_at: m.updated_at, image: m.image || null,
+                youtube: m.youtube || null
             }))
-        ].sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+        ];
 
-        grid.innerHTML = allProjects.length
-            ? allProjects.map(r => cardHTML(r)).join('')
+        const keyOf = p => p.slug || p.repo || p.name;
+        const featured = featuredOrder
+            .map(key => allProjects.find(project => keyOf(project) === key))
+            .filter(Boolean);
+        const featuredKeys = new Set(featured.map(keyOf));
+        const others = allProjects
+            .filter(project => !featuredKeys.has(keyOf(project)))
+            .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+
+        grid.innerHTML = featured.length
+            ? featured.map(r => cardHTML(r)).join('')
             : '<p class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">Gösterilecek proje bulunamadı.</p>';
+        if (otherGrid && otherSection && others.length) {
+            otherGrid.innerHTML = others.map(project => {
+                const target = project.slug || project.repo || project.name;
+                return `<a class="flex items-center justify-between gap-4 border-b border-outline-variant/50 py-4 text-on-surface hover:text-primary transition-colors" href="/project_details.html?repo=${encodeURIComponent(target)}"><span class="font-label-md text-label-md">${esc(project.name)}</span><span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span></a>`;
+            }).join('');
+            otherSection.hidden = false;
+        }
     } catch {
         grid.innerHTML = '<p class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">Projeler yüklenemedi.</p>';
     }
