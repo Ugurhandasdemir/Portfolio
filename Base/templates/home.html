@@ -10,6 +10,7 @@
 <script src="/static/js/tailwind-config.js"></script>
 <style>
     :root { --color-primary: #311fca; }
+    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
     .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
@@ -117,7 +118,7 @@
     <span aria-hidden="true" class="material-symbols-outlined text-primary">person</span> Hakkımda
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-    Merhaba, ben Uğurhan Daşdemir. <strong>Atatürk Üniversitesi Bilgisayar Mühendisliği</strong> mezunuyum (2026). Yapay zeka, otonom sistemler ve veri mühendisliği üzerine çalışıyorum; <strong>SAYZEK</strong> bursiyeri olarak termal nesne tespiti, <strong>Teknofest</strong> yarışmalarında İHA algoritmaları geliştirdim. <strong>NICEYE GROUP</strong>'ta part-time AI otomasyon geliştirici, öncesinde <strong>IBTECH</strong>'te Data Warehouse stajyeri olarak deneyim kazandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
+    Merhaba, ben Uğurhan Daşdemir. <strong>Atatürk Üniversitesi Bilgisayar Mühendisliği</strong> mezunuyum (2026). Yapay zeka, otonom sistemler ve veri mühendisliği üzerine çalışıyorum; <strong>SAYZEK</strong> bursiyeri olarak termal nesne tespiti, <strong>Teknofest</strong> yarışmalarında İHA algoritmaları geliştirdim. <strong>Uludoğan Savunma Sanayi</strong>'nde PX4 tabanlı GPS'siz otonom uçuş, <strong>NICEYE GROUP</strong>'ta AI otomasyon ve <strong>IBTECH</strong>'te veri ambarı alanlarında deneyim kazandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
 </p>
 </div>
 </section>
@@ -128,8 +129,27 @@
     <span aria-hidden="true" class="material-symbols-outlined text-primary">work</span> İş Deneyimi
 </h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<!-- NICEYE GROUP -->
+<!-- ULUDOĞAN SAVUNMA SANAYİ -->
 <div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-100">
+<div class="flex justify-between items-start mb-4 gap-4">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">ULUDOĞAN SAVUNMA SANAYİ TEKNOLOJİ A.Ş.</h3>
+<p class="font-label-md text-label-md text-primary mt-1">Uzun Dönem Stajyer / Yerinde</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">İstanbul, Türkiye</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Tem 2026 – Eyl 2026</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">GPS'in kullanılamadığı uçuşlar için LiDAR ölçümlerini irtifa veya zemin durumuna yönlendiren iki modlu bir PX4 EKF2 yapısı geliştirdim. Engel geçişlerinde irtifa kaymasını 3 m'den 0,2 m'ye düşürdüm; sistemi Gazebo SITL, gerçek araç uçuşu, ULog kabul testleri ve birim testleriyle doğruladım.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">C++</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PX4 / EKF2</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">LiDAR / ToF</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Gazebo SITL</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">MAVLink / ULog</span>
+</div>
+</div>
+<!-- NICEYE GROUP -->
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-200">
 <div class="flex justify-between items-start mb-4 gap-4">
 <div>
 <h3 class="font-headline-md text-headline-md text-on-surface">NICEYE GROUP</h3>
@@ -148,7 +168,7 @@
 </div>
 </div>
 <!-- IBTECH -->
-<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-200">
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-300">
 <div class="flex justify-between items-start mb-4 gap-4">
 <div>
 <h3 class="font-headline-md text-headline-md text-on-surface">IBTECH</h3>
