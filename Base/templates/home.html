@@ -5,103 +5,11 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                "colors": {
-                    "outline": "#777587",
-                    "on-tertiary": "#ffffff",
-                    "surface-container-high": "#e6e8ea",
-                    "on-secondary-fixed-variant": "#3a485c",
-                    "secondary": "#515f74",
-                    "on-tertiary-container": "#ffc9b4",
-                    "secondary-fixed": "#d5e3fd",
-                    "surface-container-highest": "#e0e3e5",
-                    "on-tertiary-fixed-variant": "#7e2c00",
-                    "on-error-container": "#93000a",
-                    "surface-tint": "#4d44e3",
-                    "primary-container": "#4b41e1",
-                    "inverse-on-surface": "#eff1f3",
-                    "surface-bright": "#f7f9fb",
-                    "on-primary-fixed": "#0f0069",
-                    "primary-fixed": "#e2dfff",
-                    "on-secondary-container": "#57657b",
-                    "outline-variant": "#c7c4d8",
-                    "tertiary-fixed-dim": "#ffb597",
-                    "on-background": "#191c1e",
-                    "on-secondary": "#ffffff",
-                    "primary-fixed-dim": "#c3c0ff",
-                    "secondary-container": "#d5e3fd",
-                    "surface-container": "#eceef0",
-                    "on-surface": "#191c1e",
-                    "secondary-fixed-dim": "#b9c7e0",
-                    "text-ink": "#000000",
-                    "surface": "#f7f9fb",
-                    "error-container": "#ffdad6",
-                    "surface-container-low": "#f2f4f6",
-                    "primary": "#311fca",
-                    "surface-pure": "#FFFFFF",
-                    "tertiary-fixed": "#ffdbcd",
-                    "on-surface-variant": "#464555",
-                    "tertiary-container": "#a13b00",
-                    "slate-muted": "#64748B",
-                    "on-error": "#ffffff",
-                    "on-tertiary-fixed": "#360f00",
-                    "on-primary-fixed-variant": "#3322cc",
-                    "on-primary": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "error": "#ba1a1a",
-                    "on-secondary-fixed": "#0d1c2f",
-                    "on-primary-container": "#d3d1ff",
-                    "surface-dim": "#d8dadc",
-                    "inverse-surface": "#2d3133",
-                    "surface-variant": "#e0e3e5",
-                    "tertiary": "#7a2b00",
-                    "background": "#f7f9fb",
-                    "inverse-primary": "#c3c0ff"
-                },
-                "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-                },
-                "spacing": {
-                    "margin-mobile": "16px",
-                    "gutter": "24px",
-                    "margin-desktop": "48px",
-                    "container-max": "1280px",
-                    "base": "8px"
-                },
-                "fontFamily": {
-                    "body-md": ["Inter"],
-                    "headline-md": ["Montserrat"],
-                    "display-lg-mobile": ["Montserrat"],
-                    "label-md": ["Inter"],
-                    "display-lg": ["Montserrat"],
-                    "body-lg": ["Inter"],
-                    "label-sm": ["Inter"],
-                    "headline-lg": ["Montserrat"]
-                },
-                "fontSize": {
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
-                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
-                }
-            }
-        }
-    }
-</script>
+<script src="/static/js/tailwind-config.js"></script>
 <style>
+    :root { --color-primary: #311fca; }
     .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
@@ -114,9 +22,18 @@
     .delay-100 { transition-delay: 0.1s; }
     .delay-200 { transition-delay: 0.2s; }
     .delay-300 { transition-delay: 0.3s; }
-    .nav-link.active { color: #311fca; border-bottom: 2px solid #311fca; padding-bottom: 2px; }
+    .nav-link.active { color: var(--color-primary); border-bottom: 2px solid var(--color-primary); padding-bottom: 2px; }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .telemetry-grid {
+        background-image: linear-gradient(rgba(49,31,202,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(49,31,202,.08) 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+        .animate-on-scroll { opacity: 1; transform: none; }
+    }
 </style>
 </head>
 <body class="bg-surface-bright text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
@@ -135,7 +52,7 @@
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#contact">İletişim</a>
 </nav>
 <a class="hidden md:inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-4 py-2 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" href="#contact">İletişime Geç</a>
-<button class="md:hidden text-on-surface hover:bg-surface-container-low p-2 rounded-full transition-all duration-200 ease-out active:scale-95" id="mobileMenuBtn">
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Menüyü aç" class="md:hidden text-on-surface hover:bg-surface-container-low p-3 rounded-full transition-all duration-200 ease-out active:scale-95" id="mobileMenuBtn">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -176,9 +93,19 @@
 </a>
 </div>
 </div>
-<div class="flex-1 w-full mt-12 md:mt-0 relative h-64 md:h-96 rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 bg-surface-pure animate-on-scroll delay-200">
-<div class="w-full h-full bg-cover bg-center opacity-80 mix-blend-multiply" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGko2WoLKDHWSLJVBAxEMpWkxX7B_cfioovnS7fwEQTkjDEsgYU97vuIu2Il1DIFB_xN7z6LP-tqcvDQZCf3P8BrIxa2DL9YsDEBhe1wb8fVFvFfJ7_8NOaWwEkOEhRNoZb_EmhUiK7vNWDEVAlWFXL68jAMiuGuVOf7TPN79_8sP4jrwCpRrQixX38jtTGVUOfXECNj7_H4eXG1rt5FMOwm5CDiOjCZcdyloJoeCrvnBm6nTVGUNttBOI77P7NbQLG3GBDbdCDHOr')"></div>
-<div class="absolute inset-0 bg-gradient-to-tr from-surface-bright/50 to-transparent pointer-events-none"></div>
+<div aria-label="İHA yazılım yığını: algılama, karar ve uçuş katmanları" class="telemetry-grid flex-1 w-full mt-12 md:mt-0 relative h-72 md:h-96 rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 bg-surface-pure animate-on-scroll delay-200 font-telemetry">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary-container/40"></div>
+<div class="relative h-full p-6 md:p-8 flex flex-col justify-between">
+<div class="flex items-center justify-between text-label-sm text-on-surface-variant uppercase tracking-widest">
+<span>UAV software stack</span><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span>system ready</span>
+</div>
+<div class="space-y-3" aria-hidden="true">
+<div class="ml-auto w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">01 / PERCEPTION</span><p class="mt-1 text-sm text-on-surface-variant">YOLO · OpenCV · Thermal imaging</p></div>
+<div class="w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">02 / DECISION</span><p class="mt-1 text-sm text-on-surface-variant">Path planning · Computer vision</p></div>
+<div class="ml-auto w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">03 / FLIGHT</span><p class="mt-1 text-sm text-on-surface-variant">PX4 · ROS 2 · MAVLink</p></div>
+</div>
+<div class="text-xs text-on-surface-variant">PERCEPTION → DECISION → CONTROL</div>
+</div>
 </div>
 </section>
 
@@ -415,16 +342,25 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        animatedElements.forEach(el => el.classList.add('is-visible'));
+    } else {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.1 });
+        animatedElements.forEach(el => observer.observe(el));
+    }
 
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+            mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Menüyü kapat' : 'Menüyü aç');
+        });
     }
 
     // Active nav link on scroll
