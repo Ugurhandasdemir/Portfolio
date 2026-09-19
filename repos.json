@@ -9,30 +9,12 @@
     "Shared_memory_python",
     "landing_status"
   ],
-  "titles": {
-    "manga_translator": "Manga Çeviri Sistemi",
-    "Flights-Booking": "Uçuş Rezervasyon Uygulaması",
-    "YOLOv8_UAV_Vehicle_Detection": "Drone Görüntülerinde Araç Tespiti",
-    "house_rent_predictor_xgb": "Kira Fiyatı Tahmin Sistemi",
-    "Local_deep_research": "Yerel Derin Araştırma ve RAG",
-    "brain_tumor": "MR Görüntülerinde Beyin Tümörü Sınıflandırma",
-    "Shared_memory_python": "Paylaşımlı Bellek ile Gerçek Zamanlı Görüntü İşleme",
-    "landing_status": "İniş Alanı Uygunluk Analizi"
-  },
-  "featured": [
-    "avci-drone",
-    "edge-ai-termal",
-    "Local_deep_research",
-    "manga_translator",
-    "YOLOv8_UAV_Vehicle_Detection",
-    "no-fly-zone"
-  ],
   "images": {
-    "manga_translator": "static/images/manga.webp",
-    "Local_deep_research": "static/images/deep.webp",
-    "landing_status": "static/images/landing_status.webp",
-    "brain_tumor": "static/images/braintumor.webp",
-    "house_rent_predictor_xgb": "static/images/house_rent_predictor_xgb.webp"
+    "manga_translator": "static/images/manga.png",
+    "Local_deep_research": "static/images/deep.png",
+    "landing_status": "static/images/landing_status.png",
+    "brain_tumor": "static/images/braintumor.png",
+    "house_rent_predictor_xgb": "static/images/house_rent_predictor_xgb.png"
   },
   "youtube": {
     "YOLOv8_UAV_Vehicle_Detection": "https://www.youtube.com/watch?v=rUq1ZLTppGM"
@@ -58,7 +40,7 @@
       "updated_at": "2025-07-10",
       "html_url": null,
       "homepage": null,
-      "image": "static/images/avci.webp",
+      "image": "static/images/avci.png",
       "youtube": null,
       "kaggle": null
     },
@@ -70,7 +52,7 @@
       "updated_at": "2024-01-15",
       "html_url": null,
       "homepage": null,
-      "image": "static/images/no-fly-zone.webp",
+      "image": "static/images/b.jpeg",
       "youtube": "https://www.youtube.com/watch?v=YYVqzlg4NcY&t=251s",
       "kaggle": null
     },
