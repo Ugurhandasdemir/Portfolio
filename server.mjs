@@ -36,6 +36,16 @@ createServer(async (req, res) => {
   );
   const normalized = path.replace(/\/+$/, '') || '/';
 
+  // SEO dosyaları: Vercel'deki rota gibi static/seo/ altından sunulur
+  const seoFile = path.match(/^\/(robots\.txt|sitemap\.xml|llms\.txt)$/);
+  if (seoFile) {
+    const file = join(ROOT, 'static', 'seo', seoFile[1]);
+    const type = seoFile[1].endsWith('.xml')
+      ? 'application/xml'
+      : 'text/plain; charset=utf-8';
+    return send(res, 200, type, await readFile(file));
+  }
+
   // Statik dosyalar: static/ ve repos.json
   if (/^\/(static\/|repos\.json)/.test(path)) {
     const file = join(ROOT, path);

@@ -1,0 +1,11 @@
+# Uğurhan Daşdemir
+
+> Bilgisayar mühendisi. İHA yazılımı (PX4, ROS 2, MAVLink), bilgisayarlı görü,
+> Edge AI ve LLM/RAG üzerine çalışıyor.
+
+## Sayfalar
+
+- [Ana sayfa](https://www.ugurhandasdemir.com/): hakkında, deneyim, yetkinlikler, projeler, iletişim
+- [Özgeçmiş (PDF)](https://www.ugurhandasdemir.com/static/pdf/ozgecmis.pdf)
+- [GitHub](https://github.com/ugurhandasdemir)
+- [LinkedIn](https://www.linkedin.com/in/ugurhandasdemir)
