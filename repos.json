@@ -21,7 +21,6 @@
     {
       "name": "Local Deep Research",
       "repo": "Local_deep_research",
-      "link": "https://github.com/ugurhandasdemir/Local_deep_research",
       "featured": true,
       "date": "2025-11",
       "summary": "PDF'ler üzerinde tamamen yerel çalışan, kaynak gösteren bir RAG asistanı. 26 embedding modeli ile 5 vektör veritabanının kombinasyonlarını karşılaştıran bir benchmark içeriyor.",
@@ -35,7 +34,8 @@
         "Flutter"
       ],
       "image": "static/images/deep.webp",
-      "youtube": null
+      "youtube": null,
+      "slug": "local-deep-research"
     },
     {
       "name": "Avcı Drone: Görsel Hedef Takibi",
@@ -224,6 +224,12 @@
       "image": null,
       "youtube": null,
       "kaggle": null
+    },
+    {
+      "name": "Local Deep Research",
+      "slug": "local-deep-research",
+      "repo": "Local_deep_research",
+      "details": "static/projects/local-deep-research.md"
     }
   ]
 }
