@@ -2,7 +2,7 @@
 
 > Savaşan İHA 2025 yarışması kapsamında, yasaklı alanlardan kaçınan rota planlama algoritması.
 
-![No-Fly Zone Rota Planlama](/static/images/b.jpeg)
+![No-Fly Zone Rota Planlama](/static/images/b.webp)
 
 ## Genel Bakış
 

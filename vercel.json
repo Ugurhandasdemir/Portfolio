@@ -5,9 +5,25 @@
     }
   },
   "routes": [
-    { "src": "/repos.json", "dest": "/repos.json" },
-    { "src": "/static/(.*)", "dest": "/static/$1" },
-    { "src": "/project_details(\\.html)?/?", "dest": "/project_details.html" },
-    { "src": "/(.*)", "dest": "/api/index.ts" }
+    {
+      "src": "/(robots\\.txt|sitemap\\.xml|llms\\.txt)",
+      "dest": "/static/seo/$1"
+    },
+    {
+      "src": "/repos.json",
+      "dest": "/repos.json"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/project_details(\\.html)?/?",
+      "dest": "/project_details.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.ts"
+    }
   ]
 }
