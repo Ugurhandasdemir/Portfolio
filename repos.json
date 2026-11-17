@@ -6,7 +6,7 @@
       "featured": true,
       "date": "2025-08",
       "context": "SAYZEK bursiyeri",
-      "summary": "Termal görüntülerde araç ve insan tespiti için YOLOv8/v11, RT-DETR ve Faster R-CNN'i karşılaştırdım; seçilen modeli ONNX, INT8 quantization ve pruning ile Jetson Orin'de gerçek zamanlı çalışır hale getirdim.",
+      "summary": "Termal görüntülerde araç ve insan tespiti için YOLOv8/v11, RT-DETR, Faster R-CNN ve U-Net'i karşılaştırdım; modelleri ONNX, INT8 quantization ve pruning ile uç cihaza uyarlayıp Jetson Orin'de FPS ve çıkarım süresi ölçtüm.",
       "stack": [
         "PyTorch",
         "YOLO",
@@ -23,12 +23,13 @@
       "repo": "Local_deep_research",
       "link": "https://github.com/ugurhandasdemir/Local_deep_research",
       "featured": true,
-      "date": "2025-09",
-      "summary": "Belgeler üzerinde tamamen yerel çalışan, kaynak gösteren bir RAG asistanı. Beş vektör veritabanını ve 28 embedding modelini aynı veri setinde karşılaştırdım.",
+      "date": "2025-11",
+      "summary": "PDF'ler üzerinde tamamen yerel çalışan, kaynak gösteren bir RAG asistanı. 26 embedding modeli ile 5 vektör veritabanının kombinasyonlarını karşılaştıran bir benchmark içeriyor.",
       "stack": [
         "Python",
         "FastAPI",
         "Ollama",
+        "LangChain",
         "ChromaDB",
         "Milvus",
         "Flutter"
@@ -55,11 +56,11 @@
     {
       "name": "Hava Görüntülerinde Nesne Tespiti",
       "repo": "YOLOv8_UAV_Vehicle_Detection",
-      "date": "2025-04",
-      "summary": "Yüksekten çekilmiş küçük nesneleri kaçırmamak için YOLOv8'i SAHI dilimli çıkarımla birleştirdim; insan ve araç tespiti yaptım.",
+      "date": "2024-09",
+      "summary": "26.000'den fazla hava görüntüsüyle YOLOv8l eğittim; araç, insan ve motosiklet tespiti yapan model.",
       "stack": [
         "YOLOv8",
-        "SAHI",
+        "Ultralytics",
         "PyTorch"
       ],
       "image": null,
@@ -68,12 +69,13 @@
     {
       "name": "Beyin Tümörü Sınıflandırma",
       "repo": "brain_tumor",
-      "date": "2025-02",
-      "summary": "12.064 MR görüntüsünde 4 sınıflı tümör sınıflandırması. DenseNet121 + SE + LSTM hibrit mimarisiyle yaklaşık %97-98 doğruluk.",
+      "date": "2025-12",
+      "summary": "MR görüntülerinde 4 sınıflı tümör sınıflandırması. On bir mimariyi karşılaştırdım, en iyisi DenseNet + SE + LSTM %97,9 doğruluk verdi; Gradio ile demo arayüzü.",
       "stack": [
         "PyTorch",
         "DenseNet",
-        "CNN-LSTM"
+        "CNN-LSTM",
+        "Gradio"
       ],
       "image": "static/images/braintumor.webp",
       "youtube": null
@@ -81,12 +83,13 @@
     {
       "name": "Manga Çevirmeni",
       "repo": "manga_translator",
-      "date": "2025-06",
-      "summary": "Konuşma balonlarını tespit edip OCR ile okuyan, çeviriyi balona geri yerleştiren uçtan uca hat.",
+      "date": "2025-03",
+      "summary": "Konuşma balonlarını YOLO ile bulup EasyOCR ile okuyan, bölümü bütün olarak LLM ile çevirip metni balonun şekline göre geri yerleştiren uçtan uca hat.",
       "stack": [
-        "PyTorch",
-        "OCR",
-        "Python"
+        "YOLO (ONNX)",
+        "EasyOCR",
+        "Ollama",
+        "LLM"
       ],
       "image": "static/images/manga.webp",
       "youtube": null
@@ -94,10 +97,11 @@
     {
       "name": "İniş Alanı Uygunluk Analizi",
       "repo": "landing_status",
-      "date": "2025-03",
-      "summary": "Alt kamera görüntüsünden iniş alanının boş olup olmadığını belirleyen ve kareler arası kaymadan konum kestiren görüntü işleme modülü.",
+      "date": "2024-05",
+      "summary": "Tespit edilen iniş alanını kırpıp Otsu eşikleme, morfolojik kapama ve kontur analiziyle alanda engel olup olmadığını belirleyen görüntü işleme modülü.",
       "stack": [
         "OpenCV",
+        "NumPy",
         "Python"
       ],
       "image": "static/images/landing_status.webp",
@@ -106,7 +110,7 @@
     {
       "name": "Paylaşımlı Bellekle Gerçek Zamanlı Görü",
       "repo": "Shared_memory_python",
-      "date": "2025-05",
+      "date": "2025-11",
       "summary": "Kamera akışını süreçler arasında kopyalamadan paylaşıp YOLO ve QR tespitini paralel çalıştıran düşük gecikmeli hat.",
       "stack": [
         "Python",
@@ -145,26 +149,28 @@
       "youtube": null
     },
     {
-      "name": "Kira Tahmini",
+      "name": "Emlak Fiyat Analizi",
       "repo": "house_rent_predictor_xgb",
-      "date": "2024-12",
-      "summary": "Veri temizleme, aykırı değer filtreleme ve GridSearchCV ile ayarlanmış XGBoost üzerinde uçtan uca kira tahmini.",
+      "date": "2025-12",
+      "summary": "AI Spark Datathon için ilanların adil fiyatını XGBoost ile tahmin edip ilanı fırsat, normal veya pahalı olarak sınıflandıran Streamlit uygulaması.",
       "stack": [
         "XGBoost",
         "scikit-learn",
+        "Streamlit",
         "Pandas"
       ],
       "image": "static/images/house_rent_predictor_xgb.webp",
       "youtube": null
     },
     {
-      "name": "Uçuş Rezervasyon Uygulaması",
+      "name": "THY Rezervasyon Klonu",
       "repo": "Flights-Booking",
-      "date": "2024-10",
-      "summary": "Kayıt, koltuk seçimi ve ödeme akışı olan Django web uygulaması.",
+      "date": "2025-01",
+      "summary": "THY web sitesinin Django ile yapılmış klonu: uçuş arama ve rezervasyon akışı, SQL Server veritabanı.",
       "stack": [
         "Django",
-        "Python"
+        "Python",
+        "SQL Server"
       ],
       "image": null,
       "youtube": null
