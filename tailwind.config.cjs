@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--color-primary)",
+        // Hex olmalı: CSS değişkeniyle bg-primary/10 gibi saydamlık sınıfları üretilmiyordu
+        primary: "#311fca",
         "on-primary": "#ffffff",
         "primary-container": "#e2dfff",
         "on-primary-container": "#0f0069",

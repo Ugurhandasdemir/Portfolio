@@ -1,28 +1,24 @@
 <!DOCTYPE html><html lang="tr"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Uğurhan Daşdemir | Yapay Zekâ ve Otonom Sistemler</title>
-<meta name="description" content="Uğurhan Daşdemir'in yapay zekâ, bilgisayarlı görü, Edge AI, LLM/RAG ve otonom sistemler portföyü.">
+<title>Uğurhan Daşdemir | Yapay Zekâ Mühendisi</title>
+<meta name="description" content="Uğurhan Daşdemir'in yapay zekâ, bilgisayarlı görü, Edge AI ve LLM/RAG projeleri.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="Uğurhan Daşdemir | Yapay Zekâ ve Otonom Sistemler">
-<meta property="og:description" content="Bilgisayarlı görü, Edge AI, LLM/RAG ve otonom sistemler projeleri.">
+<meta property="og:title" content="Uğurhan Daşdemir | Yapay Zekâ Mühendisi">
+<meta property="og:description" content="Bilgisayarlı görü, Edge AI ve LLM/RAG projeleri.">
 <meta property="og:url" content="https://www.ugurhandasdemir.com/">
 <link rel="canonical" href="https://www.ugurhandasdemir.com/">
 <meta property="og:image" content="https://www.ugurhandasdemir.com/static/images/avci.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<!-- Fontlar site.css içinde kendi sunucudan gelir; ilk ekranda görünen ikisi önden yüklenir -->
+<link rel="preload" href="/static/fonts/montserrat-latin-5.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/fonts/inter-latin-1.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/static/css/site.css">
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
     :root { --color-primary: #311fca; }
     html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
     .animate-on-scroll {
         opacity: 0;
         transform: translateY(16px);
@@ -33,10 +29,10 @@
     .delay-200 { transition-delay: 0.2s; }
     .delay-300 { transition-delay: 0.3s; }
     .nav-link.active { color: var(--color-primary); border-bottom: 2px solid var(--color-primary); padding-bottom: 2px; }
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .telemetry-grid {
-        background-image: linear-gradient(rgba(49,31,202,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(49,31,202,.08) 1px, transparent 1px);
+        background-image:
+            linear-gradient(rgba(49,31,202,.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(49,31,202,.08) 1px, transparent 1px);
         background-size: 24px 24px;
     }
     @media (prefers-reduced-motion: reduce) {
@@ -47,6 +43,28 @@
 </style>
 </head>
 <body class="bg-surface-bright text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- İkonlar: ikon fontu yerine tek seferlik SVG sembolleri (render bloklayan font isteği kalmasın diye) -->
+<svg aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8M10 9H8"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></symbol>
+<symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
+<symbol id="i-cpu" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+<symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+</defs>
+</svg>
+<style>
+    /* Sembolleri kullanan her <svg class="icon"> çizgi stilini buradan alır */
+    .icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+</style>
 
 <!-- TopNavBar -->
 <header class="bg-surface-pure/80 fixed top-0 w-full backdrop-blur-md border-b border-outline-variant/30 shadow-sm z-50 transition-all duration-200">
@@ -61,9 +79,14 @@
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#volunteer">Gönüllü</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors ease-out duration-200" href="#contact">İletişim</a>
 </nav>
-<a class="hidden md:inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-4 py-2 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" href="#contact">İletişime Geç</a>
+<div class="hidden md:flex items-center gap-3">
+<a aria-label="GitHub" class="p-2.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors duration-200" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">
+<svg aria-hidden="true" class="icon w-6 h-6"><use href="#i-github"/></svg>
+</a>
+<a class="inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-4 py-2 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" href="#contact">İletişime Geç</a>
+</div>
 <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Menüyü aç" class="md:hidden text-on-surface hover:bg-surface-container-low p-3 rounded-full transition-all duration-200 ease-out active:scale-95" id="mobileMenuBtn">
-<span aria-hidden="true" class="material-symbols-outlined">menu</span>
+<svg aria-hidden="true" class="icon w-6 h-6"><use href="#i-menu"/></svg>
 </button>
 </div>
 <!-- Mobile Menu -->
@@ -75,24 +98,25 @@
 <a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="#projects">Projeler</a>
 <a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="#volunteer">Gönüllü</a>
 <a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="#contact">İletişim</a>
+<a class="mobile-menu-link block py-3 font-label-md text-label-md text-on-surface-variant" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">GitHub</a>
 </div>
 </header>
 
 <main class="pt-24 md:pt-32 pb-0">
 
 <!-- Hero Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32 flex flex-col md:flex-row items-center gap-gutter" id="home">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-24 md:mb-32 flex flex-col md:flex-row items-center gap-gutter" id="home">
 <div class="flex-1 space-y-6">
 <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface animate-on-scroll">
-    Zor problemleri <br class="hidden md:block">
-    <span class="text-primary">basit ve işe yarar</span> <br class="hidden md:block">
-    çözümlere dönüştürüyorum.
+    Yapay zekâyı <br class="hidden md:block">
+    <span class="text-primary">sahada çalışan</span> <br class="hidden md:block">
+    yazılıma dönüştürüyorum.
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl animate-on-scroll delay-100">
-    Ben Uğurhan Daşdemir. Bilgisayar mühendisliği mezunu olarak bilgisayarlı görü, derin öğrenme ve otonom sistemlerde gerçek problemlere çalışan çözümler geliştiriyorum.
+    Ben Uğurhan Daşdemir, yapay zekâ mühendisiyim. Bilgisayarlı görü, Edge AI ve LLM/RAG üzerine çalışıyorum.
 </p>
 <div class="flex flex-wrap gap-4 pt-4 animate-on-scroll delay-200">
-<button class="inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-6 py-3 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" id="cv-open">
+<button class="inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary px-6 py-3 rounded-lg hover:bg-primary/90 hover:shadow-md transition-all duration-200 ease-out active:scale-95" data-cv-open id="cv-open" type="button">
     CV'yi Görüntüle
 </button>
 <a class="inline-flex items-center justify-center font-label-md text-label-md border border-outline-variant text-on-surface px-6 py-3 rounded-lg hover:bg-surface-container-low transition-all duration-200 ease-out active:scale-95" href="#projects">
@@ -100,41 +124,41 @@
 </a>
 </div>
 </div>
-<div aria-label="İHA yazılım yığını: algılama, karar ve uçuş katmanları" class="telemetry-grid flex-1 w-full mt-12 md:mt-0 relative h-72 md:h-96 rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 bg-surface-pure animate-on-scroll delay-200 font-telemetry">
+<div aria-label="Yapay zekâ katmanları: görü, dil modelleri ve uç cihazda çıkarım" role="img" class="telemetry-grid flex-1 w-full mt-12 md:mt-0 relative h-72 md:h-96 rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 bg-surface-pure animate-on-scroll delay-200 font-telemetry">
 <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary-container/40"></div>
 <div class="relative h-full p-6 md:p-8 flex flex-col justify-between">
 <div class="flex items-center justify-between text-label-sm text-on-surface-variant uppercase tracking-widest">
-<span>İHA yazılım katmanları</span>
+<span>Yapay zekâ katmanları</span>
 </div>
 <div class="space-y-3" aria-hidden="true">
-<div class="ml-auto w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">01 / ALGILAMA</span><p class="mt-1 text-sm text-on-surface-variant">YOLO · OpenCV · Termal görüntüleme</p></div>
-<div class="w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">02 / KARAR</span><p class="mt-1 text-sm text-on-surface-variant">Rota planlama · Bilgisayarlı görü</p></div>
-<div class="ml-auto w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">03 / UÇUŞ</span><p class="mt-1 text-sm text-on-surface-variant">PX4 · ROS 2 · MAVLink</p></div>
+<div class="ml-auto w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">01 / GÖRÜ</span><p class="mt-1 text-sm text-on-surface-variant">YOLO · RT-DETR · OpenCV</p></div>
+<div class="w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">02 / DİL</span><p class="mt-1 text-sm text-on-surface-variant">LLM · RAG · Ajanlar</p></div>
+<div class="ml-auto w-4/5 rounded-lg border border-primary/20 bg-surface-pure/90 p-4"><span class="text-primary">03 / UÇ CİHAZ</span><p class="mt-1 text-sm text-on-surface-variant">ONNX · INT8 · Jetson</p></div>
 </div>
-<div class="text-xs text-on-surface-variant">ALGILAMA → KARAR → KONTROL</div>
+<div class="text-xs text-on-surface-variant" aria-hidden="true">VERİ → MODEL → ÇIKARIM</div>
 </div>
 </div>
 </section>
 
 <!-- About Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="about">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-24 md:mb-32" id="about">
 <div class="bg-surface-pure rounded-xl p-8 md:p-12 border border-outline-variant/30 shadow-sm relative overflow-hidden animate-on-scroll">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 flex items-center gap-2">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">person</span> Hakkımda
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 flex items-center gap-3">
+    <span aria-hidden="true" class="inline-flex items-center justify-center h-9 min-w-9 px-2 rounded-lg bg-primary/10 font-telemetry text-sm text-primary">01</span> Hakkımda
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-    Merhaba, ben Uğurhan Daşdemir. <strong>Atatürk Üniversitesi Bilgisayar Mühendisliği</strong> mezunuyum (2026). Yapay zeka, otonom sistemler ve veri mühendisliği üzerine çalışıyorum; <strong>SAYZEK</strong> bursiyeri olarak termal nesne tespiti, <strong>Teknofest</strong> yarışmalarında İHA algoritmaları geliştirdim. <strong>Uludoğan Savunma Sanayi</strong>'nde PX4 tabanlı GPS'siz otonom uçuş, <strong>NICEYE GROUP</strong>'ta AI otomasyon ve <strong>IBTECH</strong>'te veri ambarı alanlarında deneyim kazandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
+    Merhaba, ben Uğurhan Daşdemir. <strong>Atatürk Üniversitesi Bilgisayar Mühendisliği</strong> mezunuyum (2026) ve şu an <strong>SDM</strong>'de Ar-Ge mühendisi olarak yapay zekâ yazılımı geliştiriyorum. <strong>SAYZEK</strong> bursiyeri olarak termal nesne tespiti, <strong>Teknofest</strong> yarışmalarında görüntü işleme algoritmaları geliştirdim. <strong>Uludoğan Savunma Sanayi</strong>'nde otonom uçuş yazılımı, <strong>NICEYE GROUP</strong>'ta yapay zekâ otomasyonu ve <strong>IBTECH</strong>'te veri ambarı alanlarında deneyim kazandım. Öğrenmeyi seven, yeni şeyler denemekten çekinmeyen ve üretmekten keyif alan biriyim.
 </p>
 </div>
 </section>
 
 <!-- Experience Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="experience">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-2 animate-on-scroll">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">work</span> İş Deneyimi
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-24 md:mb-32" id="experience">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-3 animate-on-scroll">
+    <span aria-hidden="true" class="inline-flex items-center justify-center h-9 min-w-9 px-2 rounded-lg bg-primary/10 font-telemetry text-sm text-primary">02</span> İş Deneyimi
 </h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<!-- ULUDOĞAN SAVUNMA SANAYİ -->
+<!-- ULUDOĞAN SAVUNMA SANAYİ: savunma işi, rakam ve mimari detay yazılmaz -->
 <div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200 animate-on-scroll delay-100">
 <div class="flex justify-between items-start mb-4 gap-4">
 <div>
@@ -144,13 +168,13 @@
 </div>
 <span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full whitespace-nowrap shrink-0">Tem 2026 – Eyl 2026</span>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">GPS'in kullanılamadığı uçuşlar için LiDAR ölçümlerini irtifa veya zemin durumuna yönlendiren iki modlu bir PX4 EKF2 yapısı geliştirdim. Engel geçişlerinde irtifa kaymasını 3 m'den 0,2 m'ye düşürdüm; sistemi Gazebo SITL, gerçek araç uçuşu, ULog kabul testleri ve birim testleriyle doğruladım.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">GPS'in kullanılamadığı uçuşlar için PX4 tabanlı irtifa ve konum kestirimi üzerinde çalıştım. Geliştirdiğim yapıyı simülasyon ve uçuş testleriyle doğruladım.</p>
 <div class="flex flex-wrap gap-2">
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">C++</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PX4 / EKF2</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">LiDAR / ToF</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PX4</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">LiDAR</span>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Gazebo SITL</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">MAVLink / ULog</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">MAVLink</span>
 </div>
 </div>
 <!-- NICEYE GROUP -->
@@ -195,19 +219,39 @@
 </section>
 
 <!-- Skills Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="skills">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-24 md:mb-32" id="skills">
 <div class="mb-12 animate-on-scroll">
-<h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">code</span> Teknik Yetkinlikler
+<h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-3">
+    <span aria-hidden="true" class="inline-flex items-center justify-center h-9 min-w-9 px-2 rounded-lg bg-primary/10 font-telemetry text-sm text-primary">03</span> Teknik Yetkinlikler
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-2">Projelerimde en çok kullandığım temel teknolojiler.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Languages -->
-<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-100">
+<!-- Ana alan önce ve vurgulu: ziyaretçi ilk bakışta neyle uğraştığımı görsün -->
+<div class="md:col-span-2 bg-primary/5 rounded-xl p-8 border border-primary/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-100">
 <div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<span aria-hidden="true" class="material-symbols-outlined text-primary">terminal</span>
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<svg aria-hidden="true" class="icon w-6 h-6"><use href="#i-cpu"/></svg>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Yapay Zekâ &amp; Otonom Sistemler</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-3 py-1 rounded-full">PyTorch</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-3 py-1 rounded-full">YOLO</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-3 py-1 rounded-full">OpenCV</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-3 py-1 rounded-full">Transformers</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-3 py-1 rounded-full">ONNX</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-3 py-1 rounded-full">RAG / LLM</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-3 py-1 rounded-full">PX4</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-3 py-1 rounded-full">ROS 2</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-3 py-1 rounded-full">MAVSDK</span>
+</div>
+</div>
+<!-- Languages -->
+<div class="bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-200">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<svg aria-hidden="true" class="icon w-6 h-6"><use href="#i-terminal"/></svg>
 </div>
 <h3 class="font-headline-md text-headline-md text-on-surface">Diller</h3>
 </div>
@@ -220,31 +264,11 @@
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">SQL</span>
 </div>
 </div>
-<!-- AI & Autonomous Systems -->
-<div class="md:col-span-2 bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-200">
-<div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<span aria-hidden="true" class="material-symbols-outlined text-primary">smart_toy</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface">Yapay Zeka &amp; Otonom Sistemler</h3>
-</div>
-<div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PyTorch</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">YOLO</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">OpenCV</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">Transformers</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">ONNX</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">MAVSDK</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">PX4</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">ROS 2</span>
-<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">RAG / LLM</span>
-</div>
-</div>
 <!-- Data & Backend -->
 <div class="md:col-span-3 bg-surface-pure rounded-xl p-8 border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col animate-on-scroll delay-300">
 <div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<span aria-hidden="true" class="material-symbols-outlined text-primary">database</span>
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<svg aria-hidden="true" class="icon w-6 h-6"><use href="#i-database"/></svg>
 </div>
 <h3 class="font-headline-md text-headline-md text-on-surface">Veri &amp; Backend</h3>
 </div>
@@ -264,24 +288,24 @@
 </section>
 
 <!-- Projects Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="projects">
-<div class="flex justify-between items-end mb-12">
-<div class="animate-on-scroll">
-<h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">view_carousel</span> Öne Çıkan Projeler
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-24 md:mb-32" id="projects">
+<div class="mb-12 animate-on-scroll">
+<h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-3">
+    <span aria-hidden="true" class="inline-flex items-center justify-center h-9 min-w-9 px-2 rounded-lg bg-primary/10 font-telemetry text-sm text-primary">04</span> Öne Çıkan Projeler
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-2">Karmaşık problemleri çözdüğüm seçilmiş çalışmalar.</p>
 </div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="projectSlider">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" id="featuredProjects">
 <div class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">Projeler yükleniyor…</div>
 </div>
+<h3 class="hidden font-headline-sm text-headline-sm text-on-surface mt-16 mb-6" id="otherProjectsTitle">Diğer çalışmalar</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="otherProjects"></div>
 </section>
 
 <!-- Volunteer / Community Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32" id="volunteer">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-2 animate-on-scroll">
-    <span aria-hidden="true" class="material-symbols-outlined text-primary">groups</span> Gönüllü Çalışmalar &amp; Yarışmalar
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-24 md:mb-32" id="volunteer">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 flex items-center gap-3 animate-on-scroll">
+    <span aria-hidden="true" class="inline-flex items-center justify-center h-9 min-w-9 px-2 rounded-lg bg-primary/10 font-telemetry text-sm text-primary">05</span> Gönüllü Çalışmalar &amp; Yarışmalar
 </h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- ATA AIT Simurg -->
@@ -315,20 +339,19 @@
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-0" id="contact">
 <div class="bg-primary text-on-primary rounded-xl p-8 md:p-12 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 animate-on-scroll">
 <div class="max-w-3xl">
-<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary/70 mb-3">Birlikte çalışalım</p>
-<h2 class="font-headline-lg text-headline-lg mb-4">Yeni projelere ve iş birliklerine açığım.</h2>
-<p class="font-body-lg text-body-lg text-on-primary/80">Yapay zekâ, bilgisayarlı görü, Edge AI, LLM/RAG ve otonom sistemler alanındaki projelerde çalışmaya açığım.</p>
+<h2 class="font-headline-lg text-headline-lg mb-4">Yapay zekâ üzerine konuşalım.</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80">Bilgisayarlı görü, Edge AI veya LLM/RAG üzerine bir fikriniz ya da sorunuz varsa yazabilirsiniz.</p>
 </div>
 <div class="flex flex-wrap gap-3 shrink-0">
 <a class="inline-flex items-center justify-center gap-2 rounded-lg bg-on-primary px-6 py-3 font-label-md text-label-md text-primary hover:bg-primary-container transition-colors" href="mailto:ugurhandasdemir@gmail.com">
-<span aria-hidden="true" class="material-symbols-outlined text-lg">mail</span>E-posta Gönder
+<svg aria-hidden="true" class="icon w-5 h-5"><use href="#i-mail"/></svg>E-posta Gönder
 </a>
 <a class="inline-flex items-center justify-center gap-2 rounded-lg border border-on-primary/30 px-6 py-3 font-label-md text-label-md text-on-primary hover:bg-on-primary/10 transition-colors" href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" rel="noopener">
-<span aria-hidden="true" class="material-symbols-outlined text-lg">account_circle</span>LinkedIn
+<svg aria-hidden="true" class="icon w-5 h-5"><use href="#i-linkedin"/></svg>LinkedIn
 </a>
-<a class="inline-flex items-center justify-center gap-2 rounded-lg border border-on-primary/30 px-6 py-3 font-label-md text-label-md text-on-primary hover:bg-on-primary/10 transition-colors" href="/static/pdf/ozgecmis.pdf" target="_blank" rel="noopener">
-<span aria-hidden="true" class="material-symbols-outlined text-lg">description</span>CV'yi Görüntüle
-</a>
+<button class="inline-flex items-center justify-center gap-2 rounded-lg border border-on-primary/30 px-6 py-3 font-label-md text-label-md text-on-primary hover:bg-on-primary/10 transition-colors" data-cv-open type="button">
+<svg aria-hidden="true" class="icon w-5 h-5"><use href="#i-file"/></svg>CV'yi Görüntüle
+</button>
 </div>
 </div>
 </section>
@@ -336,23 +359,23 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-surface-container w-full py-12 border-t border-outline-variant/20">
+<footer class="bg-surface-container w-full py-12 mt-16 md:mt-24 border-t border-outline-variant/20">
 <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
 <div class="flex items-center gap-4">
 <span class="font-headline-lg text-headline-lg text-on-surface">Uğurhan Daşdemir</span>
 </div>
 <div class="flex flex-wrap justify-center gap-6">
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="tel:+905364078583">
-<span aria-hidden="true" class="material-symbols-outlined text-base">call</span>+90 536 407 85 83
+<svg aria-hidden="true" class="icon w-4 h-4"><use href="#i-phone"/></svg>+90 536 407 85 83
 </a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="mailto:ugurhandasdemir@gmail.com">
-<span aria-hidden="true" class="material-symbols-outlined text-base">mail</span>E-posta
+<svg aria-hidden="true" class="icon w-4 h-4"><use href="#i-mail"/></svg>E-posta
 </a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">
-<span aria-hidden="true" class="material-symbols-outlined text-base">code</span>GitHub
+<svg aria-hidden="true" class="icon w-4 h-4"><use href="#i-github"/></svg>GitHub
 </a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1" href="https://www.linkedin.com/in/ugurhandasdemir" target="_blank" rel="noopener">
-<span aria-hidden="true" class="material-symbols-outlined text-base">account_circle</span>LinkedIn
+<svg aria-hidden="true" class="icon w-4 h-4"><use href="#i-linkedin"/></svg>LinkedIn
 </a>
 </div>
 <div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">
@@ -367,7 +390,7 @@
 <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4 border-b border-outline-variant/30 flex justify-between items-center">
 <h3 class="font-headline-md text-headline-md text-on-surface" id="cv-modal-title">Özgeçmiş</h3>
 <button aria-label="Kapat" class="text-on-surface-variant hover:text-on-surface transition-colors rounded-full p-3" data-close-cv type="button">
-<span aria-hidden="true" class="material-symbols-outlined text-2xl">close</span>
+<svg aria-hidden="true" class="icon w-6 h-6"><use href="#i-x"/></svg>
 </button>
 </div>
 <div class="bg-surface-container-low p-4 sm:p-6">
@@ -406,20 +429,26 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Menüyü kapat' : 'Menüyü aç');
         };
         mobileMenuBtn.addEventListener('click', () => setMobileMenu(mobileMenu.classList.contains('hidden')));
-        mobileMenu.querySelectorAll('.mobile-menu-link').forEach(link => link.addEventListener('click', () => setMobileMenu(false)));
+        mobileMenu.querySelectorAll('.mobile-menu-link').forEach(link => {
+            link.addEventListener('click', () => setMobileMenu(false));
+        });
     }
 
-    // Accessible CV dialog
+    // CV dialog: hero ve iletişim bandındaki düğmeler aynı pencereyi açar,
+    // kapanınca odak hangi düğmeden açıldıysa ona döner.
     const cvModal = document.getElementById('cv-modal');
-    const cvOpen = document.getElementById('cv-open');
     let cvTrigger = null;
-    if (cvModal && cvOpen) {
-        cvOpen.addEventListener('click', () => {
-            cvTrigger = document.activeElement;
-            cvModal.showModal();
-            cvModal.querySelector('[data-close-cv]').focus();
+    if (cvModal) {
+        document.querySelectorAll('[data-cv-open]').forEach(button => {
+            button.addEventListener('click', () => {
+                cvTrigger = button;
+                cvModal.showModal();
+                cvModal.querySelector('[data-close-cv]').focus();
+            });
         });
-        cvModal.querySelectorAll('[data-close-cv]').forEach(button => button.addEventListener('click', () => cvModal.close()));
+        cvModal.querySelectorAll('[data-close-cv]').forEach(button => {
+            button.addEventListener('click', () => cvModal.close());
+        });
         cvModal.addEventListener('click', event => { if (event.target === cvModal) cvModal.close(); });
         cvModal.addEventListener('close', () => { if (cvTrigger) cvTrigger.focus(); });
     }
@@ -438,124 +467,109 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<!-- Dynamic projects loader -->
+<!-- Projects: repos.json içindeki küratörlü listeden çizilir.
+     GitHub API kullanılmaz; README değişse ya da istek limiti dolsa da kartlar bozulmaz. -->
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
-    const grid = document.getElementById('projectSlider');
-    if (!grid) return;
+    const featuredGrid = document.getElementById('featuredProjects');
+    const otherGrid = document.getElementById('otherProjects');
+    const otherTitle = document.getElementById('otherProjectsTitle');
+    if (!featuredGrid || !otherGrid) return;
 
-    const username = 'ugurhandasdemir';
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+    const assetUrl = p => (p ? `/${String(p).replace(/^\/+/, '')}` : null);
+    const icon = (id, size = 'w-4 h-4') =>
+        `<svg aria-hidden="true" class="icon ${size}"><use href="#${id}"/></svg>`;
 
-    const FALLBACK_PROJECTS = [
-        { name: 'Local Deep Research', repo: 'Local_deep_research', updated_at: '2025-09-20', image: 'static/images/deep.png',
-          readmeIntro: 'Python/FastAPI/Flutter ile yerel RAG uygulaması: PDF\'leri parçalayıp ChromaDB, Milvus, Qdrant, LanceDB ve Weaviate\'e gömme; Ollama LLM ile kaynaklı soru-cevap. 28 embedding modelini benchmark ettim.' },
-        { name: 'Manga Translator', repo: 'manga_translator', updated_at: '2025-06-15', image: 'static/images/manga.png',
-          readmeIntro: 'Manga konuşma balonlarını PyTorch ile tespit edip OCR\'la metni çıkaran, çevirip balona geri yerleştiren uçtan uca Python pipeline (API/CLI).' },
-        { name: 'Paylaşımlı Bellek Gerçek Zamanlı CV (YOLO + QR)', repo: 'Shared_memory_python', updated_at: '2025-05-10',
-          readmeIntro: 'Jetson/GStreamer kamera akışını multiprocessing.shared_memory ile süreçler arası düşük gecikmeyle paylaşan, Ultralytics YOLO + pyzbar QR tespiti yapan gerçek zamanlı görüntü işleme hattı.' },
-        { name: 'Drone Görüntü Analizi (YOLOv8 + SAHI)', repo: 'YOLOv8_UAV_Vehicle_Detection', updated_at: '2025-04-05',
-          youtube: 'https://www.youtube.com/watch?v=rUq1ZLTppGM',
-          readmeIntro: 'Drone görüntülerinde YOLOv8 + SAHI ile insan/araç/UAP-UAI tespiti; iniş uygunluğu analizi ve ardışık karelerden öteleme/konum kestirimi.' },
-        { name: 'İniş Alanı Uygunluk Analizi', repo: 'landing_status', updated_at: '2025-03-12', image: 'static/images/landing_status.png',
-          readmeIntro: 'Drone alt görüş kamerasından alınan karelerle iniş alanı uygunluğunu analiz eden ve kutu hareketinden öteleme/konum kestiren görüntü işleme modülü.' },
-        { name: 'Beyin Tümörü Sınıflandırma', repo: 'brain_tumor', updated_at: '2025-02-08', image: 'static/images/braintumor.png',
-          readmeIntro: '12.064 MR görüntüsünde 4 sınıflı tümör sınıflandırması; PyTorch ile DenseNet121+SE+LSTM ve hibrit mimariler, yaklaşık %97-98 doğruluk.' },
-        { name: 'HouseRentPredictor (Kira Tahmini)', repo: 'house_rent_predictor_xgb', updated_at: '2024-12-20', image: 'static/images/house_rent_predictor_xgb.png',
-          readmeIntro: 'Ev kira tahmini için uçtan uca ML akışı: veri temizleme, aykırı değer filtreleme, one-hot encoding ve GridSearchCV ile XGBoost hiperparametre optimizasyonu.' },
-        { name: 'Flights Booking (Django)', repo: 'Flights-Booking', updated_at: '2024-10-15',
-          readmeIntro: 'Django ile uçtan uca uçuş rezervasyon uygulaması: kayıt/giriş, koltuk seçimi, ödeme ve özet akışı; ORM, formlar ve migrations ile.' }
-    ].map(p => ({ ...p, description: p.readmeIntro, image: p.image || null }));
-
-    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-    const assetUrl = p => p ? ('/' + String(p).replace(/^\/+/, '')) : null;
-    const formatDate = iso => {
-        if (!iso) return '';
-        return new Date(iso).toLocaleDateString('tr-TR', { year: 'numeric', month: 'short' });
+    // "2025-08" → "Ağu 2025"
+    const formatDate = value => {
+        const [year, month] = String(value || '').split('-').map(Number);
+        if (!year || !month) return '';
+        return new Date(year, month - 1)
+            .toLocaleDateString('tr-TR', { year: 'numeric', month: 'short' });
     };
 
-    const getReadmeIntro = async repo => {
-        try {
-            const r = await fetch(`https://api.github.com/repos/${username}/${repo}/readme`, { headers: { Accept: 'application/vnd.github.v3.raw' } });
-            if (!r.ok) return null;
-            const lines = (await r.text()).split('\n');
-            let p = '';
-            for (const line of lines) {
-                const t = line.trim();
-                if (!t || t.startsWith('#') || t.startsWith('!') || t.startsWith('[!') || t.startsWith('[![')) { if (p) break; continue; }
-                p += (p ? ' ' : '') + t;
-            }
-            p = p.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
-            return (p.length > 180 ? p.slice(0, 180).trim() + '...' : p) || null;
-        } catch { return null; }
+    const chip = (text, tone = 'neutral') => {
+        const toneClass = tone === 'primary'
+            ? 'text-primary bg-primary/10'
+            : 'text-secondary bg-secondary-container/30';
+        return `<span class="font-label-sm text-label-sm ${toneClass} px-3 py-1 rounded-full">${esc(text)}</span>`;
     };
 
-    const cardHTML = r => {
-        const img = assetUrl(r.image);
-        const media = img
-            ? `<img alt="${esc(r.name)}" width="640" height="384" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="${esc(img)}">`
-            : `<div class="w-full h-full flex items-center justify-center bg-surface-container-low"><span aria-hidden="true" class="material-symbols-outlined text-5xl text-on-surface-variant/30">terminal</span></div>`;
-        const rawDesc = r.readmeIntro ?? r.description ?? 'Açıklama yok.';
-        const desc = rawDesc.length > 160 ? rawDesc.slice(0, 160).replace(/\s+\S*$/, '').trim() + '…' : rawDesc;
-        const dateChip = r.updated_at ? `<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full">${esc(formatDate(r.updated_at))}</span>` : '';
-        const clickable = !!(r.details || r.repo);
-        const target = r.slug || r.repo || r.name;
-        const cta = clickable
-            ? `<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1" href="/project_details.html?repo=${encodeURIComponent(target)}">Detayları Gör <span aria-hidden="true" class="material-symbols-outlined text-sm">arrow_forward</span></a>`
-            : '';
-        const ytBtn = r.youtube
-            ? `<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1" href="${esc(r.youtube)}" target="_blank" rel="noopener"><span aria-hidden="true" class="material-symbols-outlined text-sm">play_circle</span> Video</a>`
-            : '';
-        return `
-        <div class="group bg-surface-pure rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col">
-            <div class="w-full h-48 overflow-hidden bg-surface-container-low shrink-0">${media}</div>
-            <div class="p-6 flex flex-col flex-1">
-                <div class="mb-3">${dateChip}</div>
-                <h3 class="font-headline-md text-headline-md text-on-surface mb-2 line-clamp-2">${esc(r.name)}</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-1 line-clamp-4">${esc(desc)}</p>
-                <div class="flex items-center gap-4 mt-auto">${cta}${ytBtn}</div>
-            </div>
+    const linksRow = p => {
+        const linkClass = 'font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1';
+        const links = [];
+        if (p.link) {
+            links.push(`<a class="${linkClass}" href="${esc(p.link)}" target="_blank" rel="noopener">
+                GitHub'da Gör ${icon('i-arrow')}</a>`);
+        } else if (p.slug || p.repo) {
+            const target = encodeURIComponent(p.slug || p.repo);
+            links.push(`<a class="${linkClass}" href="/project_details.html?repo=${target}">
+                Detayları Gör ${icon('i-arrow')}</a>`);
+        }
+        if (p.youtube) {
+            links.push(`<a class="${linkClass}" href="${esc(p.youtube)}" target="_blank" rel="noopener">
+                ${icon('i-play')} Video</a>`);
+        }
+        return `<div class="flex items-center gap-4 mt-auto pt-4">${links.join('')}</div>`;
+    };
+
+    // Görseli olmayan proje boş gri kutu yerine hero'daki telemetri ızgarasıyla gösterilir
+    const media = p => {
+        const img = assetUrl(p.image);
+        if (img) {
+            return `<img alt="${esc(p.name)}" width="640" height="384" loading="lazy" decoding="async"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                src="${esc(img)}">`;
+        }
+        const label = (p.stack || []).slice(0, 3).join(' · ');
+        return `<div class="telemetry-grid w-full h-full bg-surface-pure flex items-center justify-center p-6">
+            <span class="font-telemetry text-label-sm text-primary uppercase tracking-widest text-center">${esc(label)}</span>
         </div>`;
     };
 
+    const featuredCard = p => `
+        <article class="group bg-surface-pure rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col">
+            <div class="w-full h-48 overflow-hidden bg-surface-container-low shrink-0">${media(p)}</div>
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-3">
+                    ${p.date ? chip(formatDate(p.date)) : ''}
+                    ${p.context ? chip(p.context, 'primary') : ''}
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-surface mb-2 line-clamp-2">${esc(p.name)}</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-4">${esc(p.summary)}</p>
+                <div class="flex flex-wrap gap-2">${(p.stack || []).map(s => chip(s)).join('')}</div>
+                ${linksRow(p)}
+            </div>
+        </article>`;
+
+    const otherCard = p => `
+        <article class="bg-surface-pure rounded-xl p-6 border border-outline-variant/30 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col">
+            <p class="font-telemetry text-label-sm text-on-surface-variant mb-2">${esc(formatDate(p.date))}</p>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">${esc(p.name)}</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-3">${esc(p.summary)}</p>
+            <div class="flex flex-wrap gap-2">${(p.stack || []).slice(0, 4).map(s => chip(s)).join('')}</div>
+            ${linksRow(p)}
+        </article>`;
+
     try {
-        const listRes = await fetch('/repos.json', { cache: 'no-cache' });
-        if (!listRes.ok) throw new Error('repos.json alınamadı');
-        const listData = await listRes.json();
-        const allowed = new Set(listData.repos || []);
-        const repoImages = listData.images || {};
-        const repoYoutube = listData.youtube || {};
-        const manualProjects = listData.manual || [];
+        const response = await fetch('/repos.json', { cache: 'no-cache' });
+        if (!response.ok) throw new Error('repos.json alınamadı');
+        const projects = (await response.json()).projects || [];
 
-        let repos = [];
-        try {
-            const r = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
-            if (r.ok) repos = await r.json();
-        } catch { /* limit / offline → fallback */ }
-        repos = (Array.isArray(repos) ? repos : []).filter(r => allowed.has(r.name));
+        const featured = projects.filter(p => p.featured);
+        const others = projects.filter(p => !p.featured);
 
-        const reposWithReadme = await Promise.all(repos.map(async r => ({
-            name: r.name, repo: r.name, description: r.description,
-            readmeIntro: await getReadmeIntro(r.name),
-            updated_at: r.updated_at, image: repoImages[r.name] || null,
-            youtube: repoYoutube[r.name] || null
-        })));
-
-        const githubProjects = reposWithReadme.length ? reposWithReadme : FALLBACK_PROJECTS;
-
-        const allProjects = [
-            ...githubProjects,
-            ...manualProjects.map(m => ({
-                name: m.name, repo: m.repo || null, slug: m.slug || null,
-                details: m.details || null, description: m.description,
-                readmeIntro: m.description, updated_at: m.updated_at, image: m.image || null
-            }))
-        ].sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-
-        grid.innerHTML = allProjects.length
-            ? allProjects.map(r => cardHTML(r)).join('')
-            : '<p class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">Gösterilecek proje bulunamadı.</p>';
+        featuredGrid.innerHTML = featured.map(featuredCard).join('');
+        otherGrid.innerHTML = others.map(otherCard).join('');
+        otherTitle.classList.toggle('hidden', others.length === 0);
     } catch {
-        grid.innerHTML = '<p class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">Projeler yüklenemedi.</p>';
+        featuredGrid.innerHTML = `<p class="col-span-full text-center py-16 font-body-md text-body-md text-on-surface-variant">
+            Projeler yüklenemedi.
+            <a class="text-primary hover:underline" href="https://github.com/ugurhandasdemir" target="_blank" rel="noopener">GitHub'da gör</a>
+        </p>`;
     }
 });
 </script>
