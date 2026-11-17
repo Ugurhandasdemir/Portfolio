@@ -2,7 +2,7 @@
 
 > GNSS jamming senaryosunda sabit kanat hedef İHA'yı arayıp takip edebilen otonom FPV multikopter sistemi.
 
-![Avcı Drone](/static/images/avci.png)
+![Avcı Drone](/static/images/avci.webp)
 
 ## Genel Bakış
 

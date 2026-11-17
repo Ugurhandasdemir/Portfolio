@@ -1,24 +1,175 @@
 {
-  "repos": [
-    "manga_translator",
-    "Flights-Booking",
-    "YOLOv8_UAV_Vehicle_Detection",
-    "house_rent_predictor_xgb",
-    "Local_deep_research",
-    "brain_tumor",
-    "Shared_memory_python",
-    "landing_status"
+  "projects": [
+    {
+      "name": "Edge AI ile Termal Nesne Tespiti",
+      "slug": "edge-ai-termal",
+      "featured": true,
+      "date": "2025-08",
+      "context": "SAYZEK bursiyeri",
+      "summary": "Termal görüntülerde araç ve insan tespiti için YOLOv8/v11, RT-DETR ve Faster R-CNN'i karşılaştırdım; seçilen modeli ONNX, INT8 quantization ve pruning ile Jetson Orin'de gerçek zamanlı çalışır hale getirdim.",
+      "stack": [
+        "PyTorch",
+        "YOLO",
+        "RT-DETR",
+        "ONNX",
+        "INT8",
+        "Jetson Orin"
+      ],
+      "image": null,
+      "youtube": null
+    },
+    {
+      "name": "Local Deep Research",
+      "repo": "Local_deep_research",
+      "link": "https://github.com/ugurhandasdemir/Local_deep_research",
+      "featured": true,
+      "date": "2025-09",
+      "summary": "Belgeler üzerinde tamamen yerel çalışan, kaynak gösteren bir RAG asistanı. Beş vektör veritabanını ve 28 embedding modelini aynı veri setinde karşılaştırdım.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Ollama",
+        "ChromaDB",
+        "Milvus",
+        "Flutter"
+      ],
+      "image": "static/images/deep.webp",
+      "youtube": null
+    },
+    {
+      "name": "Avcı Drone: Görsel Hedef Takibi",
+      "slug": "avci-drone",
+      "featured": true,
+      "date": "2025-07",
+      "summary": "Hareketli bir hedefi kamerayla bulup takip eden görü hattı. Klasik yöntemleri (MOG2, CSRT) YOLOv8 + ByteTrack ile karşılaştırdım; ONNX Runtime ve OpenVINO arka uçlarını ölçtüm.",
+      "stack": [
+        "YOLOv8",
+        "ByteTrack",
+        "OpenCV",
+        "ONNX Runtime",
+        "OpenVINO"
+      ],
+      "image": "static/images/avci.webp",
+      "youtube": null
+    },
+    {
+      "name": "Hava Görüntülerinde Nesne Tespiti",
+      "repo": "YOLOv8_UAV_Vehicle_Detection",
+      "date": "2025-04",
+      "summary": "Yüksekten çekilmiş küçük nesneleri kaçırmamak için YOLOv8'i SAHI dilimli çıkarımla birleştirdim; insan ve araç tespiti yaptım.",
+      "stack": [
+        "YOLOv8",
+        "SAHI",
+        "PyTorch"
+      ],
+      "image": null,
+      "youtube": "https://www.youtube.com/watch?v=rUq1ZLTppGM"
+    },
+    {
+      "name": "Beyin Tümörü Sınıflandırma",
+      "repo": "brain_tumor",
+      "date": "2025-02",
+      "summary": "12.064 MR görüntüsünde 4 sınıflı tümör sınıflandırması. DenseNet121 + SE + LSTM hibrit mimarisiyle yaklaşık %97-98 doğruluk.",
+      "stack": [
+        "PyTorch",
+        "DenseNet",
+        "CNN-LSTM"
+      ],
+      "image": "static/images/braintumor.webp",
+      "youtube": null
+    },
+    {
+      "name": "Manga Çevirmeni",
+      "repo": "manga_translator",
+      "date": "2025-06",
+      "summary": "Konuşma balonlarını tespit edip OCR ile okuyan, çeviriyi balona geri yerleştiren uçtan uca hat.",
+      "stack": [
+        "PyTorch",
+        "OCR",
+        "Python"
+      ],
+      "image": "static/images/manga.webp",
+      "youtube": null
+    },
+    {
+      "name": "İniş Alanı Uygunluk Analizi",
+      "repo": "landing_status",
+      "date": "2025-03",
+      "summary": "Alt kamera görüntüsünden iniş alanının boş olup olmadığını belirleyen ve kareler arası kaymadan konum kestiren görüntü işleme modülü.",
+      "stack": [
+        "OpenCV",
+        "Python"
+      ],
+      "image": "static/images/landing_status.webp",
+      "youtube": null
+    },
+    {
+      "name": "Paylaşımlı Bellekle Gerçek Zamanlı Görü",
+      "repo": "Shared_memory_python",
+      "date": "2025-05",
+      "summary": "Kamera akışını süreçler arasında kopyalamadan paylaşıp YOLO ve QR tespitini paralel çalıştıran düşük gecikmeli hat.",
+      "stack": [
+        "Python",
+        "shared_memory",
+        "YOLO",
+        "GStreamer"
+      ],
+      "image": null,
+      "youtube": null
+    },
+    {
+      "name": "Yasaklı Alanlardan Kaçınan Rota Planlama",
+      "slug": "no-fly-zone",
+      "date": "2024-01",
+      "summary": "Yasaklı bölgeleri tampon payıyla modelleyip PRM + A* ile çakışmasız, yumuşatılmış rota üreten planlayıcı.",
+      "stack": [
+        "Python",
+        "Shapely",
+        "PRM",
+        "A*"
+      ],
+      "image": "static/images/b.webp",
+      "youtube": "https://www.youtube.com/watch?v=YYVqzlg4NcY&t=251s"
+    },
+    {
+      "name": "Gerçek Zamanlı Tehdit Analizi ve Kaçış",
+      "slug": "escape-uav",
+      "date": "2025-01",
+      "summary": "Rakip araç telemetrisinden mesafe ve yönelime göre anlık tehdit seviyesi hesaplayıp kaçış manevrası seçen karar modülü.",
+      "stack": [
+        "Python",
+        "MAVSDK",
+        "Telemetri"
+      ],
+      "image": null,
+      "youtube": null
+    },
+    {
+      "name": "Kira Tahmini",
+      "repo": "house_rent_predictor_xgb",
+      "date": "2024-12",
+      "summary": "Veri temizleme, aykırı değer filtreleme ve GridSearchCV ile ayarlanmış XGBoost üzerinde uçtan uca kira tahmini.",
+      "stack": [
+        "XGBoost",
+        "scikit-learn",
+        "Pandas"
+      ],
+      "image": "static/images/house_rent_predictor_xgb.webp",
+      "youtube": null
+    },
+    {
+      "name": "Uçuş Rezervasyon Uygulaması",
+      "repo": "Flights-Booking",
+      "date": "2024-10",
+      "summary": "Kayıt, koltuk seçimi ve ödeme akışı olan Django web uygulaması.",
+      "stack": [
+        "Django",
+        "Python"
+      ],
+      "image": null,
+      "youtube": null
+    }
   ],
-  "images": {
-    "manga_translator": "static/images/manga.png",
-    "Local_deep_research": "static/images/deep.png",
-    "landing_status": "static/images/landing_status.png",
-    "brain_tumor": "static/images/braintumor.png",
-    "house_rent_predictor_xgb": "static/images/house_rent_predictor_xgb.png"
-  },
-  "youtube": {
-    "YOLOv8_UAV_Vehicle_Detection": "https://www.youtube.com/watch?v=rUq1ZLTppGM"
-  },
   "manual": [
     {
       "name": "Edge AI Tabanlı Termal Nesne Tespiti (SAYZEK Bursiyeri)",
@@ -40,7 +191,7 @@
       "updated_at": "2025-07-10",
       "html_url": null,
       "homepage": null,
-      "image": "static/images/avci.png",
+      "image": "static/images/avci.webp",
       "youtube": null,
       "kaggle": null
     },
@@ -52,7 +203,7 @@
       "updated_at": "2024-01-15",
       "html_url": null,
       "homepage": null,
-      "image": "static/images/b.jpeg",
+      "image": "static/images/b.webp",
       "youtube": "https://www.youtube.com/watch?v=YYVqzlg4NcY&t=251s",
       "kaggle": null
     },
